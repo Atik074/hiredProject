@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React, { useContext, useState } from "react";
 import { FaGithub, FaUserGraduate } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Divider from "../login/Divider";
 import { useForm } from "react-hook-form"
 import { Label } from "@/components/ui/label";
@@ -15,8 +15,9 @@ import { AuthContext } from "@/hooks/AuthContext";
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
-  const {createUser , user} = useContext(AuthContext)
+  const {createUser} = useContext(AuthContext)
   const [error , setError] = useState('')
+  const navigate = useNavigate()
 
 
 
@@ -24,12 +25,17 @@ const Register = () => {
   const onSubmit = (data) =>{
     console.log(data)
     createUser(data.email , data.password)
+
+  
     .then(result =>{
       const user = result.user
+  
+       if(user) navigate("/login")
+        
        console.log("user from register" , user)
     })
-    .catch(error =>{
-      const err = err.message 
+    .catch(err=>{
+      const error = err.message 
         console.log("err from register" , error)
         setError(error)
     })
@@ -93,6 +99,16 @@ const Register = () => {
                     text-[15px]  absolute left-0 bottom-[1px]">{errors.lastName.message}</span>} 
                  </div>
         </div>
+
+        
+        <div className='w-[80%] mx-auto mb-3 '>
+                  <Label className="text-[18px] font-normal text-black" htmlFor="photoURL">photoURL</Label>
+                  <Input  id="photoURL" name="photoURL"  type="url" placeholder="type here photoURL" {...register("photoURL")}  /> 
+                   
+                 </div>
+
+              
+
 
         <div className='w-[80%] mx-auto mb-5 relative'>
                   <Label className="text-[18px] font-normal text-black" htmlFor="email">Email</Label>

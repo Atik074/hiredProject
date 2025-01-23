@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { FaGithub, FaUserCircle } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Input } from "@/components/ui/input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import Divider from "./Divider";
 import { useForm } from "react-hook-form";
@@ -11,10 +11,11 @@ import { AuthContext } from "@/hooks/AuthContext";
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const {signInUser} = useContext(AuthContext)
+  const {signInUser } = useContext(AuthContext)
   const [error , setError] = useState('')
+  const navigate = useNavigate()
 
-  // email: 'at@gmail.com', password: 'asdf1234#@'
+
 
   // handle form submitm for user login
   const onSubmit = (data) =>{
@@ -22,6 +23,8 @@ const Login = () => {
     signInUser(data.email , data.password)
     .then(result =>{
       const loggedInUser = result.user
+   
+      if(loggedInUser) navigate("/")
        console.log("user from login" , loggedInUser)
     })
     .catch(error =>{
