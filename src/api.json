@@ -1,0 +1,808 @@
+[
+    {
+      "id": "001",
+      "title": "TechCorp",
+     "image": "https://shorturl.at/X13w2",
+      "vacancy": "01",
+      "post_name": "Frontend Developer",
+      "job_type": "Full Time",
+      "requirements": [
+        "Proficient in HTML, CSS, JavaScript",
+        "Experience with React.js and Redux",
+        "Familiarity with responsive design",
+        "Good communication and teamwork skills"
+      ],
+      "experience_required": "2-4 years",
+      "salary_range": "$70,000 - $90,000 ",
+      "category": "Software Development",
+      "description": "We are looking for a passionate and skilled Frontend Developer to join our growing team at TechCorp. In this role, you will be responsible for designing, developing, and maintaining dynamic user interfaces for our web applications.",
+      "location": "San Francisco, USA"
+    },
+    {
+      "id": "002",
+      "title": "TechCorp",
+     "image": "https://shorturl.at/X13w2",
+      "vacancy": "02",
+      "post_name": "Backend Developer",
+      "job_type": "Part Time",
+      "requirements": [
+        "Experience with Node.js, Express.js",
+        "Familiarity with databases like MongoDB and MySQL",
+        "Understanding of RESTful APIs and microservices",
+        "Problem-solving and debugging skills"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$80,000 - $100,000 ",
+      "category": "Software Development",
+      "description": "As a Backend Developer, you will work with a team to design, implement, and maintain server-side applications. You'll handle database integration and build APIs.",
+      "location": "San Francisco, USA"
+    },
+    {
+      "id": "003",
+      "title": "TechCorp",
+     "image": "https://shorturl.at/X13w2",
+      "vacancy": "03",
+      "post_name": "Full Stack Developer",
+      "job_type": "Part Time",
+      "requirements": [
+        "Proficiency in both frontend and backend technologies",
+        "Experience with React.js, Node.js, and Express.js",
+        "Strong understanding of databases (SQL and NoSQL)",
+        "Experience with Docker and cloud platforms like AWS"
+      ],
+      "experience_required": "4-6 years",
+      "salary_range": "$90,000 - $110,000 ",
+      "category": "Software Development",
+      "description": "We are looking for a talented Full Stack Developer to work on both frontend and backend technologies. You will develop responsive user interfaces, APIs, and handle cloud deployment.",
+      "location": "San Francisco, USA"
+    },
+    {
+      "id": "004",
+      "title": "TechCorp",
+     "image": "https://shorturl.at/X13w2",
+      "vacancy": "04",
+      "post_name": "UI/UX Designer",
+      "job_type": "Freelance",
+      "requirements": [
+        "Proven experience as a UI/UX designer or similar role",
+        "Proficiency in design software (Sketch, Figma, Adobe XD)",
+        "Strong understanding of web design principles",
+        "Ability to create wireframes, prototypes, and high-fidelity designs"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$70,000 - $85,000 ",
+      "category": "Design",
+      "description": "We are looking for a creative and detail-oriented UI/UX Designer to design user-friendly interfaces for our applications. Your work will include wireframing, prototyping, and creating designs.",
+      "location": "San Francisco, USA"
+    },
+    {
+      "id": "005",
+      "title": "TechCorp",
+     "image": "https://shorturl.at/X13w2",
+      "vacancy": "05",
+      "post_name": "Product Manager",
+      "job_type": "Internships",
+      "requirements": [
+        "Experience in product management or project management",
+        "Strong understanding of product development lifecycle",
+        "Excellent communication and leadership skills",
+        "Ability to work with cross-functional teams"
+      ],
+      "experience_required": "4-6 years",
+      "salary_range": "$95,000 - $120,000 ",
+      "category": "Product Management",
+      "description": "As a Product Manager, you will work with engineering, marketing, and sales to define product features, prioritize tasks, and ensure timely delivery of high-quality products.",
+      "location": "San Francisco, USA"
+    },
+    {
+      "id": "006",
+      "title": "InnovaTech",
+     "image": "/assets/logos/innovatech.png",
+      "vacancy": "06",
+      "post_name": "Data Scientist",
+      "job_type": "Full Time",
+      "requirements": [
+        "Proficiency in Python, R, and SQL",
+        "Experience with machine learning algorithms",
+        "Strong analytical skills",
+        "Experience with data visualization tools like Tableau"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$85,000 - $105,000 ",
+        "category": "Data Science",
+        
+        "description": "We are looking for an experienced Data Scientist to analyze large data sets and provide actionable insights. Your work will involve building predictive models and data pipelines.",
+        "location": "New York, USA"
+    },
+    {
+      "id": "007",
+      "title": "InnovaTech",
+     "image": "/assets/logos/innovatech.png",
+      "vacancy": "07",
+      "post_name": "Software Engineer",
+      "job_type": "Part Time",
+      "requirements": [
+        "Experience with Java, C++, or Python",
+        "Familiarity with software development life cycle (SDLC)",
+        "Problem-solving and debugging skills",
+        "Experience with Agile methodologies"
+      ],
+      "experience_required": "2-4 years",
+      "salary_range": "$75,000 - $95,000 ",
+      "category": "Software Development",
+      "description": "As a Software Engineer, you'll work on building and optimizing software applications. You'll also collaborate with cross-functional teams to deliver new features.",
+      "location": "New York, USA"
+    },
+    {
+      "id": "008",
+      "title": "InnovaTech",
+     "image": "/assets/logos/innovatech.png",
+      "vacancy": "08",
+      "post_name": "DevOps Engineer",
+      "job_type": "Contract",
+      "requirements": [
+        "Experience with cloud platforms (AWS, Azure, GCP)",
+        "Experience with automation tools like Jenkins and Docker",
+        "Strong Linux/Unix skills",
+        "Ability to write scripts (Bash, Python, etc.)"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$90,000 - $110,000 ",
+      "category": "Operations",
+      "description": "We are seeking a skilled DevOps Engineer to help automate and optimize our cloud infrastructure. You'll manage deployments, automate builds, and ensure high availability of services.",
+      "location": "Chicago, USA"
+    },
+    {
+      "id": "009",
+      "title": "InnovaTech",
+     "image": "/assets/logos/innovatech.png",
+      "vacancy": "09",
+      "post_name": "Network Engineer",
+      "job_type": "Internships",
+      "requirements": [
+        "Experience with routing, switching, and network security",
+        "Knowledge of TCP/IP, DNS, and HTTP protocols",
+        "Experience with firewalls and network security tools",
+        "Ability to troubleshoot and optimize networks"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$80,000 - $100,000 ",
+      "category": "Networking",
+      "description": "We are hiring a Network Engineer to design, implement, and maintain our organization's network infrastructure. Your work will include configuring routers, firewalls, and optimizing network performance.",
+      "location": "Chicago, USA"
+    },
+    {
+      "id": "010",
+      "title": "InnovateSoft",
+     "image": "/assets/logos/innovatesoft.png",
+      "vacancy": "10",
+      "post_name": "Systems Administrator",
+      "job_type": "Contract",
+      "requirements": [
+        "Experience with Windows, Linux, and MacOS server environments",
+        "Knowledge of networking and system monitoring tools",
+        "Experience with virtualization technologies (VMware, Hyper-V)",
+        "Ability to troubleshoot and resolve hardware and software issues"
+      ],
+      "experience_required": "2-4 years",
+      "salary_range": "$60,000 - $80,000 ",
+      "category": "Systems Administration",
+      "description": "We are seeking a Systems Administrator to manage and support our company's server infrastructure, ensuring uptime and performance of key systems.",
+      "location": "Los Angeles, USA"
+    },
+    {
+      "id": "011",
+      "title": "CyberTech",
+     "image": "/assets/logos/cybertech.png",
+      "vacancy": "11",
+      "post_name": "Security Analyst",
+      "job_type": "Internships",
+      "requirements": [
+        "Proficiency in security technologies and protocols",
+        "Experience with firewalls, intrusion detection systems",
+        "Knowledge of ethical hacking and penetration testing",
+        "Experience with SIEM and incident response"
+      ],
+      "experience_required": "2-4 years",
+      "salary_range": "$70,000 - $90,000 ",
+      "category": "Cybersecurity",
+      "description": "We are looking for a Security Analyst to monitor our systems for vulnerabilities and potential attacks. You will perform regular security audits and recommend improvements to our infrastructure.",
+      "location": "Austin, USA"
+    },
+    {
+      "id": "012",
+      "title": "CyberTech",
+     "image": "/assets/logos/cybertech.png",
+      "vacancy": "12",
+      "post_name": "Network Security Engineer",
+      "requirements": [
+        "Experience with VPNs, firewalls, and intrusion detection",
+        "Knowledge of encryption protocols",
+        "Ability to analyze network traffic for security threats",
+        "Experience with network monitoring tools"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$85,000 - $105,000 ",
+      "category": "Cybersecurity",
+      "description": "As a Network Security Engineer, you'll manage and monitor the security of our corporate network. You will implement and maintain security measures to protect the organization from internal and external threats.",
+      "location": "Austin, USA"
+    },
+    {
+      "id": "013",
+      "title": "CloudSphere",
+     "image": "/assets/logos/cloudsphere.png",
+      "vacancy": "13",
+      "post_name": "Cloud Architect",
+      "requirements": [
+        "Experience with AWS, Azure, and Google Cloud",
+        "Strong understanding of cloud infrastructure and services",
+        "Experience with cloud security best practices",
+        "Ability to design scalable and resilient cloud solutions"
+      ],
+      "experience_required": "5-7 years",
+      "salary_range": "$110,000 - $130,000 ",
+      "category": "Cloud Computing",
+      "description": "We are looking for a Cloud Architect to lead the design and implementation of scalable cloud solutions. You will work with other teams to integrate cloud technologies into the organization's infrastructure.",
+      "location": "Seattle, USA"
+    },
+    {
+      "id": "014",
+      "title": "CloudSphere",
+     "image": "/assets/logos/cloudsphere.png",
+      "vacancy": "14",
+      "post_name": "Cloud Engineer",
+      "requirements": [
+        "Experience with cloud services (AWS, Azure)",
+        "Experience with container technologies (Docker, Kubernetes)",
+        "Understanding of cloud security principles",
+        "Ability to automate infrastructure provisioning"
+      ],
+      "experience_required": "2-4 years",
+      "salary_range": "$80,000 - $100,000 ",
+      "category": "Cloud Computing",
+      "description": "We are looking for a Cloud Engineer to help manage and optimize cloud infrastructure. You will assist with automation, monitoring, and scaling of services across cloud platforms.",
+      "location": "Seattle, USA"
+    },
+    {
+      "id": "015",
+      "title": "DataTech",
+     "image": "/assets/logos/datatech.png",
+      "vacancy": "15",
+      "post_name": "Machine Learning Engineer",
+      "requirements": [
+        "Strong knowledge of machine learning algorithms",
+        "Proficiency in Python and machine learning libraries",
+        "Experience with TensorFlow, PyTorch, or Keras",
+        "Ability to process and analyze large datasets"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$90,000 - $110,000 ",
+      "category": "Data Science",
+      "description": "We are seeking a Machine Learning Engineer to develop intelligent systems and predictive models. You will work with large datasets and deploy machine learning solutions.",
+      "location": "Boston, USA"
+    },
+    {
+      "id": "016",
+      "title": "DataTech",
+     "image": "/assets/logos/datatech.png",
+      "vacancy": "16",
+      "post_name": "Data Engineer",
+      "requirements": [
+        "Experience with SQL and NoSQL databases",
+        "Knowledge of data warehousing and ETL processes",
+        "Proficiency in Python or Java",
+        "Experience with cloud platforms (AWS, GCP)"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$85,000 - $105,000 ",
+      "category": "Data Engineering",
+      "description": "We are hiring a Data Engineer to design and implement data pipelines. Your role will involve preparing data for analysis and ensuring it's accessible for data scientists and analysts.",
+      "location": "Boston, USA"
+    },
+    {
+      "id": "017",
+      "title": "QuantumTech",
+     "image": "/assets/logos/quantumtech.png",
+      "vacancy": "17",
+      "post_name": "Quantum Computing Researcher",
+      "requirements": [
+        "Experience in quantum computing or related fields",
+        "Strong background in linear algebra, probability theory, and computer science",
+        "Proficiency in quantum programming languages like Q# or Quipper",
+        "Knowledge of quantum algorithms"
+      ],
+      "experience_required": "5-7 years",
+      "salary_range": "$120,000 - $140,000 ",
+      "category": "Research",
+      "description": "Join us as a Quantum Computing Researcher and work on the cutting edge of quantum technology. You will design algorithms and optimize quantum systems for real-world applications.",
+      "location": "Cambridge, USA"
+    },
+    {
+      "id": "018",
+      "title": "QuantumTech",
+     "image": "/assets/logos/quantumtech.png",
+      "vacancy": "18",
+      "post_name": "Quantum Software Engineer",
+      "requirements": [
+        "Strong experience in C++, Python, and quantum programming languages",
+        "Knowledge of quantum hardware and simulators",
+        "Ability to work with quantum computing platforms like IBM Q or Microsoft Quantum",
+        "Experience in algorithm development for quantum systems"
+      ],
+      "experience_required": "4-6 years",
+      "salary_range": "$110,000 - $130,000 ",
+      "category": "Research",
+      "description": "We are looking for a Quantum Software Engineer to design and develop quantum algorithms. You will collaborate with researchers to create efficient solutions for quantum problems.",
+      "location": "Cambridge, USA"
+    },
+    {
+      "id": "019",
+      "title": "NextGen Tech",
+     "image": "/assets/logos/nextgen.png",
+      "vacancy": "19",
+      "post_name": "AI Specialist",
+      "requirements": [
+        "Experience with AI frameworks and tools (TensorFlow, Keras)",
+        "Proficiency in Python and machine learning",
+        "Experience in neural networks, deep learning, and reinforcement learning",
+        "Knowledge of data preprocessing and feature engineering"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$100,000 - $120,000 ",
+      "category": "AI & Machine Learning",
+      "description": "We are looking for an AI Specialist to develop and implement machine learning models. You will work on building intelligent systems that can improve over time using reinforcement learning.",
+      "location": "Austin, USA"
+    },
+    {
+      "id": "020",
+      "title": "NextGen Tech",
+     "image": "/assets/logos/nextgen.png",
+      "vacancy": "20",
+      "post_name": "AI Researcher",
+      "requirements": [
+        "Expertise in machine learning and deep learning",
+        "Experience in computer vision, NLP, or robotics",
+        "Strong programming skills in Python and C++",
+        "Ability to publish research papers in AI conferences"
+      ],
+      "experience_required": "5-7 years",
+      "salary_range": "$120,000 - $150,000 ",
+      "category": "AI & Machine Learning",
+      "description": "We are hiring an AI Researcher to conduct research in the field of AI. You'll work on solving cutting-edge problems and advance the field of artificial intelligence.",
+      "location": "Austin, USA"
+    },
+    {
+      "id": "021",
+      "title": "GreenTech Solutions",
+     "image": "/assets/logos/greentech.png",
+      "vacancy": "21",
+      "post_name": "Environmental Engineer",
+      "requirements": [
+        "Experience in environmental impact assessments",
+        "Knowledge of renewable energy technologies",
+        "Strong analytical and problem-solving skills",
+        "Familiarity with environmental laws and regulations"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$75,000 - $95,000 ",
+      "category": "Environmental Engineering",
+      "description": "We are looking for an Environmental Engineer to lead sustainability initiatives. You will evaluate environmental impacts and design solutions to mitigate negative effects.",
+      "location": "Denver, USA"
+    },
+    {
+      "id": "022",
+      "title": "GreenTech Solutions",
+     "image": "/assets/logos/greentech.png",
+      "vacancy": "22",
+      "post_name": "Sustainability Consultant",
+      "requirements": [
+        "Expertise in sustainability practices and corporate responsibility",
+        "Ability to analyze energy consumption and waste patterns",
+        "Experience in designing sustainability programs",
+        "Strong communication and presentation skills"
+      ],
+      "experience_required": "3-5 years",
+      "salary_range": "$85,000 - $105,000 ",
+      "category": "Sustainability",
+      "description": "We are hiring a Sustainability Consultant to assist organizations in achieving sustainability goals. You will evaluate systems and propose eco-friendly solutions to enhance sustainability.",
+      "location": "Denver, USA"
+    },
+    {
+        "id": "023",
+        "title": "MedTech Innovations",
+       "image": "/assets/logos/medtech.png",
+        "vacancy": "23",
+        "post_name": "Clinical Data Analyst",
+        "requirements": [
+          "Experience with clinical trial data analysis",
+          "Proficiency in statistical software (SAS, R, Python)",
+          "Knowledge of clinical data standards (CDISC, SDTM)",
+          "Strong analytical and communication skills"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$80,000 - $100,000 ",
+        "category": "Healthcare",
+        "description": "We are looking for a Clinical Data Analyst to manage and analyze clinical trial data. You will support the data collection and reporting processes, ensuring compliance with regulatory standards.",
+        "location": "Boston, USA"
+      },
+      {
+        "id": "024",
+        "title": "MedTech Innovations",
+       "image": "/assets/logos/medtech.png",
+        "vacancy": "24",
+        "post_name": "Medical Device Engineer",
+        "requirements": [
+          "Experience with medical device design and development",
+          "Knowledge of FDA regulations and quality standards",
+          "Proficiency in CAD software (SolidWorks, AutoCAD)",
+          "Strong problem-solving and teamwork skills"
+        ],
+        "experience_required": "4-6 years",
+        "salary_range": "$95,000 - $115,000 ",
+        "category": "Healthcare",
+        "description": "Join us as a Medical Device Engineer and help design innovative devices that improve patient outcomes. You'll work with a multidisciplinary team to develop prototypes, conduct testing, and ensure regulatory compliance.",
+        "location": "Los Angeles, USA"
+      },
+      {
+        "id": "025",
+        "title": "RetailPlus",
+       "image": "/assets/logos/retailplus.png",
+        "vacancy": "25",
+        "post_name": "E-commerce Manager",
+        "requirements": [
+          "Experience managing e-commerce platforms (Shopify, Magento)",
+          "Knowledge of digital marketing strategies (SEO, SEM)",
+          "Strong analytical skills and ability to interpret data",
+          "Excellent project management and leadership skills"
+        ],
+        "experience_required": "4-6 years",
+        "salary_range": "$70,000 - $90,000 ",
+        "category": "E-commerce",
+        "description": "We are looking for an E-commerce Manager to drive the growth of our online store. You will manage product listings, optimize the shopping experience, and develop digital marketing strategies.",
+        "location": "Chicago, USA"
+      },
+      {
+        "id": "026",
+        "title": "RetailPlus",
+       "image": "/assets/logos/retailplus.png",
+        "vacancy": "26",
+        "post_name": "Digital Marketing Specialist",
+        "requirements": [
+          "Experience with Google Ads, Facebook Ads, and email marketing",
+          "Strong knowledge of SEO and SEM techniques",
+          "Ability to analyze and report on digital campaigns",
+          "Creative thinking and content development skills"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$50,000 - $70,000 ",
+        "category": "Marketing",
+        "description": "We are seeking a Digital Marketing Specialist to manage and optimize our online advertising efforts. You will develop campaigns, create engaging content, and analyze results to improve performance.",
+        "location": "Chicago, USA"
+      },
+      {
+        "id": "027",
+        "title": "FinTech Solutions",
+       "image": "/assets/logos/fintech.png",
+        "vacancy": "27",
+        "post_name": "Financial Analyst",
+        "requirements": [
+          "Experience with financial modeling and forecasting",
+          "Proficiency in Excel, Power BI, or similar tools",
+          "Strong knowledge of accounting and financial reporting standards",
+          "Excellent communication skills for reporting findings"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$60,000 - $80,000 ",
+        "category": "Finance",
+        "description": "We are looking for a Financial Analyst to help with budgeting, forecasting, and financial reporting. You will analyze trends, identify opportunities, and support senior leadership with data-driven insights.",
+        "location": "New York, USA"
+      },
+      {
+        "id": "028",
+        "title": "FinTech Solutions",
+       "image": "/assets/logos/fintech.png",
+        "vacancy": "28",
+        "post_name": "Compliance Officer",
+        "requirements": [
+          "Experience with financial regulations (SOX, SEC)",
+          "Strong understanding of risk management practices",
+          "Ability to analyze and implement compliance processes",
+          "Attention to detail and strong reporting skills"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$70,000 - $90,000 ",
+        "category": "Finance",
+        "description": "As a Compliance Officer, you'll ensure that our financial operations meet regulatory requirements. You will monitor policies, conduct audits, and develop strategies to mitigate risks.",
+        "location": "New York, USA"
+      },
+      {
+        "id": "029",
+        "title": "HealthTech Inc.",
+       "image": "/assets/logos/healthtech.png",
+        "vacancy": "29",
+        "post_name": "Healthcare IT Specialist",
+        "requirements": [
+          "Experience with healthcare information systems (EHR, EMR)",
+          "Strong knowledge of data privacy laws (HIPAA)",
+          "Experience with database management and cloud systems",
+          "Excellent problem-solving and technical troubleshooting skills"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$80,000 - $100,000 ",
+        "category": "Healthcare IT",
+        "description": "We are hiring a Healthcare IT Specialist to implement, support, and optimize electronic health record systems. You will ensure data security, compliance, and seamless integration across various systems.",
+        "location": "Dallas, USA"
+      },
+      {
+        "id": "030",
+        "title": "HealthTech Inc.",
+       "image": "/assets/logos/healthtech.png",
+        "vacancy": "30",
+        "post_name": "Clinical Research Coordinator",
+        "requirements": [
+          "Experience with clinical trial coordination",
+          "Strong understanding of GCP and ICH guidelines",
+          "Proficiency in data collection, reporting, and documentation",
+          "Excellent organizational and communication skills"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$60,000 - $80,000 ",
+        "category": "Healthcare",
+        "description": "We are looking for a Clinical Research Coordinator to assist in the planning, implementation, and monitoring of clinical trials. You will work closely with researchers and regulatory bodies.",
+        "location": "Dallas, USA"
+      },
+      {
+        "id": "031",
+        "title": "AutoTech",
+       "image": "/assets/logos/autotech.png",
+        "vacancy": "31",
+        "post_name": "Automotive Engineer",
+        "requirements": [
+          "Experience in automotive design and development",
+          "Proficiency in CAD software (AutoCAD, CATIA)",
+          "Understanding of automotive systems and components",
+          "Ability to work with cross-functional teams to meet design goals"
+        ],
+        "experience_required": "4-6 years",
+        "salary_range": "$85,000 - $105,000 ",
+        "category": "Engineering",
+        "description": "As an Automotive Engineer, you will work on the design, development, and testing of vehicle components. You will collaborate with a team to improve performance, safety, and efficiency.",
+        "location": "Detroit, USA"
+      },
+      {
+        "id": "032",
+        "title": "AutoTech",
+       "image": "/assets/logos/autotech.png",
+        "vacancy": "32",
+        "post_name": "Automotive Technician",
+        "requirements": [
+          "Experience with vehicle diagnostics and repairs",
+          "Strong understanding of automotive systems",
+          "Proficiency in using diagnostic tools and equipment",
+          "Attention to detail and problem-solving skills"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$50,000 - $70,000 ",
+        "category": "Automotive",
+        "description": "We are looking for an experienced Automotive Technician to perform diagnostics and repairs on vehicles. You'll use state-of-the-art tools to troubleshoot and fix mechanical issues.",
+        "location": "Detroit, USA"
+      },
+      {
+        "id": "033",
+        "title": "CleanEnergy Solutions",
+       "image": "/assets/logos/cleanenergy.png",
+        "vacancy": "33",
+        "post_name": "Renewable Energy Engineer",
+        "requirements": [
+          "Experience with solar, wind, or other renewable energy systems",
+          "Knowledge of energy storage and grid integration",
+          "Proficiency in CAD software for energy system design",
+          "Strong problem-solving and analytical skills"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$75,000 - $95,000 ",
+        "category": "Renewable Energy",
+        "description": "We are seeking a Renewable Energy Engineer to design and implement renewable energy systems. You will help reduce environmental impact and improve energy efficiency for our clients.",
+        "location": "Denver, USA"
+      },
+      {
+        "id": "034",
+        "title": "CleanEnergy Solutions",
+       "image": "/assets/logos/cleanenergy.png",
+        "vacancy": "34",
+        "post_name": "Energy Analyst",
+        "requirements": [
+          "Experience in energy modeling and simulation software",
+          "Knowledge of energy consumption and efficiency strategies",
+          "Proficiency in Excel, EnergyPlus, or similar tools",
+          "Strong analytical and research skills"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$60,000 - $80,000 ",
+        "category": "Renewable Energy",
+        "description": "We are hiring an Energy Analyst to evaluate and recommend energy efficiency improvements. You will conduct research, analyze energy data, and support sustainability initiatives.",
+        "location": "Denver, USA"
+      }, {
+        "id": "035",
+        "title": "BioTech Labs",
+       "image": "/assets/logos/biotech.png",
+        "vacancy": "35",
+        "post_name": "Biotech Research Scientist",
+        "requirements": [
+          "Experience with DNA sequencing and gene editing",
+          "Strong knowledge of molecular biology techniques",
+          "Proficiency in lab equipment and analysis software",
+          "Ability to conduct independent research and write papers"
+        ],
+        "experience_required": "4-6 years",
+        "salary_range": "$85,000 - $105,000 ",
+        "category": "Biotechnology",
+        "description": "We are looking for a talented Biotech Research Scientist to work on groundbreaking research in genetics and biotechnology. You will perform experiments, analyze data, and contribute to scientific publications.",
+        "location": "San Diego, USA"
+      },
+      {
+        "id": "036",
+        "title": "BioTech Labs",
+       "image": "/assets/logos/biotech.png",
+        "vacancy": "36",
+        "post_name": "Molecular Biologist",
+        "requirements": [
+          "Experience with PCR, RT-PCR, and Western blotting",
+          "Proficiency in experimental design and data analysis",
+          "Strong background in cellular biology",
+          "Ability to write technical reports and scientific papers"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$75,000 - $95,000 ",
+        "category": "Biotechnology",
+        "description": "As a Molecular Biologist, you will be responsible for conducting laboratory experiments to explore molecular mechanisms and advance genetic research in the biotech field.",
+        "location": "San Diego, USA"
+      },
+      {
+        "id": "037",
+        "title": "SmartHomes",
+       "image": "/assets/logos/smarthomes.png",
+        "vacancy": "37",
+        "post_name": "IoT Solutions Architect",
+        "requirements": [
+          "Experience designing IoT systems for smart homes",
+          "Proficiency in embedded systems and IoT protocols",
+          "Knowledge of wireless communication (Wi-Fi, ZigBee, Z-Wave)",
+          "Strong problem-solving skills and attention to detail"
+        ],
+        "experience_required": "5-7 years",
+        "salary_range": "$100,000 - $120,000 ",
+        "category": "Smart Home Technology",
+        "description": "Join our team as an IoT Solutions Architect and help design the next generation of smart home solutions. You'll create scalable and secure IoT architectures to enhance home automation.",
+        "location": "Austin, USA"
+      },
+      {
+        "id": "038",
+        "title": "SmartHomes",
+       "image": "/assets/logos/smarthomes.png",
+        "vacancy": "38",
+        "post_name": "Embedded Systems Engineer",
+        "requirements": [
+          "Experience with embedded software development",
+          "Proficiency in C/C++ and RTOS",
+          "Familiarity with IoT hardware and sensors",
+          "Strong debugging and testing skills"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$70,000 - $90,000 ",
+        "category": "Smart Home Technology",
+        "description": "We are looking for an Embedded Systems Engineer to design and develop firmware for IoT devices used in smart homes. Your work will help create innovative solutions to make homes smarter and more efficient.",
+        "location": "Austin, USA"
+      },
+      {
+        "id": "039",
+        "title": "SustainTech",
+       "image": "/assets/logos/sustaintech.png",
+        "vacancy": "39",
+        "post_name": "Sustainability Data Scientist",
+        "requirements": [
+          "Experience with environmental data analysis and modeling",
+          "Proficiency in Python, R, or MATLAB",
+          "Strong background in statistics and data visualization",
+          "Ability to interpret complex data and provide actionable insights"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$85,000 - $105,000 ",
+        "category": "Sustainability",
+        "description": "We are looking for a Sustainability Data Scientist to analyze environmental data and develop models that help organizations reduce their carbon footprint and improve sustainability practices.",
+        "location": "Portland, USA"
+      },
+      {
+        "id": "040",
+        "title": "SustainTech",
+       "image": "/assets/logos/sustaintech.png",
+        "vacancy": "40",
+        "post_name": "Environmental Consultant",
+        "requirements": [
+          "Experience with environmental regulations and compliance",
+          "Strong analytical and problem-solving skills",
+          "Knowledge of sustainability practices and renewable energy",
+          "Ability to conduct environmental impact assessments"
+        ],
+        "experience_required": "4-6 years",
+        "salary_range": "$75,000 - $95,000 ",
+        "category": "Environmental Consulting",
+        "description": "Join us as an Environmental Consultant, where you will advise clients on how to reduce their environmental impact. You'll assess their operations and recommend eco-friendly solutions.",
+        "location": "Portland, USA"
+      },
+      {
+        "id": "041",
+        "title": "TravelTech",
+       "image": "/assets/logos/traveltech.png",
+        "vacancy": "41",
+        "post_name": "Travel Technology Developer",
+        "requirements": [
+          "Experience in developing travel applications and platforms",
+          "Proficiency in web technologies (JavaScript, HTML, CSS)",
+          "Knowledge of APIs and third-party integrations",
+          "Experience with cloud platforms (AWS, Google Cloud)"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$75,000 - $95,000 ",
+        "category": "Travel Technology",
+        "description": "We are seeking a Travel Technology Developer to build innovative solutions for the travel industry. You will develop applications that improve the customer experience and integrate with travel services.",
+        "location": "San Francisco, USA"
+      },
+      {
+        "id": "042",
+        "title": "TravelTech",
+       "image": "/assets/logos/traveltech.png",
+        "vacancy": "42",
+        "post_name": "Data Analyst - Travel Insights",
+        "requirements": [
+          "Experience with data analysis and reporting tools (Excel, Power BI)",
+          "Knowledge of the travel industry and customer trends",
+          "Strong analytical and communication skills",
+          "Ability to analyze large datasets and identify insights"
+        ],
+        "experience_required": "2-4 years",
+        "salary_range": "$60,000 - $80,000 ",
+        "category": "Travel Industry",
+        "description": "We are looking for a Data Analyst to help us gain insights into the travel industry. You will analyze customer data, trends, and behaviors to help us improve our travel services.",
+        "location": "San Francisco, USA"
+      },
+      {
+        "id": "043",
+        "title": "AeroTech Solutions",
+       "image": "/assets/logos/aerotech.png",
+        "vacancy": "43",
+        "post_name": "Aerodynamics Engineer",
+        "requirements": [
+          "Experience with fluid dynamics and computational simulations",
+          "Proficiency in software like ANSYS, Fluent, or OpenFOAM",
+          "Knowledge of aerodynamics principles and aircraft design",
+          "Strong problem-solving and communication skills"
+        ],
+        "experience_required": "4-6 years",
+        "salary_range": "$95,000 - $115,000 ",
+        "category": "Aerospace Engineering",
+        "description": "We are looking for an Aerodynamics Engineer to design and optimize aircraft components. You will work with a team of engineers to enhance performance, safety, and efficiency of air vehicles.",
+        "location": "Seattle, USA"
+      },
+      {
+        "id": "044",
+        "title": "AeroTech Solutions",
+       "image": "/assets/logos/aerotech.png",
+        "vacancy": "44",
+        "post_name": "Flight Systems Engineer",
+        "requirements": [
+          "Experience with avionics systems and flight control software",
+          "Proficiency in C, C++, or Python programming",
+          "Knowledge of flight dynamics and aerospace systems",
+          "Strong analytical skills and ability to work under pressure"
+        ],
+        "experience_required": "3-5 years",
+        "salary_range": "$90,000 - $110,000 ",
+        "category": "Aerospace Engineering",
+        "description": "Join us as a Flight Systems Engineer and help design flight control systems for advanced aircraft. Your work will help ensure the safety and efficiency of flight operations.",
+        "location": "Seattle, USA"
+      }
+
+      
+  ]
+  

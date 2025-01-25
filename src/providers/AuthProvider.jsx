@@ -1,7 +1,11 @@
 import auth from '@/firebase/firebase';
-import { AuthContext } from '@/hooks/AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
+import { AuthContext } from '@/context/AuthContext';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { GoogleAuthProvider } from "firebase/auth";
+
+//for google sign in
+const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({children}) => {
     const [user, setUser]= useState(null)
@@ -37,11 +41,17 @@ const AuthProvider = ({children}) => {
       
  }
 
+ //sign in by Google
+ const googleSigninUser =()=>{
+     setLoading(true)
+   return signInWithPopup(auth, provider)
+      
+ }
+
    // manage user 
     useEffect(()=>{
        const unSubscribe = onAuthStateChanged(auth , currentUser =>{
             setUser(currentUser)
-            console.log("from authProvider" , currentUser)
             setLoading(false)
         })
 
@@ -57,7 +67,9 @@ const AuthProvider = ({children}) => {
         createUser,
         signInUser,
         signOutUser ,
-        updateUserProfile
+        googleSigninUser ,
+        updateUserProfile 
+
       
      }
 

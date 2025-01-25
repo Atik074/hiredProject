@@ -1,19 +1,22 @@
-import { Button } from "@/components/ui/button";
 import React, { useContext, useState } from "react";
-import { FaGithub, FaUserCircle } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { FaUserCircle } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import Divider from "./Divider";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "@/hooks/AuthContext";
+import { AuthContext } from "@/context/AuthContext";
+import SocialLogin from "../SocialLogin";
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const {signInUser } = useContext(AuthContext)
   const [error , setError] = useState('')
   const navigate = useNavigate()
+  // const location = useLocation()
+
+
+  // const from = location.state?.from?.pathname || "/"
 
 
 
@@ -26,6 +29,7 @@ const Login = () => {
    
       if(loggedInUser) navigate("/")
        console.log("user from login" , loggedInUser)
+     
     })
     .catch(error =>{
       const err = error.message 
@@ -53,16 +57,7 @@ const Login = () => {
             Welcome back! Please sign in to Continue.
           </p>
         </div>
-
-        <Button variant="white" size="sm" className="mr-3">
-          <FaGithub />
-          <span className="text-[19px] text-[#535555] ml-1">Github</span>
-        </Button>
-
-        <Button variant="white" size="sm" className="ml-3">
-          <FcGoogle />
-          <span className="text-[19px] text-[#535555] ml-1">Google</span>
-        </Button>
+         <SocialLogin/>
         <Divider />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="relative mb-6">

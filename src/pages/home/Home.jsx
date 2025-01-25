@@ -10,6 +10,9 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from 'embla-carousel-autoplay';
 import Header from '../header/Header';
+import { Link } from 'react-router-dom';
+import FeatureJobs from '../featureJobs/FeatureJobs';
+
 
 const Home = () => {
     return (
@@ -17,14 +20,12 @@ const Home = () => {
           
             {/* components */}
             <Header/>
-
-
-
-          <h2>Find Your Dream Job and Get Hired</h2>
-
-           <Button variant="blue" size="lg" >Find Jobs</Button> 
+             <h2>Find Your Dream Job and Get Hired</h2>
+            <Link to="/jobs"> 
+               <Button variant="outline" size="lg" >Find Jobs</Button> 
+            </Link>
+          
            <Button variant="destructive" size="lg">Post a Job</Button>
-
 
       
 
@@ -51,7 +52,7 @@ const Home = () => {
      
     </Carousel>
             
-
+        <FeatureJobs/>
           
            
         </div>

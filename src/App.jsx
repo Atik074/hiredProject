@@ -1,15 +1,19 @@
 import { Route, Routes } from "react-router-dom"
-import Home from "./pages/home/Home"
-import Login from "./pages/login/Login"
-import Register from "./pages/register/Register"
+import Login from "./pages/auth/login/Login"
+import Register from "./pages/auth/register/Register"
+import Jobs from "./pages/Jobs/Jobs"
+import ProtectedRoute from "./routes/ProtectedRoute"
+import MainLayout from "./layout/MainLayout"
+
 
 function App() {
  
   return (
     <Routes>
-        <Route path="/" element={<Home/>} exact />
+        <Route path="/" element={<MainLayout/>} exact />
         <Route path="/login" element={<Login/>}  />
         <Route path="/register" element={<Register/>} />
+        <Route path="/jobs" element={<ProtectedRoute><Jobs/></ProtectedRoute>} />
     </Routes>
   )
 }
