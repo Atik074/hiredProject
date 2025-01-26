@@ -1,6 +1,6 @@
 [
     {
-      "id": "001",
+      "id": "1",
       "title": "TechCorp",
      "image": "https://shorturl.at/X13w2",
       "vacancy": "01",
@@ -19,7 +19,7 @@
       "location": "San Francisco, USA"
     },
     {
-      "id": "002",
+      "id": "2",
       "title": "TechCorp",
      "image": "https://shorturl.at/X13w2",
       "vacancy": "02",
@@ -38,7 +38,7 @@
       "location": "San Francisco, USA"
     },
     {
-      "id": "003",
+      "id": "3",
       "title": "TechCorp",
      "image": "https://shorturl.at/X13w2",
       "vacancy": "03",
@@ -57,7 +57,7 @@
       "location": "San Francisco, USA"
     },
     {
-      "id": "004",
+      "id": "4",
       "title": "TechCorp",
      "image": "https://shorturl.at/X13w2",
       "vacancy": "04",
@@ -76,7 +76,7 @@
       "location": "San Francisco, USA"
     },
     {
-      "id": "005",
+      "id": "5",
       "title": "TechCorp",
      "image": "https://shorturl.at/X13w2",
       "vacancy": "05",
@@ -95,7 +95,7 @@
       "location": "San Francisco, USA"
     },
     {
-      "id": "006",
+      "id": "6",
       "title": "InnovaTech",
      "image": "/assets/logos/innovatech.png",
       "vacancy": "06",
@@ -115,7 +115,7 @@
         "location": "New York, USA"
     },
     {
-      "id": "007",
+      "id": "7",
       "title": "InnovaTech",
      "image": "/assets/logos/innovatech.png",
       "vacancy": "07",
@@ -134,7 +134,7 @@
       "location": "New York, USA"
     },
     {
-      "id": "008",
+      "id": "8",
       "title": "InnovaTech",
      "image": "/assets/logos/innovatech.png",
       "vacancy": "08",
@@ -153,7 +153,7 @@
       "location": "Chicago, USA"
     },
     {
-      "id": "009",
+      "id": "9",
       "title": "InnovaTech",
      "image": "/assets/logos/innovatech.png",
       "vacancy": "09",
@@ -172,7 +172,7 @@
       "location": "Chicago, USA"
     },
     {
-      "id": "010",
+      "id": "10",
       "title": "InnovateSoft",
      "image": "/assets/logos/innovatesoft.png",
       "vacancy": "10",
@@ -191,7 +191,7 @@
       "location": "Los Angeles, USA"
     },
     {
-      "id": "011",
+      "id": "11",
       "title": "CyberTech",
      "image": "/assets/logos/cybertech.png",
       "vacancy": "11",
@@ -210,7 +210,7 @@
       "location": "Austin, USA"
     },
     {
-      "id": "012",
+      "id": "12",
       "title": "CyberTech",
      "image": "/assets/logos/cybertech.png",
       "vacancy": "12",
@@ -228,7 +228,7 @@
       "location": "Austin, USA"
     },
     {
-      "id": "013",
+      "id": "13",
       "title": "CloudSphere",
      "image": "/assets/logos/cloudsphere.png",
       "vacancy": "13",
@@ -246,7 +246,7 @@
       "location": "Seattle, USA"
     },
     {
-      "id": "014",
+      "id": "14",
       "title": "CloudSphere",
      "image": "/assets/logos/cloudsphere.png",
       "vacancy": "14",
@@ -264,7 +264,7 @@
       "location": "Seattle, USA"
     },
     {
-      "id": "015",
+      "id": "15",
       "title": "DataTech",
      "image": "/assets/logos/datatech.png",
       "vacancy": "15",
@@ -282,7 +282,7 @@
       "location": "Boston, USA"
     },
     {
-      "id": "016",
+      "id": "16",
       "title": "DataTech",
      "image": "/assets/logos/datatech.png",
       "vacancy": "16",
@@ -300,7 +300,7 @@
       "location": "Boston, USA"
     },
     {
-      "id": "017",
+      "id": "17",
       "title": "QuantumTech",
      "image": "/assets/logos/quantumtech.png",
       "vacancy": "17",
@@ -318,7 +318,7 @@
       "location": "Cambridge, USA"
     },
     {
-      "id": "018",
+      "id": "18",
       "title": "QuantumTech",
      "image": "/assets/logos/quantumtech.png",
       "vacancy": "18",
@@ -336,7 +336,7 @@
       "location": "Cambridge, USA"
     },
     {
-      "id": "019",
+      "id": "19",
       "title": "NextGen Tech",
      "image": "/assets/logos/nextgen.png",
       "vacancy": "19",
@@ -354,7 +354,7 @@
       "location": "Austin, USA"
     },
     {
-      "id": "020",
+      "id": "20",
       "title": "NextGen Tech",
      "image": "/assets/logos/nextgen.png",
       "vacancy": "20",

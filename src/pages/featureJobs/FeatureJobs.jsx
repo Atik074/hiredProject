@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import useJobData from "@/hooks/useData";
 import FeatureJobCard from "./FeatureJobCard";
+import { JobDataContext } from "@/context/AuthContext";
 
 const FeatureJobs = () => {
-  const { jobs } = useJobData();
+  const { jobs ,setJobs } = useJobData();
+  const { setJob} = useContext(JobDataContext)
+
+ 
+//handle signle job details 
+  const handleJobDetails =(job)=>{
+    console.log(job)
+
+    setJob(job)
+  
+    
+  
 
 
+  }
+
+  
   return (
     <div>
       <div className="text-center mb-10 ">
@@ -18,8 +33,13 @@ const FeatureJobs = () => {
       </div>
 
       <div className="p-8">
-        {jobs.slice(0, 10).map((job) => (
-          <FeatureJobCard key={job.id} job={job} />
+        {jobs.slice(0, 6).map((job) => (
+          <FeatureJobCard 
+          key={job.id}
+           job={job}
+           onJobDetails={handleJobDetails}
+
+           />
         ))}
       </div>
     </div>

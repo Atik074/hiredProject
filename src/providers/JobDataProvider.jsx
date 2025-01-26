@@ -2,11 +2,11 @@ import { JobDataContext } from '@/context/AuthContext';
 import React, { useState } from 'react';
 
 const JobDataProvider = ({children}) => {
-    const [jobs , setJobs] = useState([])
+    const [job , setJob] = useState(null)
 
 
     return (
-    <JobDataContext.Provider value={{jobs , setJobs}}>
+    <JobDataContext.Provider value={{job , setJob}}>
         {children}
     </JobDataContext.Provider>
     
