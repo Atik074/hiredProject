@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const FeatureJobCard = ({ job ,onJobDetails }) => {
   const {id ,image ,post_name,job_type,salary_range ,location ,category} =job
+  
 
 
 

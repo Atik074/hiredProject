@@ -1,8 +1,8 @@
-import { AuthContext } from '@/context/AuthContext';
-import React, { useContext } from 'react';
+
+import React from 'react';
 
 const Jobs = () => {
-    const {user} = useContext(AuthContext)
+  
    
     return (
         <div>

@@ -3,11 +3,16 @@ import useJobData from "@/hooks/useData";
 import FeatureJobCard from "./FeatureJobCard";
 import { JobDataContext } from "@/context/AuthContext";
 
+
 const FeatureJobs = () => {
-  const { jobs ,setJobs } = useJobData();
+  const { jobs  } = useJobData();
   const { setJob} = useContext(JobDataContext)
 
  
+
+
+ 
+
 //handle signle job details 
   const handleJobDetails =(job)=>{
     console.log(job)
