@@ -1,304 +1,303 @@
-[
-    {
-      "id": "1",
-      "title": "TechCorp",
-     "image": "https://shorturl.at/X13w2",
-      "vacancy": "01",
-      "post_name": "Frontend Developer",
-      "job_type": "Full Time",
-      "requirements": [
-        "Proficient in HTML, CSS, JavaScript",
-        "Experience with React.js and Redux",
-        "Familiarity with responsive design",
-        "Good communication and teamwork skills"
-      ],
-      "experience_required": "2-4 years",
-      "salary_range": "$70,000 - $90,000 ",
-      "category": "Software Development",
-      "description": "We are looking for a passionate and skilled Frontend Developer to join our growing team at TechCorp. In this role, you will be responsible for designing, developing, and maintaining dynamic user interfaces for our web applications.",
-      "location": "San Francisco, USA"
-    },
-    {
-      "id": "2",
-      "title": "TechCorp",
-     "image": "https://shorturl.at/X13w2",
-      "vacancy": "02",
-      "post_name": "Backend Developer",
-      "job_type": "Part Time",
-      "requirements": [
-        "Experience with Node.js, Express.js",
-        "Familiarity with databases like MongoDB and MySQL",
-        "Understanding of RESTful APIs and microservices",
-        "Problem-solving and debugging skills"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$80,000 - $100,000 ",
-      "category": "Software Development",
-      "description": "As a Backend Developer, you will work with a team to design, implement, and maintain server-side applications. You'll handle database integration and build APIs. A Back-End Developer is a software engineer who focuses on building and maintaining the server-side of web applications. This includes working with databases, servers, APIs (Application Programming Interfaces), and other systems that handle the logic, data processing, and server-side functionality of an application",
-      "location": "San Francisco, USA"
-    },
-    {
-      "id": "3",
-      "title": "TechCorp",
-     "image": "https://shorturl.at/X13w2",
-      "vacancy": "03",
-      "post_name": "Full Stack Developer",
-      "job_type": "Part Time",
-      "requirements": [
-        "Proficiency in both frontend and backend technologies",
-        "Experience with React.js, Node.js, and Express.js",
-        "Strong understanding of databases (SQL and NoSQL)",
-        "Experience with Docker and cloud platforms like AWS"
-      ],
-      "experience_required": "4-6 years",
-      "salary_range": "$90,000 - $110,000 ",
-      "category": "Software Development",
-      "description": "We are looking for a talented Full Stack Developer to work on both frontend and backend technologies. You will develop responsive user interfaces, APIs, and handle cloud deployment.",
-      "location": "San Francisco, USA"
-    },
-    {
-      "id": "4",
-      "title": "TechCorp",
-     "image": "https://shorturl.at/X13w2",
-      "vacancy": "04",
-      "post_name": "UI/UX Designer",
-      "job_type": "Freelance",
-      "requirements": [
-        "Proven experience as a UI/UX designer or similar role",
-        "Proficiency in design software (Sketch, Figma, Adobe XD)",
-        "Strong understanding of web design principles",
-        "Ability to create wireframes, prototypes, and high-fidelity designs"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$70,000 - $85,000 ",
-      "category": "Design",
-      "description": "We are looking for a creative and detail-oriented UI/UX Designer to design user-friendly interfaces for our applications. Your work will include wireframing, prototyping, and creating designs.",
-      "location": "San Francisco, USA"
-    },
-    {
-      "id": "5",
-      "title": "TechCorp",
-     "image": "https://shorturl.at/X13w2",
-      "vacancy": "05",
-      "post_name": "Product Manager",
-      "job_type": "Internships",
-      "requirements": [
-        "Experience in product management or project management",
-        "Strong understanding of product development lifecycle",
-        "Excellent communication and leadership skills",
-        "Ability to work with cross-functional teams"
-      ],
-      "experience_required": "4-6 years",
-      "salary_range": "$95,000 - $120,000 ",
-      "category": "Product Management",
-      "description": "As a Product Manager, you will work with engineering, marketing, and sales to define product features, prioritize tasks, and ensure timely delivery of high-quality products.",
-      "location": "San Francisco, USA"
-    },
-    {
-      "id": "6",
-      "title": "InnovaTech",
-     "image": "/assets/logos/innovatech.png",
-      "vacancy": "06",
-      "post_name": "Data Scientist",
-      "job_type": "Full Time",
-      "requirements": [
-        "Proficiency in Python, R, and SQL",
-        "Experience with machine learning algorithms",
-        "Strong analytical skills",
-        "Experience with data visualization tools like Tableau"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$85,000 - $105,000 ",
-        "category": "Data Science",
-        
-        "description": "We are looking for an experienced Data Scientist to analyze large data sets and provide actionable insights. Your work will involve building predictive models and data pipelines.",
-        "location": "New York, USA"
-    },
-    {
-      "id": "7",
-      "title": "InnovaTech",
-     "image": "/assets/logos/innovatech.png",
-      "vacancy": "07",
-      "post_name": "Software Engineer",
-      "job_type": "Part Time",
-      "requirements": [
-        "Experience with Java, C++, or Python",
-        "Familiarity with software development life cycle (SDLC)",
-        "Problem-solving and debugging skills",
-        "Experience with Agile methodologies"
-      ],
-      "experience_required": "2-4 years",
-      "salary_range": "$75,000 - $95,000 ",
-      "category": "Software Development",
-      "description": "As a Software Engineer, you'll work on building and optimizing software applications. You'll also collaborate with cross-functional teams to deliver new features.",
-      "location": "New York, USA"
-    },
-    {
-      "id": "8",
-      "title": "InnovaTech",
-     "image": "/assets/logos/innovatech.png",
-      "vacancy": "08",
-      "post_name": "DevOps Engineer",
-      "job_type": "Contract",
-      "requirements": [
-        "Experience with cloud platforms (AWS, Azure, GCP)",
-        "Experience with automation tools like Jenkins and Docker",
-        "Strong Linux/Unix skills",
-        "Ability to write scripts (Bash, Python, etc.)"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$90,000 - $110,000 ",
-      "category": "Operations",
-      "description": "We are seeking a skilled DevOps Engineer to help automate and optimize our cloud infrastructure. You'll manage deployments, automate builds, and ensure high availability of services.",
-      "location": "Chicago, USA"
-    },
-    {
-      "id": "9",
-      "title": "InnovaTech",
-     "image": "/assets/logos/innovatech.png",
-      "vacancy": "09",
-      "post_name": "Network Engineer",
-      "job_type": "Internships",
-      "requirements": [
-        "Experience with routing, switching, and network security",
-        "Knowledge of TCP/IP, DNS, and HTTP protocols",
-        "Experience with firewalls and network security tools",
-        "Ability to troubleshoot and optimize networks"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$80,000 - $100,000 ",
-      "category": "Networking",
-      "description": "We are hiring a Network Engineer to design, implement, and maintain our organization's network infrastructure. Your work will include configuring routers, firewalls, and optimizing network performance.",
-      "location": "Chicago, USA"
-    },
-    {
-      "id": "10",
-      "title": "InnovateSoft",
-     "image": "/assets/logos/innovatesoft.png",
-      "vacancy": "10",
-      "post_name": "Systems Administrator",
-      "job_type": "Contract",
-      "requirements": [
-        "Experience with Windows, Linux, and MacOS server environments",
-        "Knowledge of networking and system monitoring tools",
-        "Experience with virtualization technologies (VMware, Hyper-V)",
-        "Ability to troubleshoot and resolve hardware and software issues"
-      ],
-      "experience_required": "2-4 years",
-      "salary_range": "$60,000 - $80,000 ",
-      "category": "Systems Administration",
-      "description": "We are seeking a Systems Administrator to manage and support our company's server infrastructure, ensuring uptime and performance of key systems.",
-      "location": "Los Angeles, USA"
-    },
-    {
-      "id": "11",
-      "title": "CyberTech",
-     "image": "/assets/logos/cybertech.png",
-      "vacancy": "11",
-      "post_name": "Security Analyst",
-      "job_type": "Internships",
-      "requirements": [
-        "Proficiency in security technologies and protocols",
-        "Experience with firewalls, intrusion detection systems",
-        "Knowledge of ethical hacking and penetration testing",
-        "Experience with SIEM and incident response"
-      ],
-      "experience_required": "2-4 years",
-      "salary_range": "$70,000 - $90,000 ",
-      "category": "Cybersecurity",
-      "description": "We are looking for a Security Analyst to monitor our systems for vulnerabilities and potential attacks. You will perform regular security audits and recommend improvements to our infrastructure.",
-      "location": "Austin, USA"
-    },
-    {
-      "id": "12",
-      "title": "CyberTech",
-     "image": "/assets/logos/cybertech.png",
-      "vacancy": "12",
-      "post_name": "Network Security Engineer",
-      "requirements": [
-        "Experience with VPNs, firewalls, and intrusion detection",
-        "Knowledge of encryption protocols",
-        "Ability to analyze network traffic for security threats",
-        "Experience with network monitoring tools"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$85,000 - $105,000 ",
-      "category": "Cybersecurity",
-      "description": "As a Network Security Engineer, you'll manage and monitor the security of our corporate network. You will implement and maintain security measures to protect the organization from internal and external threats.",
-      "location": "Austin, USA"
-    },
-    {
-      "id": "13",
-      "title": "CloudSphere",
-     "image": "/assets/logos/cloudsphere.png",
-      "vacancy": "13",
-      "post_name": "Cloud Architect",
-      "requirements": [
-        "Experience with AWS, Azure, and Google Cloud",
-        "Strong understanding of cloud infrastructure and services",
-        "Experience with cloud security best practices",
-        "Ability to design scalable and resilient cloud solutions"
-      ],
-      "experience_required": "5-7 years",
-      "salary_range": "$110,000 - $130,000 ",
-      "category": "Cloud Computing",
-      "description": "We are looking for a Cloud Architect to lead the design and implementation of scalable cloud solutions. You will work with other teams to integrate cloud technologies into the organization's infrastructure.",
-      "location": "Seattle, USA"
-    },
-    {
-      "id": "14",
-      "title": "CloudSphere",
-     "image": "/assets/logos/cloudsphere.png",
-      "vacancy": "14",
-      "post_name": "Cloud Engineer",
-      "requirements": [
-        "Experience with cloud services (AWS, Azure)",
-        "Experience with container technologies (Docker, Kubernetes)",
-        "Understanding of cloud security principles",
-        "Ability to automate infrastructure provisioning"
-      ],
-      "experience_required": "2-4 years",
-      "salary_range": "$80,000 - $100,000 ",
-      "category": "Cloud Computing",
-      "description": "We are looking for a Cloud Engineer to help manage and optimize cloud infrastructure. You will assist with automation, monitoring, and scaling of services across cloud platforms.",
-      "location": "Seattle, USA"
-    },
-    {
-      "id": "15",
-      "title": "DataTech",
-     "image": "/assets/logos/datatech.png",
-      "vacancy": "15",
-      "post_name": "Machine Learning Engineer",
-      "requirements": [
-        "Strong knowledge of machine learning algorithms",
-        "Proficiency in Python and machine learning libraries",
-        "Experience with TensorFlow, PyTorch, or Keras",
-        "Ability to process and analyze large datasets"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$90,000 - $110,000 ",
-      "category": "Data Science",
-      "description": "We are seeking a Machine Learning Engineer to develop intelligent systems and predictive models. You will work with large datasets and deploy machine learning solutions.",
-      "location": "Boston, USA"
-    },
-    {
-      "id": "16",
-      "title": "DataTech",
-     "image": "/assets/logos/datatech.png",
-      "vacancy": "16",
-      "post_name": "Data Engineer",
-      "requirements": [
-        "Experience with SQL and NoSQL databases",
-        "Knowledge of data warehousing and ETL processes",
-        "Proficiency in Python or Java",
-        "Experience with cloud platforms (AWS, GCP)"
-      ],
-      "experience_required": "3-5 years",
-      "salary_range": "$85,000 - $105,000 ",
-      "category": "Data Engineering",
-      "description": "We are hiring a Data Engineer to design and implement data pipelines. Your role will involve preparing data for analysis and ensuring it's accessible for data scientists and analysts.",
-      "location": "Boston, USA"
-    },
+[ {
+  "id": "1",
+  "title": "Tech Corp Innovations",
+  "image": "https://shorturl.at/X13w2",
+  "vacancy": "01",
+  "post_name": "Frontend Developer",
+  "job_type": "Full Time",
+  "requirements": [
+    "Proficient in HTML, CSS, JavaScript",
+    "Experience with React.js and Redux",
+    "Familiarity with responsive design",
+    "Good communication and teamwork skills"
+  ],
+  "experience_required": "2-4 years",
+  "salary_range": "$70,000 - $90,000",
+  "category": "Software Development",
+  "description": "Tech Corp Innovations is looking for an enthusiastic and skilled Frontend Developer to join our dynamic team. You will play a key role in creating engaging and responsive user interfaces for our web applications. The ideal candidate will have hands-on experience with modern frontend technologies such as React.js and Redux, and a passion for delivering user-friendly designs. Collaboration with cross-functional teams, including backend developers and designers, will be essential to ensure seamless integration of new features and improve the overall user experience. You will be part of an agile team, continuously learning and growing alongside talented peers.",
+  "location": "San Francisco, USA"
+},
+{
+  "id": "2",
+  "title": "Biz Solutions Inc.",
+  "image": "https://shorturl.at/X13w2",
+  "vacancy": "02",
+  "post_name": "Backend Developer",
+  "job_type": "Part Time",
+  "requirements": [
+    "Experience with Node.js, Express.js",
+    "Familiarity with databases like MongoDB and MySQL",
+    "Understanding of RESTful APIs and microservices",
+    "Problem-solving and debugging skills"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$80,000 - $100,000",
+  "category": "Software Development",
+  "description": "At Biz Solutions Inc., we are seeking a skilled Backend Developer to join our growing team. You will be responsible for building and maintaining the server-side architecture for our applications. This includes working with technologies such as Node.js, Express.js, and databases like MongoDB and MySQL to ensure that data is stored, accessed, and processed efficiently. You will be integral in the development of robust and scalable APIs that will power the features of our web applications. Collaboration with frontend developers and other team members will be key in ensuring a seamless integration of backend systems.",
+  "location": "San Francisco, USA"
+},
+{
+  "id": "3",
+  "title": "MindTech Solutions",
+  "image": "https://shorturl.at/X13w2",
+  "vacancy": "03",
+  "post_name": "Full Stack Developer",
+  "job_type": "Part Time",
+  "requirements": [
+    "Proficiency in both frontend and backend technologies",
+    "Experience with React.js, Node.js, and Express.js",
+    "Strong understanding of databases (SQL and NoSQL)",
+    "Experience with Docker and cloud platforms like AWS"
+  ],
+  "experience_required": "4-6 years",
+  "salary_range": "$90,000 - $110,000",
+  "category": "Software Development",
+  "description": "MindTech Solutions is looking for a Full Stack Developer who is proficient in both frontend and backend technologies. You will be responsible for developing highly interactive web applications by leveraging technologies such as React.js, Node.js, and Express.js. In addition to frontend and backend development, you will work with cloud platforms like AWS and Docker to ensure that applications are scalable, secure, and performant. You will collaborate closely with product managers and UI/UX designers to create seamless experiences and help deliver cutting-edge solutions to our clients.",
+  "location": "San Francisco, USA"
+},
+{
+  "id": "4",
+  "title": "Design Works Studio",
+  "image": "https://shorturl.at/X13w2",
+  "vacancy": "04",
+  "post_name": "UI/UX Designer",
+  "job_type": "Freelance",
+  "requirements": [
+    "Proven experience as a UI/UX designer or similar role",
+    "Proficiency in design software (Sketch, Figma, Adobe XD)",
+    "Strong understanding of web design principles",
+    "Ability to create wireframes, prototypes, and high-fidelity designs"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$70,000 - $85,000",
+  "category": "Design",
+  "description": "Design Works Studio is seeking a talented freelance UI/UX Designer to join our creative team. In this role, you will be responsible for creating visually appealing and user-friendly interfaces for web applications. Your tasks will include developing wireframes, interactive prototypes, and high-fidelity designs that align with user needs and business goals. A key part of the job is conducting usability testing to gather insights and make iterative improvements. You will work closely with both developers and product managers to ensure that designs are not only aesthetically pleasing but also functional and practical.",
+  "location": "San Francisco, USA"
+},
+{
+  "id": "5",
+  "title": "FutureTech Innovations",
+  "image": "https://shorturl.at/X13w2",
+  "vacancy": "05",
+  "post_name": "Product Manager",
+  "job_type": "Internship",
+  "requirements": [
+    "Experience in product management or project management",
+    "Strong understanding of product development lifecycle",
+    "Excellent communication and leadership skills",
+    "Ability to work with cross-functional teams"
+  ],
+  "experience_required": "4-6 years",
+  "salary_range": "$95,000 - $120,000",
+  "category": "Product Management",
+  "description": "FutureTech Innovations is looking for a Product Manager Intern to assist in the end-to-end management of our product development processes. You will work closely with engineering, design, and marketing teams to define product vision, features, and roadmap. You’ll help prioritize tasks and make key decisions that ensure timely delivery and alignment with the overall business strategy. This internship is an excellent opportunity to gain hands-on experience in product management while learning from experienced professionals in a fast-paced tech environment.",
+  "location": "San Francisco, USA"
+},
+{
+  "id": "6",
+  "title": "InnovaTech Solutions",
+  "image": "/assets/logos/innovatech.png",
+  "vacancy": "06",
+  "post_name": "Data Scientist",
+  "job_type": "Full Time",
+  "requirements": [
+    "Proficiency in Python, R, and SQL",
+    "Experience with machine learning algorithms",
+    "Strong analytical skills",
+    "Experience with data visualization tools like Tableau"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$85,000 - $105,000",
+  "category": "Data Science",
+  "description": "InnovaTech Solutions is looking for a Data Scientist to join our data-driven team. You will analyze vast amounts of data to uncover trends, patterns, and correlations that help guide business decisions. Your work will include building predictive models using machine learning algorithms and presenting findings through data visualization tools like Tableau. You’ll also work with business leaders to ensure that insights derived from data are actionable and lead to improvements in business operations. This role offers a great opportunity to work with cutting-edge technologies and be at the forefront of data-driven decision-making.",
+  "location": "New York, USA"
+},
+{
+  "id": "7",
+  "title": "Tech Labs",
+  "image": "/assets/logos/innovatech.png",
+  "vacancy": "07",
+  "post_name": "Software Engineer",
+  "job_type": "Part Time",
+  "requirements": [
+    "Experience with Java, C++, or Python",
+    "Familiarity with software development life cycle (SDLC)",
+    "Problem-solving and debugging skills",
+    "Experience with Agile methodologies"
+  ],
+  "experience_required": "2-4 years",
+  "salary_range": "$75,000 - $95,000",
+  "category": "Software Development",
+  "description": "Tech Labs is looking for a Software Engineer to join our development team. You will play a crucial role in designing, building, and optimizing software applications that meet user needs. With a focus on Java, C++, and Python, you will develop clean, maintainable code that supports our backend systems. You will work within Agile frameworks to deliver timely solutions and collaborate with cross-functional teams to ensure features are integrated successfully. Troubleshooting, debugging, and resolving complex technical challenges will be part of your daily responsibilities.",
+  "location": "New York, USA"
+},
+{
+  "id": "8",
+  "title": "Cloud Innovations",
+  "image": "/assets/logos/innovatech.png",
+  "vacancy": "08",
+  "post_name": "DevOps Engineer",
+  "job_type": "Contract",
+  "requirements": [
+    "Experience with cloud platforms (AWS, Azure, GCP)",
+    "Experience with automation tools like Jenkins and Docker",
+    "Strong Linux/Unix skills",
+    "Ability to write scripts (Bash, Python, etc.)"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$90,000 - $110,000",
+  "category": "Operations",
+  "description": "Cloud Innovations is looking for a DevOps Engineer with expertise in managing cloud infrastructures. In this role, you will focus on automating deployment pipelines, scaling cloud infrastructure, and ensuring the reliability and performance of production systems. You will work closely with development teams to streamline code releases and ensure a smooth integration process. Experience with cloud platforms like AWS, Azure, or Google Cloud, along with tools like Jenkins and Docker, will be key to success in this role.",
+  "location": "San Francisco, USA"
+},
+{
+  "id": "9",
+  "title": "InnovaTech Systems",
+  "image": "/assets/logos/innovatech.png",
+  "vacancy": "09",
+  "post_name": "Network Engineer",
+  "job_type": "Internship",
+  "requirements": [
+    "Experience with routing, switching, and network security",
+    "Knowledge of TCP/IP, DNS, and HTTP protocols",
+    "Experience with firewalls and network security tools",
+    "Ability to troubleshoot and optimize networks"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$80,000 - $100,000",
+  "category": "Networking",
+  "description": "InnovaTech Systems is looking for an eager Network Engineer Intern to assist in the design and maintenance of our company's network infrastructure. In this role, you'll work on configuring and troubleshooting network devices like routers, switches, and firewalls, ensuring they are optimized for performance and security. You will gain hands-on experience with industry-standard tools and protocols like TCP/IP, DNS, and HTTP while learning how to monitor and enhance network performance. This is an excellent opportunity for someone interested in pursuing a career in network engineering with a focus on real-world challenges.",
+  "location": "Chicago, USA"
+},
+{
+  "id": "10",
+  "title": "InnovateSoft Technologies",
+  "image": "/assets/logos/innovatesoft.png",
+  "vacancy": "10",
+  "post_name": "Systems Administrator",
+  "job_type": "Contract",
+  "requirements": [
+    "Experience with Windows, Linux, and MacOS server environments",
+    "Knowledge of networking and system monitoring tools",
+    "Experience with virtualization technologies (VMware, Hyper-V)",
+    "Ability to troubleshoot and resolve hardware and software issues"
+  ],
+  "experience_required": "2-4 years",
+  "salary_range": "$60,000 - $80,000",
+  "category": "Systems Administration",
+  "description": "InnovateSoft Technologies is looking for a Systems Administrator to manage and support our company's diverse server environments. You will be responsible for maintaining uptime and optimizing performance across a mix of Windows, Linux, and MacOS systems. Your role will also involve managing virtualization technologies like VMware and Hyper-V, ensuring system reliability, security, and performance. You'll also collaborate with IT teams to troubleshoot and resolve issues across hardware and software, providing timely solutions to keep our systems running smoothly.",
+  "location": "Los Angeles, USA"
+},
+{
+  "id": "11",
+  "title": "CyberTech Solutions",
+  "image": "/assets/logos/cybertech.png",
+  "vacancy": "11",
+  "post_name": "Security Analyst",
+  "job_type": "Internship",
+  "requirements": [
+    "Proficiency in security technologies and protocols",
+    "Experience with firewalls, intrusion detection systems",
+    "Knowledge of ethical hacking and penetration testing",
+    "Experience with SIEM and incident response"
+  ],
+  "experience_required": "2-4 years",
+  "salary_range": "$70,000 - $90,000",
+  "category": "Cybersecurity",
+  "description": "CyberTech Solutions is hiring a Security Analyst Intern to help monitor and protect our digital assets. In this internship, you will work closely with senior security engineers to perform regular system audits, identify potential vulnerabilities, and develop strategies to mitigate security risks. You will gain hands-on experience with firewalls, intrusion detection systems, penetration testing, and SIEM tools while learning about incident response and real-time threat analysis. This is a great opportunity to build practical skills and contribute to cybersecurity initiatives in a rapidly evolving field.",
+  "location": "Austin, USA"
+},
+{
+  "id": "12",
+  "title": "CyberTech Solutions",
+  "image": "/assets/logos/cybertech.png",
+  "vacancy": "12",
+  "post_name": "Network Security Engineer",
+  "requirements": [
+    "Experience with VPNs, firewalls, and intrusion detection",
+    "Knowledge of encryption protocols",
+    "Ability to analyze network traffic for security threats",
+    "Experience with network monitoring tools"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$85,000 - $105,000",
+  "category": "Cybersecurity",
+  "description": "CyberTech Solutions is seeking a skilled Network Security Engineer to enhance and maintain our network security architecture. In this role, you will be responsible for securing our organization's network infrastructure by implementing firewalls, VPNs, and intrusion detection systems. You will monitor network traffic for security threats, conduct vulnerability assessments, and ensure compliance with industry best practices and security protocols. This role is crucial for ensuring the confidentiality, integrity, and availability of our systems and data, and provides an opportunity to make a significant impact on our security posture.",
+  "location": "Austin, USA"
+},
+{
+  "id": "13",
+  "title": "CloudSphere Technologies",
+  "image": "/assets/logos/cloudsphere.png",
+  "vacancy": "13",
+  "post_name": "Cloud Architect",
+  "requirements": [
+    "Experience with AWS, Azure, and Google Cloud",
+    "Strong understanding of cloud infrastructure and services",
+    "Experience with cloud security best practices",
+    "Ability to design scalable and resilient cloud solutions"
+  ],
+  "experience_required": "5-7 years",
+  "salary_range": "$110,000 - $130,000",
+  "category": "Cloud Computing",
+  "description": "CloudSphere Technologies is looking for a Cloud Architect to join our team and help design and implement scalable, secure cloud infrastructures. As a Cloud Architect, you will work with AWS, Azure, and Google Cloud to build cloud environments that meet the needs of the business. You will be responsible for architecting highly available, fault-tolerant, and scalable solutions while ensuring cloud security best practices are followed. You will collaborate with engineering teams to integrate cloud services and help improve our cloud strategy, ensuring maximum efficiency and reliability across the organization.",
+  "location": "Seattle, USA"
+},
+{
+  "id": "14",
+  "title": "CloudSphere Technologies",
+  "image": "/assets/logos/cloudsphere.png",
+  "vacancy": "14",
+  "post_name": "Cloud Engineer",
+  "requirements": [
+    "Experience with cloud services (AWS, Azure)",
+    "Experience with container technologies (Docker, Kubernetes)",
+    "Understanding of cloud security principles",
+    "Ability to automate infrastructure provisioning"
+  ],
+  "experience_required": "2-4 years",
+  "salary_range": "$80,000 - $100,000",
+  "category": "Cloud Computing",
+  "description": "CloudSphere Technologies is seeking a talented Cloud Engineer to assist with the deployment, management, and optimization of cloud-based services. You will work with cloud platforms such as AWS and Azure to provision and scale infrastructure, with a focus on automation using tools like Docker and Kubernetes. The role will also involve monitoring and maintaining cloud systems, ensuring optimal performance and security. Cloud engineers are key players in helping our organization achieve scalability and resilience while following cloud security principles and best practices.",
+  "location": "Seattle, USA"
+},
+{
+  "id": "15",
+  "title": "DataTech Solutions",
+  "image": "/assets/logos/datatech.png",
+  "vacancy": "15",
+  "post_name": "Machine Learning Engineer",
+  "requirements": [
+    "Strong knowledge of machine learning algorithms",
+    "Proficiency in Python and machine learning libraries",
+    "Experience with TensorFlow, PyTorch, or Keras",
+    "Ability to process and analyze large datasets"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$90,000 - $110,000",
+  "category": "Data Science",
+  "description": "DataTech Solutions is seeking a talented Machine Learning Engineer to develop and implement intelligent algorithms and predictive models. You will work with large datasets and apply your expertise in machine learning frameworks such as TensorFlow, PyTorch, or Keras to solve real-world problems. In this role, you will collaborate with data scientists, engineers, and product teams to build machine learning solutions that provide valuable insights and enhance business decision-making. If you're passionate about the potential of AI and machine learning to transform industries, this is the role for you.",
+  "location": "Boston, USA"
+},
+{
+  "id": "16",
+  "title": "DataTech Solutions",
+  "image": "/assets/logos/datatech.png",
+  "vacancy": "16",
+  "post_name": "Data Engineer",
+  "requirements": [
+    "Experience with SQL and NoSQL databases",
+    "Knowledge of data warehousing and ETL processes",
+    "Proficiency in Python or Java",
+    "Experience with cloud platforms (AWS, GCP)"
+  ],
+  "experience_required": "3-5 years",
+  "salary_range": "$85,000 - $105,000",
+  "category": "Data Engineering",
+  "description": "DataTech Solutions is hiring a Data Engineer to join our growing data team. In this role, you will design, build, and maintain data pipelines to ensure that data is clean, structured, and accessible for analytics teams. You will work with a mix of SQL and NoSQL databases, as well as cloud platforms like AWS and GCP, to manage large-scale datasets. Your expertise in data warehousing, ETL processes, and programming languages like Python or Java will be critical in ensuring that data is ready for analysis and machine learning models. If you enjoy solving complex data challenges, this role is for you.",
+  "location": "Boston, USA"
+}
+,
     {
       "id": "17",
       "title": "QuantumTech",
