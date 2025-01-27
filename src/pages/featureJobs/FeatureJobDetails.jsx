@@ -90,7 +90,7 @@ const FeatureJobDetails = () => {
           <h2 className="text-[22px]   mb-3 underline underline-offset-8">
             Primary Responsivilty :
           </h2>
-          <p className="text-[19px] mx-4 text-justify mb-4">
+          <p className="text-[19px]  text-justify mb-6">
             Depending on the role, you may be responsible for managing or
             coordinating specific projects. This could include setting
             deadlines, allocating resources, tracking progress, and
@@ -113,22 +113,25 @@ const FeatureJobDetails = () => {
             <IoMdArrowForward className="text-[19px] text-amber-600 font-medium" />
             <p className="-mt-2">Vacancy : {vacancy}</p>
           </div>
-          <div className="flex items-center gap-x-3   text-[20px] font-normal mb-2">
+          <div className="flex items-center gap-x-3   text-[20px] font-normal mb-12">
             <IoMdArrowForward className="text-[19px] text-amber-600 font-medium" />
             <p className="-mt-2">Yearly Range : {salary_range}</p>
           </div>
 
+          
+        </div>
+        <JobDetailsSideCard />
+      </div>
+
+      <div className="mt-20 mx-60 mb-72">
           <Button
-            className="text-white w-1/4 text-xl"
+            className="text-white w-1/2  text-xl"
             variant="destructive"
             size="lg"
           >
             Apply for Job
           </Button>
-        </div>
-
-        <JobDetailsSideCard />
-      </div>
+          </div>
     </div>
   );
 };
