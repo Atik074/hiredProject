@@ -64,7 +64,7 @@ const JobDetailsSideCard = () => {
         alt=""
       />
 
-      <div className="absolute bottom-[440px]">
+      <div className="absolute bottom-[470px] right-0">
         <h3 className="text-[27px] mb-4 text-center text-white">
           Communication skill opens a new window
         </h3>
@@ -81,7 +81,7 @@ const JobDetailsSideCard = () => {
         alt=""
       />
 
-      <div className="absolute bottom-[155px] ">
+      <div className="absolute bottom-[170px] right-0 ">
         <h3 className="text-[27px] mb-4 text-center  text-white">
           Your leadship mind helps to grow
         </h3>

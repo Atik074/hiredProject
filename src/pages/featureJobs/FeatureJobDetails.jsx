@@ -1,5 +1,5 @@
 import { JobDataContext } from "@/context/AuthContext";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { PiSubtitlesLight } from "react-icons/pi";
 import { TbFileDescription } from "react-icons/tb";
@@ -9,6 +9,7 @@ import { MdOutlineOtherHouses } from "react-icons/md";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import JobDetailsSideCard from "@/components/constantUi/JobDetailsSideCard";
+import JobAppliedModal from "./JobAppliedModal";
 
 const FeatureJobDetails = () => {
   const { job } = useContext(JobDataContext);
@@ -24,6 +25,9 @@ const FeatureJobDetails = () => {
     vacancy,
     category,
   } = job;
+  const [showModal , setShowModal] = useState(false)
+
+
 
   return (
     <div>
@@ -125,6 +129,7 @@ const FeatureJobDetails = () => {
 
       <div className="mt-20 mx-60 mb-72">
           <Button
+            onClick={()=>setShowModal(true)}
             className="text-white w-1/2  text-xl"
             variant="destructive"
             size="lg"
@@ -132,6 +137,12 @@ const FeatureJobDetails = () => {
             Apply for Job
           </Button>
           </div>
+
+           {
+              showModal && <JobAppliedModal setShowModal={setShowModal} />
+           }
+
+
     </div>
   );
 };
