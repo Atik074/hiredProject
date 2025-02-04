@@ -4,14 +4,41 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
 import { RxCross2 } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const JobAppliedModal = ({setShowModal}) => {
   const { register, handleSubmit } = useForm()
+  const navigate = useNavigate()
 
   //handle applied job data
   const onSubmit = (data) =>{
-    console.log( "modal job data from modal" , data)
+    Swal.fire({
+      title: "Do you want to apply  ?",
+      text: "Once you submit, you can't change",
+      icon: "info",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, apply !"
+    }).then((result) => {
+      if (result.isConfirmed) {
+          console.log("data for job modal" ,data)
+        Swal.fire({
+          title: "Applied!",
+          text: "Thank you! Your application has been submitted.",
+          icon: "success"
+          
+        }
+       
+      );
+        setShowModal(false)
+        navigate('/')
+       
+      }
+    });
+
   }
  
 
@@ -54,7 +81,7 @@ const JobAppliedModal = ({setShowModal}) => {
     </div>
     
       <div className="grid w-full gap-1.5 mb-3">
-        <button className="text-xl py-2 bg-zinc-900 border border-white text-white" >submit</button>
+        <button className="text-xl py-2 bg-zinc-900 border border-white text-white" >Confirm</button>
     </div>
       
      </div>

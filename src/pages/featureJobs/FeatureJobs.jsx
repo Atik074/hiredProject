@@ -15,13 +15,9 @@ const FeatureJobs = () => {
 
 //handle signle job details 
   const handleJobDetails =(job)=>{
-    console.log(job)
 
     setJob(job)
   
-    
-  
-
 
   }
 

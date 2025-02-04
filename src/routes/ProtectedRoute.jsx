@@ -1,7 +1,7 @@
 import { AuthContext } from '@/context/AuthContext';
 import React, { useContext } from 'react';
 import { Navigate, useLocation} from 'react-router-dom';
-import {InfinitySpin} from 'react-loader-spinner'
+import { RiseLoader } from 'react-spinners';
 
 
 const ProtectedRoute = ({children}) => {
@@ -9,12 +9,10 @@ const ProtectedRoute = ({children}) => {
     const location = useLocation()
    
 
-    if(loading) return  <InfinitySpin
-    visible={true}
-    width="200"
-    color="#4fa94d"
-    ariaLabel="infinity-spin-loading"
-    />
+    if(loading) return  <RiseLoader
+    color="#1552bb"
+    size={25}
+  />
 
     if(user) return children ;
 
