@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import useJobData from "@/hooks/useData";
 import FeatureJobCard from "./FeatureJobCard";
 import { JobDataContext } from "@/context/AuthContext";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 
 const FeatureJobs = () => {
@@ -43,6 +45,13 @@ const FeatureJobs = () => {
            />
         ))}
       </div>
+         
+        <div className="text-center mt-6">
+        <Link to="/alljobs">
+        <Button className="w-[20%] p-[25px]  text-[20px]" variant="green" size="lg">More Jobs</Button>
+        </Link>
+        </div>
+
     </div>
   );
 };

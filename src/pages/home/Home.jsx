@@ -21,7 +21,7 @@ const Home = () => {
             {/* components */}
             <Header/>
              <h2>Find Your Dream Job and Get Hired</h2>
-            <Link to="/jobs"> 
+            <Link to="/alljobs"> 
                <Button variant="outline" size="lg" >Find Jobs</Button> 
             </Link>
           

@@ -5,6 +5,7 @@ import ProtectedRoute from "./routes/ProtectedRoute"
 import MainLayout from "./layout/MainLayout"
 import FeatureJobDetails from "./pages/featureJobs/FeatureJobDetails"
 import JobDataProvider from "./providers/JobDataProvider"
+import AllJobs from "./pages/allJobs/AllJobs"
 
 
 function App() {
@@ -15,7 +16,13 @@ function App() {
         <Route path="/" element={<MainLayout/>} exact />
         <Route path="/login" element={<Login/>}  />
         <Route path="/register" element={<Register/>} />
-        <Route path="/:id" element={<ProtectedRoute><FeatureJobDetails/></ProtectedRoute>} />
+        <Route 
+        path="/:id" element={<ProtectedRoute><FeatureJobDetails/>
+        </ProtectedRoute>} />
+        <Route 
+        path="/alljobs" element={<ProtectedRoute>
+          <AllJobs/>
+        </ProtectedRoute>} />
     </Routes>
 
     </JobDataProvider>

@@ -44,7 +44,7 @@ const FeatureJobCard = ({ job ,onJobDetails }) => {
         </div>
       </CardContent>
       <Link to={`/${id}`}>
-        <Button onClick={()=>onJobDetails(job)} className="basis-[12%]" variant="green" size="lg">
+        <Button onClick={()=>onJobDetails(job)} className="basis-[12%] text-[18px] font-normal" variant="green" size="lg">
           View Details
         </Button>
       </Link>

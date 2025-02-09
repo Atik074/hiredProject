@@ -12,6 +12,7 @@ const ProtectedRoute = ({children}) => {
     if(loading) return  <RiseLoader
     color="#1552bb"
     size={25}
+    className='m-20'
   />
 
     if(user) return children ;
