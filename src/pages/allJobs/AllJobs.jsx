@@ -1,6 +1,7 @@
 import { JobDataContext } from "@/context/AuthContext";
 import useJobData from "@/hooks/useData";
 import { useContext } from "react";
+import { JobCard } from "./JobCard";
 
 const AllJobs = () => {
   const  {jobs} = useJobData()
@@ -61,7 +62,10 @@ const AllJobs = () => {
                   <p className="text-[18px] text-[#706d6d]">Get your Dream job from top companies by Hirrd</p>
 
                   {
-
+                     jobs.map(job =><JobCard 
+                      key={job.id} 
+                      job={job}
+                      />)
                   }
 
               </div>
