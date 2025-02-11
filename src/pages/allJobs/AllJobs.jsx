@@ -53,7 +53,7 @@ const AllJobs = () => {
                 </div>
 
 
-              <div className="mainPart border border-green-600">
+              <div className="mainPart">
                   <div className="w-full h-12 border-2 border-red-800">
                       
 
@@ -61,12 +61,14 @@ const AllJobs = () => {
                   <h2 className="text-[23px] font-medium">Latest Jobs Available Here</h2>
                   <p className="text-[18px] text-[#706d6d]">Get your Dream job from top companies by Hirrd</p>
 
+                  <div className="grid grid-cols-3 gap-6 mt-12">
                   {
                      jobs.map(job =><JobCard 
                       key={job.id} 
                       job={job}
                       />)
                   }
+                  </div>
 
               </div>
         </div>

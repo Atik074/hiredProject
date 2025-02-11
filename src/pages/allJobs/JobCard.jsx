@@ -1,33 +1,47 @@
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
-import React from "react"
-import { CiLocationOn } from "react-icons/ci"
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import React from "react";
+import { CiLocationOn } from "react-icons/ci";
 
-export const JobCard = ({job}) => {
-    const {id ,image ,post_name,job_type,salary_range ,location ,category} =job
-    
+export const JobCard = ({ job }) => {
+  const {
+    id,
+    image,
+    post_name,
+    job_type,
+    salary_range,
+    location,
+    category,
+    description,
+  } = job;
+  console.log(job);
+
   return (
     <Card>
-  <CardHeader>
-    <CardTitle>{post_name}</CardTitle>
-     <p className="flex item-center justify-center  shadow-sm p-1 rounded     border border-[#c6bcbc7e]  font-medium">
-              <CiLocationOn className="text-[20px] mx-2" />
-              <span className="mr-2  text-[16px] ">{location}</span>
-            </p>
-    <CardDescription>Card Description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
-  </CardContent>
-  <CardFooter>
-    <p>Card Footer</p>
-  </CardFooter>
-</Card>
-  )
-}
+      <CardHeader>
+        <div>
+          <img className="w-full rounded" src={image} alt="logo" />
+        </div>
+        <CardTitle>{post_name}</CardTitle>
+        <div className="flex justify-between">
+        <p className="rounded border  bg-blue-50 border-blue-200 text-[15px] px-2 text-center">{location}
+        </p>
+        <p className="rounded  bg-red-50 border  border-red-200 text-[15px] text-center px-2">{job_type}
+        </p>
+      
+        </div>
+        <CardDescription className="text-[17px] text-justify leading-relaxed">
+          {description.slice(0, 100)}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Card Content</p>
+      </CardContent>
+    </Card>
+  );
+};
