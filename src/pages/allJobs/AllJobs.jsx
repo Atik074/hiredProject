@@ -1,12 +1,18 @@
-import { JobDataContext } from "@/context/AuthContext";
+import { useState } from "react";
 import useJobData from "@/hooks/useData";
-import { useContext } from "react";
-import { JobCard } from "./JobCard";
+import FeatureJobCard from "../featureJobs/FeatureJobCard";
+
+
 
 const AllJobs = () => {
   const  {jobs} = useJobData()
+  const [inView , setInView] = useState(true)
+ 
 
-  console.log("from alljobs" , jobs)
+ const handleJobDetails =(job)=>{
+    console.log(job) 
+   
+ }
 
     return (
         <div className="container grid grid-cols-[250px,1fr] mt-12  h-screen gap-12 p-10">
@@ -61,11 +67,13 @@ const AllJobs = () => {
                   <h2 className="text-[23px] font-medium">Latest Jobs Available Here</h2>
                   <p className="text-[18px] text-[#706d6d]">Get your Dream job from top companies by Hirrd</p>
 
-                  <div className="grid grid-cols-3 gap-6 mt-12">
+                  <div className={`${inView === true ? `mt-8 grid grid-cols-3 gap-6` : ``}`}>
                   {
-                     jobs.map(job =><JobCard 
+                     jobs.map(job =><FeatureJobCard 
                       key={job.id} 
                       job={job}
+                      onJobDetails={handleJobDetails}
+                      inView={inView}
                       />)
                   }
                   </div>

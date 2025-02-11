@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,9 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import React from "react";
-import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
-export const JobCard = ({ job }) => {
+export const JobCard = ({ job ,onJobDetails }) => {
   const {
     id,
     image,
@@ -40,7 +41,11 @@ export const JobCard = ({ job }) => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p>Card Content</p>
+      <Link to={`/${id}`}>
+        <Button onClick={()=>onJobDetails(job)} className="basis-[12%] text-[18px] font-normal" variant="green" size="lg">
+          View Details
+        </Button>
+      </Link>
       </CardContent>
     </Card>
   );
