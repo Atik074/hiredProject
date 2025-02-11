@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import useJobData from "@/hooks/useData";
 import FeatureJobCard from "../featureJobs/FeatureJobCard";
+import { JobDataContext } from "@/context/AuthContext";
 
 
 
 const AllJobs = () => {
   const  {jobs} = useJobData()
   const [inView , setInView] = useState(true)
+  const {setJob} = useContext(JobDataContext)
  
 
  const handleJobDetails =(job)=>{
-    console.log(job) 
+     setJob(job) 
    
  }
 

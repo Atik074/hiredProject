@@ -3,11 +3,11 @@ import { CiLocationOn } from "react-icons/ci";
 import { PiMoneyWavyThin } from "react-icons/pi";
 import { PiSubtitlesLight } from "react-icons/pi";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
-  const {id ,image ,post_name,job_type,salary_range ,location ,category} =job
+  const {id ,image ,post_name,job_type,salary_range ,location ,category,description} =job
   
 
 
@@ -15,7 +15,7 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
 
   
   return (
-    <Card className={`${inView === true  ? `border border-sky-500` : `flex items-center    hover:border-l-8 border-amber-600 transition-all  hover:shadow-xl    hover:scale-[1.02]   mb-8 `} `}>
+    <Card className={`${inView === true  ? `hover:shadow-xl  border border-[#dcdde1]` : `flex items-center  hover:border-l-8 border-amber-600   hover:shadow-xl    hover:scale-[1.02]   mb-8 `} transition-all`}>
       <CardHeader>
         <img className={`${inView  === true ? `w-full rounded`:`w-24 h-24 rounded-full`}`} src={image} alt="companyLogo" />
       </CardHeader>
@@ -23,14 +23,14 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
       <CardContent className="mt-5 basis-[72%]">
         <div>
              {
-              inView === true ? <p></p>  :  <span className="bg-[#e0f5d7] text-[#449626] text-[16px] px-2 rounded">
+              inView === true ? <p></p> :  <span className="bg-[#e0f5d7] text-[#449626] text-[16px] px-2 rounded">
               {job_type}
             </span>
              }
           <CardTitle className="mt-2 mb-4">{post_name}</CardTitle>
 
 
-          <div className={`${inView === true ? `flex justify-between` : `flex gap-x-4`}`}>
+          <div className={`${inView === true ? `flex justify-between` : `flex gap-x-4`} mb-4`}>
             <p className={`${inView === true ? `` :`flex item-center justify-center  shadow-sm p-1 rounded   border border-[#c6bcbc7e] font-medium`}`}>
               <PiMoneyWavyThin className={`${inView === true ? `hidden`   : `text-[20px] mx-2`}`} />
               {
@@ -59,10 +59,17 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
             </p> */}
 
           </div>
+
+          
+          {inView === true ? <CardDescription className="text-[17px] text-justify leading-relaxed mb-4">
+                    {description.slice(0, 80)}
+                  </CardDescription> : <p></p>}
+
+
         </div>
       </CardContent>
       <Link to={`/${id}`}>
-        <Button onClick={()=>onJobDetails(job)} className="basis-[12%] text-[18px] font-normal" variant="green" size="lg">
+        <Button onClick={()=>onJobDetails(job)} className={`${inView === true ? `w-[60%]  mb-4 mx-14 ` : `basis-[12%]`} text-[18px] font-normal`} variant="green" size="lg">
           View Details
         </Button>
       </Link>
