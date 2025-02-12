@@ -35,8 +35,8 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
               <PiMoneyWavyThin className={`${inView === true ? `hidden`   : `text-[20px] mx-2`}`} />
               {
                 inView ===  true ? 
-                 <p className="rounded border  bg-blue-50 border-blue-200 text-[15px] px-2 text-center">{location}
-                </p> 
+                 <span className="rounded border  bg-blue-50 border-blue-200 text-[15px] px-2 text-center">{location}
+                </span> 
                  :
                 <span className="text-[16px] mr-2">{salary_range}</span> 
               }
@@ -44,7 +44,7 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
             </p>
 
             {
-              inView === true ?  <p className="rounded  bg-red-50 border  border-red-200 text-[15px] text-center px-2">{job_type}
+              inView === true ?  <p className="rounded  bg-red-50 border mb-3 border-red-200 text-[15px] text-center px-2">{job_type}
         </p> : <p className="flex item-center justify-center  shadow-sm p-1 rounded     border border-[#c6bcbc7e]  font-medium">
               <CiLocationOn className="text-[20px] mx-2" />
               <span className="mr-2  text-[16px]">{location}</span>
@@ -53,15 +53,17 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
 
            
 
-            {/* <p className="flex item-center items-center justify-center  shadow-sm p-1 rounded   border border-[#c6bcbc7e] font-medium">
+            {
+              inView === true ? <p></p>  :
+             <p className="flex item-center items-center justify-center  shadow-sm p-1 rounded   border border-[#c6bcbc7e] font-medium">
               <PiSubtitlesLight className="text-[20px] ml-2" />
               <span className="mx-2  text-[16px]">{category}</span>
-            </p> */}
+            </p> }
 
           </div>
 
           
-          {inView === true ? <CardDescription className="text-[17px] text-justify leading-relaxed mb-4">
+          {inView === true ? <CardDescription className="text-[17px] text-justify leading-relaxed ">
                     {description.slice(0, 80)}
                   </CardDescription> : <p></p>}
 
@@ -69,7 +71,7 @@ const FeatureJobCard = ({ job ,onJobDetails,inView }) => {
         </div>
       </CardContent>
       <Link to={`/${id}`}>
-        <Button onClick={()=>onJobDetails(job)} className={`${inView === true ? `w-[60%]  mb-4 mx-14 ` : `basis-[12%]`} text-[18px] font-normal`} variant="green" size="lg">
+        <Button onClick={()=>onJobDetails(job)} className={`${inView === true ? `w-[60%]  mb-5 mx-14 ` : `basis-[12%]`} text-[18px] font-normal`} variant="green" size="lg">
           View Details
         </Button>
       </Link>
