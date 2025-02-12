@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useJobData from "@/hooks/useData";
 import FeatureJobCard from "../featureJobs/FeatureJobCard";
 import { JobDataContext } from "@/context/AuthContext";
@@ -7,110 +7,100 @@ const AllJobs = () => {
   const { jobs } = useJobData();
   const [inView, setInView] = useState(true);
   const { setJob } = useContext(JobDataContext);
-  const [filterJobs , setFilterJobs] = useState(jobs)
-  const [selectedCategories , setSelectedCategories] = useState([])
+  const [filterJobs, setFilterJobs] = useState(jobs);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedlocation, setSelectedLocation] = useState("");
 
+  //  for showing all jobs data in ui
+  useEffect(() => {
+    setFilterJobs(jobs);
+  }, [jobs]);
 
-
-  //collect all category from jobs data 
-   const allCategoryJobs  = [ ...new  Set(jobs.map(job=>job.category))]
-
+  //collect all category from jobs data
+  const allCategoryJobs = [...new Set(jobs.map((job) => job.category))];
+  //collect all locatin from jobs data
+  const allJobsLocation = [...new Set(jobs.map((job) => job.location))];
 
   const handleJobDetails = (job) => {
     setJob(job);
   };
-    
 
- console.log(filterJobs)
+  const handleSearchCategory = (e, categoryItem) => {
+    const isChecked = e.target.checked;
+    const newAllCategory = [...selectedCategories, categoryItem];
+    const removeCategory = selectedCategories.filter(
+      (category) => category !== categoryItem
+    );
 
-const handleSearchByCheck =(e,categoryItem)=>{
-  
-      const isChecked = e.target.checked
-    
-     let  newCategoryJobs = isChecked ? [...selectedCategories ,categoryItem] : selectedCategories.filter(category => category !== categoryItem)
-      setSelectedCategories(newCategoryJobs)
+    let updateCategories = isChecked ? newAllCategory : removeCategory;
+    setSelectedCategories(updateCategories);
 
-      setFilterJobs(
-        newCategoryJobs.length > 0 ? jobs.filter(job => newCategoryJobs.includes(job.category)) : jobs
-      )
+    setFilterJobs(
+      updateCategories.length > 0
+        ? jobs.filter((job) => updateCategories.includes(job.category))
+        : jobs
+    );
+  };
 
-  
- 
+  const handleSearchLocation = (e, locationItem) => {
+    const isChecked = e.target.value;
+    const NewAllLocation = [...selectedlocation, locationItem];
+    const removeLocation = selectedCategories.filter(
+      (location) => location !== locationItem
+    );
 
-}
+    let updatedLocation = isChecked ? NewAllLocation : removeLocation;
+    setSelectedLocation(updatedLocation);
 
+    setFilterJobs(
+      updatedLocation.length > 0
+        ? jobs.filter((job) => updatedLocation.includes(job.location))
+        : jobs
+    );
+  };
 
   return (
     <div className="container  grid grid-cols-[250px,1fr] mt-12  h-screen gap-12 p-10">
       <div className="sidebar">
+        <h2 className="text-[24px] font-semibold mb-3 border-b-2">Search by Categories</h2>
 
-       
+        {allCategoryJobs.map((category) => (
+          <div key={category} className="flex items-center  gap-2 my-1">
+            <input
+              onChange={(e) => handleSearchCategory(e, `${category}`)}
+              className="w-4 h-4 border-2 border-sky-700"
+              type="checkbox"
+              name="checkbox"
+              value={selectedCategories}
+              id="checkbox"
+            />
+            <label className="text-[19px]">{category}</label>
+          </div>
+        ))}
 
-        <h2 className="text-xl mb-3 border-b-2">Search by Categories</h2>
+        <h2 className="text-[24px] font-semibold mb-3 mt-12 border-b-2">Search by  Location</h2>
+        {allJobsLocation.map((jobLocation) => (
+          <div key={jobLocation} className="flex items-center  gap-2 my-1">
+            <input
+              onChange={(e) => handleSearchLocation(e, `${jobLocation}`)}
+              className="w-4 h-4 border-2 border-sky-700"
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+            />
+            <label className="text-[19px]">{jobLocation}</label>
+          </div>
+        ))}
 
-           {
-             allCategoryJobs.map(category =><div 
-                key={category}
-             className="flex items-center  gap-2">
-              <input
-                 onClick={(e)=>handleSearchByCheck(e ,`${category}`)}
-                className="w-4 h-4 border-2 border-sky-700"
-                type="checkbox"
-                name="checkbox"
-                id="checkbox"
-              />
-              <label className="text-[19px]">{category}</label>
-            </div>)
-           }
-       
       
-
-        {/* ////////////// */}
-        <h2 className="text-xl mb-3 border-b-2 mt-6">Job type</h2>
-        <div className="flex items-center  gap-2">
-          <input
-            className="w-4 h-4 border-2 border-sky-700"
-            type="checkbox"
-            name="checkbox"
-            id="checkbox"
-          />
-          <label className="text-[19px]">Software</label>
-        </div>
-        <div className="flex items-center  gap-2">
-          <input
-            className="w-4 h-4 border-2 border-sky-700"
-            type="checkbox"
-            name="checkbox"
-            id="checkbox"
-          />
-          <label className="text-[19px]">Software</label>
-        </div>
-        <div className="flex items-center  gap-2">
-          <input
-            className="w-4 h-4 border-2 border-sky-700"
-            type="checkbox"
-            name="checkbox"
-            id="checkbox"
-          />
-          <label className="text-[19px]">Software</label>
-        </div>
-        <div className="flex items-center  gap-2">
-          <input
-            className="w-4 h-4 border-2 border-sky-700"
-            type="checkbox"
-            name="checkbox"
-            id="checkbox"
-          />
-          <label className="text-[19px]">Software</label>
-        </div>
-        {/* /////// */}
       </div>
 
       <div className="mainPart">
         <div className="w-full h-12 border-2 border-red-800"></div>
         <h2 className="text-[23px] font-medium">Latest Jobs Available Here</h2>
         <p className="text-[18px] text-[#706d6d]">
-          Get your Dream job from top companies by Hirrd
+          Get your Dream job from top companies by{" "}
+          <span className="text-[23px] font-bold">Hirrd</span>
         </p>
 
         <div
@@ -126,6 +116,15 @@ const handleSearchByCheck =(e,categoryItem)=>{
           ))}
         </div>
       </div>
+
+
+      
+
+
+
+
+
+
     </div>
   );
 };
