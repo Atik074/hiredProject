@@ -20,12 +20,12 @@ const Home = () => {
           
             {/* components */}
             <Header/>
-             <h2>Find Your Dream Job and Get Hired</h2>
+             {/* <h2>Find Your Dream Job and Get Hired</h2>
             <Link to="/alljobs"> 
                <Button variant="outline" size="lg" >Find Jobs</Button> 
             </Link>
           
-           <Button variant="destructive" size="lg">Post a Job</Button>
+           <Button variant="destructive" size="lg">Post a Job</Button> */}
 
       
 

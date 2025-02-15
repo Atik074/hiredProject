@@ -110,7 +110,7 @@ const AllJobs = () => {
       </div>
 
       <div className="mainPart">
-        <div className="w-full h-12 border-2 border-red-800"></div>
+       
         <h2 className="text-[23px] font-medium">Latest Jobs Available Here</h2>
         <p className="text-[18px] text-[#706d6d]">
           Get your Dream job from top companies by{" "}

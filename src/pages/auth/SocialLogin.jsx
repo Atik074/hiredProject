@@ -13,7 +13,7 @@ const SocialLogin = () => {
 
      // hnadle google sign in user 
    const handleGoogleSignIn =()=>{
-    googleSigninUser()
+     googleSigninUser()
     .then(result =>{
       const user = result.user 
       if(user) navigate("/")
