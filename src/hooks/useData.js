@@ -14,11 +14,11 @@ const useJobData = () => {
       setLoading({
         ...loading,
         state: true,
-        message: " data is fetchig...",
+        message: "data is fetchig...",
       });
       setError(null);
 
-      const response = await fetch('/src/api.json');
+      const response = await fetch('/api.json');
      
       const jobData = await response.json();
            console.log(jobData)
