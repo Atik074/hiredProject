@@ -25,8 +25,8 @@ const FeatureJobs = () => {
 
   
   return (
-    <div>
-      <div className="text-center mb-10 ">
+    <div className="mt-40  hidden">
+      <div className="text-center mb-10">
         <h3 className="text-2xl font-semibold mb-1">
           Get Your Best Profession with Hirred Platform
         </h3>

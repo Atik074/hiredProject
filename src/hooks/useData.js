@@ -21,7 +21,7 @@ const useJobData = () => {
       const response = await fetch('/api.json');
      
       const jobData = await response.json();
-           console.log(jobData)
+          
           setJobs(jobData);
 
 

@@ -16,46 +16,53 @@ import FeatureJobs from '../featureJobs/FeatureJobs';
 
 const Home = () => {
     return (
-        <div className='container'>
+
+      <div >
+          <Header/>
+         
+<div className='container'>
+     <FeatureJobs/>  
           
-            {/* components */}
-            <Header/>
-             {/* <h2>Find Your Dream Job and Get Hired</h2>
-            <Link to="/alljobs"> 
-               <Button variant="outline" size="lg" >Find Jobs</Button> 
-            </Link>
+          {/* components */}
+        
+           {/* <h2>Find Your Dream Job and Get Hired</h2>
+          <Link to="/alljobs"> 
+             <Button variant="outline" size="lg" >Find Jobs</Button> 
+          </Link>
+        
+         <Button variant="destructive" size="lg">Post a Job</Button> */}
+
+    
+
+
+  {/* <Carousel
+    plugins={[ Autoplay({delay:2000})]}
+    className="w-full py-10"
+  >
+     <CarouselContent className="flex items-center gap-5 sm:gap-20 ">
+     {
+      companies.map(({id , path})=>{
+          return(
+                 <CarouselItem 
+                  className="basis-1/5 lg:basis-1/6"
+                 key={id}>
+                   <img 
+                   className='bg-amber-400 h-9 object-contain sm:h-14' 
+                   src={path} alt="picture" />
+                </CarouselItem>
+          )
+      })
+     }
+    </CarouselContent>
+   
+  </Carousel> */}
           
-           <Button variant="destructive" size="lg">Post a Job</Button> */}
-
-      
-
-
-    <Carousel
-      plugins={[ Autoplay({delay:2000})]}
-      className="w-full py-10"
-    >
-       <CarouselContent className="flex items-center gap-5 sm:gap-20 ">
-       {
-        companies.map(({id , path})=>{
-            return(
-                   <CarouselItem 
-                    className="basis-1/5 lg:basis-1/6"
-                   key={id}>
-                     <img 
-                     className='bg-amber-400 h-9 object-contain sm:h-14' 
-                     src={path} alt="picture" />
-                  </CarouselItem>
-            )
-        })
-       }
-      </CarouselContent>
      
-    </Carousel>
-            
-        <FeatureJobs/>
-          
-           
-        </div>
+        
+         
+      </div>
+      </div>
+        
     );
 };
 

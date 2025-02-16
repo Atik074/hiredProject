@@ -32,18 +32,18 @@ const Header = () => {
   };
 
   return (
-    <div className="py-2 flex items-center justify-center">
-      <div className="logo ">
-        <img className="w-[9%]" src={Logo} alt="picture" />
+    <div className="md:py-1 md:px-12     md:flex items-center justify-center shadow-md">
+      <div className="md:w-full sm:w-20 ">
+        <img className="md:w-[10%] sm:w-[3%] " src={Logo} alt="picture" />
       </div>
 
-      <Button variant="green" size="lg">
+      <Button className="" variant="green" size="lg">
         Post a Job
       </Button>
       {user ? (
         <Link onClick={handleUserModal} to="/">
           {user?.photoURL !== null ? (
-            <Avatar className="relative w-[50px] h-[50px]">
+            <Avatar className="relative w-[50px] h-[50px]  mx-1">
               <AvatarImage
                 onMouseEnter={() => setisHover(true)}
                 onMouseLeave={() => setisHover(false)}
@@ -79,7 +79,7 @@ const Header = () => {
         </Link>
       ) : (
         <Link to="/login">
-          <Button variant="destructive" size="lg">
+          <Button className="" variant="destructive" size="lg">
             <TbLogin2 />
             Login
           </Button>
