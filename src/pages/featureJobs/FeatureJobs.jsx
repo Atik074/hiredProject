@@ -25,15 +25,16 @@ const FeatureJobs = () => {
 
   
   return (
-    <div className="mt-40  hidden">
-      <div className="text-center mb-10">
-        <h3 className="text-2xl font-semibold mb-1">
-          Get Your Best Profession with Hirred Platform
-        </h3>
-        <p className="text-[18px] text-slate-600 ">
-          Find recent job circular with easy application features
-        </p>
-      </div>
+    <div className="mt-40 ">
+      <div className="text-center mb-10 px-4">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
+    Get Your Best Profession with Hirred Platform
+  </h3>
+  <p className="text-[18px] sm:text-[20px] md:text-[22px] text-slate-600">
+    Find recent job circular with easy application features
+  </p>
+</div>
+
 
       <div className="p-8">
         {jobs.slice(0, 6).map((job) => (
