@@ -9,35 +9,34 @@ import "./Style.css"
 
 const FeatureJobCard = ({ job, onJobDetails, inView }) => {
   const { id, image, post_name, job_type, salary_range, location, category, description } = job;
+  console.log(inView)
 
   return (
     <Card
       className={`${inView
         ? "hover:shadow-xl border border-[#dcdde1]" 
-        : "flex flex-col md:flex-row items-center hover:border-l-8 border-amber-600 hover:shadow-xl hover:scale-[1.02] mb-8 p-4" 
+        : "flex flex-col md:flex-row   items-center hover:border-l-8 border-amber-600 hover:shadow-xl hover:scale-[1.02] mb-8 p-3" 
       } transition-all duration-300`}
     >
-      {/* Image Section */}
-      <CardHeader className={`${inView ? "text-center" : "md:mr-6"}`}>
-        <img
-          className={`${inView ? "w-full rounded" : "w-24 h-24 rounded-full"}`}
+
+       <img
+          className={`${inView ? "w-full rounded" : "w-28 h-28 rounded-full mt-2"} cardImg`}
           src={image}
           alt="companyLogo"
         />
-      </CardHeader>
+        
 
-    
-      <CardContent className={`${inView ? "mt-5" : "flex-1"}`}>
+      <CardContent className={`${inView ? "mt-5" : "flex-1 mt-4"}`}>
         <div>
         
           {!inView && (
-            <span className="bg-[#e0f5d7] text-[#449626] text-[16px] px-2 rounded">
+            <span className="bg-[#e0f5d7] text-[#449626] text-[16px] px-2 rounded ">
               {job_type}
             </span>
           )}
 
       
-          <CardTitle className="mt-2   font-semibold title">{post_name}</CardTitle>
+          <CardTitle className="mt-2  leading-none font-semibold title">{post_name}</CardTitle>
 
     
           <div
@@ -59,7 +58,7 @@ const FeatureJobCard = ({ job, onJobDetails, inView }) => {
                 </span>
               ) : (
                 <>
-                  <PiMoneyWavyThin className="text-[20px] mx-2" />
+                  <PiMoneyWavyThin className="text-[20px] mx-2 moneyIcon" />
                   <span className="text-[16px]">{salary_range}</span>
                 </>
               )}
@@ -72,15 +71,15 @@ const FeatureJobCard = ({ job, onJobDetails, inView }) => {
               </p>
             ) : (
               <p className="flex items-center justify-center shadow-sm p-2 rounded border border-[#c6bcbc7e] font-medium ">
-                <CiLocationOn className="text-[20px] mx-2" />
+                <CiLocationOn className="text-[20px] mx-2 locationIcon" />
                 <span className="text-[16px]">{location}</span>
               </p>
             )}
 
       
             {!inView && (
-              <p className="flex items-center justify-center shadow-sm p-2 rounded border border-[#c6bcbc7e] font-medium">
-                <PiSubtitlesLight className="text-[20px] ml-2" />
+              <p className="flex items-center justify-center shadow-sm  rounded border border-[#c6bcbc7e] font-medium">
+                <PiSubtitlesLight className="text-[20px] ml-2 subTitleIcon" />
                 <span className="mx-2 text-[16px]">{category}</span>
               </p>
             )}
@@ -101,8 +100,8 @@ const FeatureJobCard = ({ job, onJobDetails, inView }) => {
         <Button
           onClick={() => onJobDetails(job)}
           className={`${inView
-            ? "w-[60%] mb-5 ml-12 btnInView" 
-            : "w-full md:w-auto md:basis-[12%] text-[18px] font-normal" 
+            ? "w-[60%] mb-5 ml-12" 
+            : "w-full md:w-auto  text-[18px] font-normal btnInTable" 
           }`}
           variant="green"
           size="lg"

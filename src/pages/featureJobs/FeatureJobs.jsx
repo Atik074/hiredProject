@@ -36,7 +36,7 @@ const FeatureJobs = () => {
 </div>
 
 
-      <div className="p-8">
+      <div className="mx-5">
         {jobs.slice(0, 6).map((job) => (
           <FeatureJobCard 
           key={job.id}
