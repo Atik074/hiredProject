@@ -6,7 +6,10 @@ export default  {
   	extend: {
         screens:{
 			'sm-min': '320px',  
-			'sm-max': {'max': '639px'}
+			'sm-max': {'max': '639px'},
+			
+		
+		
 		},
 		 
   		borderRadius: {

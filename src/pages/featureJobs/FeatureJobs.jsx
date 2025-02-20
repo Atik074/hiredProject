@@ -47,11 +47,17 @@ const FeatureJobs = () => {
         ))}
       </div>
          
-        <div className="text-center mt-6">
-        <Link to="/alljobs">
-        <Button className="w-[20%] p-[25px]  text-[20px]" variant="green" size="lg">More Jobs</Button>
-        </Link>
-        </div>
+      <div className="text-center mt-6">
+  <Link to="/alljobs">
+    <Button
+      className="w-full md:w-[40%] lg:w-[20%] p-4 md:p-6 text-base md:text-lg lg:text-xl"
+      variant="green"
+      size="lg"
+    >
+      More Jobs
+    </Button>
+  </Link>
+</div>
 
     </div>
   );
