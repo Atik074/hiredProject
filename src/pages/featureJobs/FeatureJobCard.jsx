@@ -16,7 +16,7 @@ const FeatureJobCard = ({ job, onJobDetails, inView }) => {
       className={`${inView
         ? "hover:shadow-xl border border-[#dcdde1]" 
         : "flex flex-col md:flex-row   items-center hover:border-l-8 border-amber-600 hover:shadow-xl hover:scale-[1.02] mb-8 p-3" 
-      } transition-all duration-300`}
+      } transition-all duration-300 w-[90%] mx-auto card`}
     >
 
        <img

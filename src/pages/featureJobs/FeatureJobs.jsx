@@ -4,6 +4,7 @@ import FeatureJobCard from "./FeatureJobCard";
 import { JobDataContext } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import './Style.css'
 
 
 const FeatureJobs = () => {
@@ -36,7 +37,7 @@ const FeatureJobs = () => {
 </div>
 
 
-      <div className="mx-5">
+      <div className="cardParent">
         {jobs.slice(0, 6).map((job) => (
           <FeatureJobCard 
           key={job.id}
