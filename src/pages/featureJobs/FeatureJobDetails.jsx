@@ -105,16 +105,18 @@ const FeatureJobDetails = () => {
         <JobDetailsSideCard />
       </div>
 
-      <div className="mt-10 sm:mt-20 mx-8 sm:mx-20 mb-20 sm:mb-72">
-        <Button
-          onClick={() => setShowModal(true)}
-          className="text-white w-full sm:w-1/2 text-xl"
-          variant="destructive"
-          size="lg"
-        >
-          Apply for Job
-        </Button>
-      </div>
+      <div className="mt-10 sm:mt-20 mx-8 sm:mx-20 mb-20 sm:mb-72 flex justify-center">
+  <Button
+    onClick={() => setShowModal(true)}
+    className="text-white w-full sm:w-1/2 md:w-1/3 lg:w-1/4 text-xl py-3"
+    variant="destructive"
+    size="lg"
+  >
+    Apply for Job
+  </Button>
+</div>
+
+
 
       {showModal && <JobAppliedModal setShowModal={setShowModal} />}
     </div>

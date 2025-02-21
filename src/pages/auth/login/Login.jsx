@@ -42,9 +42,9 @@ const Login = () => {
 
 
   return (
-    <div className="loginBoard flex items-center justify-end h-screen">
+    <div className="loginBoard flex items-center justify-end py-12">
       <div
-        className="mr-32 px-8 py-6 shadow-2xl
+        className="mr-32 px-14 py-6 shadow-2xl
          bg-gradient-to-r from-[#a6b840cd] to-[#ba3213]
           rounded border-t-[5px] border-t-[#ffcd43]"
       >
