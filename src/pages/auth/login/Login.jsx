@@ -7,6 +7,7 @@ import Divider from "./Divider";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "@/context/AuthContext";
 import SocialLogin from "../SocialLogin";
+import "./Style.css"
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -22,13 +23,13 @@ const Login = () => {
 
   // handle form submitm for user login
   const onSubmit = (data) =>{
-    console.log("login data" ,data)
+ 
     signInUser(data.email , data.password)
     .then(result =>{
       const loggedInUser = result.user
-   
+  
       if(loggedInUser) navigate("/")
-       console.log("user from login" , loggedInUser)
+    
      
     })
     .catch(error =>{
@@ -46,10 +47,10 @@ const Login = () => {
       <div
         className="mr-32 px-14 py-6 shadow-2xl
          bg-gradient-to-r from-[#a6b840cd] to-[#ba3213]
-          rounded border-t-[5px] border-t-[#ffcd43]"
+          rounded border-t-[5px] border-t-[#ffcd43] loginform"
       >
         <div className="flex flex-col items-center justify-center">
-          <FaUserCircle className="text-[90px] text-center mb-2 text-white" />
+          <FaUserCircle className="text-[90px] text-center mb-2 text-white sm-min:mt-5" />
           <h3 className="text-[25px] font-semibold text-white">
             Sign in to Hired
           </h3>

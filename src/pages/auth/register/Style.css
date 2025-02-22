@@ -1,0 +1,56 @@
+@media (min-width: 320px) and (max-width:480px) {
+    .socialBtn{
+        width: 250px;
+        margin: 0 auto;
+    }
+    .firstName{
+        margin-bottom: 0px;
+    }
+
+}
+@media (min-width: 481px) and (max-width:638px) {
+    .socialBtn{
+        width: 250px;
+        margin: 0 auto;
+    }
+    .firstName{
+        margin-bottom: 0px;
+    }
+
+}
+@media (min-width: 639px) and (max-width:1005px) {
+    .socialBtn{
+        width:60%;
+        margin: 0 auto;
+    }
+   
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .socialBtn{
+        width:40%;
+        margin: 0 auto;
+    }
+
+  
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .socialBtn{
+        width:60%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1201px) {
+    .socialBtn{
+        width:60%;
+        margin: 0 auto;
+    }
+}

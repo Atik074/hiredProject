@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { AuthContext } from "@/context/AuthContext";
 import Divider from "../login/Divider";
 import SocialLogin from "../SocialLogin";
+import "./Style.css"
 
 const Register = () => {
   const {
@@ -39,47 +40,43 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-gradient-to-bl from-[#22c1c3] to-[#fdbb2d] flex items-center justify-center  gap-x-10 ">
+    <div className="bg-gradient-to-bl from-[#22c1c3] to-[#fdbb2d] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 p-4 lg:p-8">
       <img
-        className="w-[50%] px-4"
+        className="w-full lg:w-[50%] mb-6 lg:mb-0 rounded-lg"
         src="https://shorturl.at/YCIIJ"
         alt="picture"
       />
 
-      <div className="rounded w-[40%]">
+      <div className="w-full lg:w-[40%] px-4">
         <div className="flex flex-col items-center">
-          <FaUserGraduate className="text-[90px] text-center mb-2 mt-6 text-white " />
-          <h3 className="text-[26px] font-bold text-black ">
-            Create your Account
-          </h3>
-          <p className="text-[16px] text-black mt-1 mb-12">
-            Wellcome! Please fill in the details to get started.
+          <FaUserGraduate className="text-[90px] text-center mb-2 mt-6 text-white" />
+          <h3 className="text-[26px] font-bold text-black">Create your Account</h3>
+          <p className="text-[16px] text-black mt-1 mb-12 text-center md:text-left">
+            Welcome! Please fill in the details to get started.
           </p>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center socialBtn">
           <SocialLogin />
         </div>
         <Divider />
 
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex justify-between gap-6 w-[80%] mx-auto">
-            <div className="w-full mb-5 relative">
-              <Label
-                className="text-[18px] font-normal text-black"
-                htmlFor="firstName"
-              >
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+          {/* Grid Layout for Form Fields */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+            <div className="w-full mb-5 relative firstName">
+              <Label className="text-[18px] font-normal text-black" htmlFor="firstName">
                 First name
               </Label>
               <Input
                 id="firstName"
-                type="firstName"
+                type="text"
                 placeholder="Your first name"
                 {...register("firstName", {
-                  required: "first name is required",
+                  required: "First name is required",
                   maxLength: {
                     value: 20,
-                    message: "fist name is too large",
+                    message: "First name is too long",
                   },
                 })}
               />
@@ -89,112 +86,100 @@ const Register = () => {
                 </span>
               )}
             </div>
-            <div className="w-full relative">
-              <Label
-                className="text-[18px] font-normal text-black"
-                htmlFor="lastName"
-              >
+
+            {/* Last Name Field */}
+            <div className="w-full mb-5 relative">
+              <Label className="text-[18px] font-normal text-black" htmlFor="lastName">
                 Last name
               </Label>
               <Input
                 id="lastName"
-                type="lastName"
+                type="text"
                 placeholder="Your last name"
                 {...register("lastName", {
-                  required: "last name is required",
+                  required: "Last name is required",
                   maxLength: {
                     value: 15,
-                    message: "last name  is too long",
+                    message: "Last name is too long",
                   },
                 })}
               />
+              {/* Last Name Error Message */}
               {errors.lastName && (
-                <span
-                  className="text-red-600 
-                    text-[15px]  absolute left-0 bottom-[1px]"
-                >
+                <span className="text-red-600 text-[15px] absolute left-0 bottom-[-20px]">
                   {errors.lastName.message}
                 </span>
               )}
             </div>
           </div>
 
-          <div className="w-[80%] mx-auto mb-3 ">
-            <Label
-              className="text-[18px] font-normal text-black"
-              htmlFor="photoURL"
-            >
-              photoURL
+          <div className="w-full mb-3">
+            <Label className="text-[18px] font-normal text-black" htmlFor="photoURL">
+              Photo URL
             </Label>
             <Input
               id="photoURL"
               name="photoURL"
               type="url"
-              placeholder="type here photoURL"
+              placeholder="Type here photo URL"
               {...register("photoURL")}
             />
           </div>
 
-          <div className="w-[80%] mx-auto mb-5 relative">
-            <Label
-              className="text-[18px] font-normal text-black"
-              htmlFor="email"
-            >
+          <div className="w-full mb-5 relative">
+            <Label className="text-[18px] font-normal text-black" htmlFor="email">
               Email
             </Label>
             <Input
               id="email"
               type="email"
-              placeholder="type your email"
+              placeholder="Type your email"
               {...register("email", {
-                required: "email is required",
+                required: "Email is required",
                 pattern: {
                   value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
-                  message: "please enter a valid email address",
+                  message: "Please enter a valid email address",
                 },
               })}
             />
             {errors.email && (
-              <span className="text-red-600 text-[15px]  absolute left-0  bottom-[-20px]">
+              <span className="text-red-600 text-[15px] absolute left-0 bottom-[-20px]">
                 {errors.email.message}
               </span>
             )}
           </div>
-          <div className="w-[80%] mx-auto mb-8 relative">
-            <Label
-              className="text-[18px] font-normal text-black"
-              htmlFor="password"
-            >
+
+          <div className="w-full mb-8 relative">
+            <Label className="text-[18px] font-normal text-black" htmlFor="password">
               Password
             </Label>
             <Input
               id="password"
               type="password"
-              placeholder="type here password"
+              placeholder="Type here password"
               {...register("password", {
-                required: "password is required",
+                required: "Password is required",
                 maxLength: {
                   value: 20,
-                  message: "password is too long",
+                  message: "Password is too long",
                 },
                 pattern: {
-                  value:
-                    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                  value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
                   message:
-                    "Min eight characters, at least one letter, one number and one special character",
+                    "Min eight characters, at least one letter, one number, and one special character",
                 },
               })}
             />
             {errors.password && (
-              <span className="text-red-600 text-[15px]  absolute left-0  ">
+              <span className="text-red-600 text-[15px] absolute left-0 bottom-[-20px]">
                 {errors.password.message}
               </span>
             )}
           </div>
 
-          <div className="w-[30%] mx-auto ">
+          <div className="w-full sm:w-[40%] mx-auto">
             <input
-              className="bg-gradient-to-r from-[#57cb45] to-[#1083c1] mt-1   mr-4   hover:text-white text-black  text-[19px] w-full border-none   py-2 rounded-md cursor-pointer"
+              className="bg-gradient-to-r from-[#57cb45] to-[#1083c1] mt-1 hover:text-white text-black text-[19px] w-full border-none py-2 rounded-md cursor-pointer"
               type="submit"
             />
           </div>
@@ -202,10 +187,7 @@ const Register = () => {
 
         <p className="text-[16px] text-black my-3 text-center">
           Already have an account?
-          <Link
-            to="/login"
-            className="text-black hover:text-white underline hover:no-underline   text-[18px]"
-          >
+          <Link to="/login" className="text-black hover:text-white underline hover:no-underline text-[18px]">
             {" "}
             Sign in
           </Link>

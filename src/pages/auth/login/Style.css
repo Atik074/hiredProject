@@ -1,0 +1,47 @@
+@media (min-width: 320px) and (max-width:480px) {
+    .loginBoard{
+        width: 100%;
+        padding:20px;
+      
+       
+    }
+    .loginform{
+        width: 100%;
+        margin: 0 auto;
+        padding:0px 15px;
+
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .loginBoard{
+        width: 100%;
+        padding:20px;
+      
+       
+    }
+    .loginform{
+        width: 60%;
+        margin: 0 auto;
+       
+    }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    
+
+  
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+ 
+}
+
+@media (min-width: 1201px) {
+
+}
