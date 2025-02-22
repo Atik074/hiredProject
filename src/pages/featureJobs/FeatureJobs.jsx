@@ -51,7 +51,7 @@ const FeatureJobs = () => {
       <div className="text-center mt-6">
   <Link to="/alljobs">
     <Button
-      className="w-full md:w-[40%] lg:w-[20%] p-4 md:p-6 text-base md:text-lg lg:text-xl"
+      className="moreJobsBtn w-full   lg:w-[20%] p-4 md:p-6 text-base md:text-lg lg:text-xl"
       variant="green"
       size="lg"
     >

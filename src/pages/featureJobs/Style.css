@@ -7,6 +7,11 @@
     .cardImg{
         margin-bottom: 30px;
     }
+
+    .moreJobsBtn{
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 @media (min-width: 481px) and (max-width: 767px) {
     .title{
@@ -16,6 +21,10 @@
     }
     .cardImg{
         margin-bottom: 30px;
+    }
+    .moreJobsBtn{
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
@@ -51,6 +60,10 @@
     }
     .subTitleIcon{
         font-size: 30px;
+    }
+    .moreJobsBtn{
+        width: 30%;
+        margin: 0 auto;
     }
     
 
