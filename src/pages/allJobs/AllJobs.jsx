@@ -11,7 +11,7 @@ const AllJobs = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage =6;
 
   // Handle pagination for job data
   const indexOfLastItem = currentPage * itemsPerPage;
