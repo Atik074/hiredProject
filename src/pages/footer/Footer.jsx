@@ -1,32 +1,57 @@
+import SocialICon from '@/components/constantUi/socialICon';
+import { Input } from '@/components/ui/input';
 import React from 'react';
+import { FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
+import { FiTwitter } from "react-icons/fi";
+
+const location = ["Dhaka", "San Francisco", "Los Angeles", "New York", "Chicago", "San Diego", "Portland", "Seattle", "Austin"];
 
 const Footer = () => {
     return (
-        <div className='bg-[#7b7878] mt-12 flex justify-between gap-12'>
-           <div className='w-[30%]'>
-           <h2 className="text-[23px] font-semibold">HIRRED</h2>
-           <p className='text-xl'>Jobs are shown here, You select the job according to your skill. Apply by clicking on & Apply.If you eligible for job,It is your best platform.So,highlight your skill and get your dream job</p>
+        <div className='bg-[#7b7878] pt-10 px-4'>
+            <div className='max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+                
+              
+                <div className='space-y-4'>
+                    <h2 className="text-[24px] font-semibold text-white">HIRRED</h2>
+                    <p className='text-[20px] text-gray-300'>
+                        Jobs are shown here, You select the job according to your skill. Apply by clicking on & Apply.
+                        If you are eligible for the job, it is your best platform. So, highlight your skill and get your dream job.
+                    </p>
+                </div>
+
+             
+                <div className='space-y-4  '>
+                    <h3 className="text-[24px] font-semibold text-white">EJOBS IN</h3>
+                    <ul className='grid grid-cols-3 gap-x-3'>
+                        {location.map(item => (
+                            <li key={item} className='text-[20px] text-gray-300 hover:underline hover:text-white'>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+
+            
+                <div className='space-y-4  ml-12'>
+                    <h3 className="text-[24px] font-semibold text-white">FOLLOW US</h3>
+                    <div className='flex gap-4'>
+                        <SocialICon icon={FaFacebookF} />
+                        <SocialICon icon={FaInstagram} />
+                        <SocialICon icon={FaGithub} />
+                        <SocialICon icon={FiTwitter} />
+                    </div>
+                  
+                       <div className="flex gap-3">
+                        <Input placeholder="type here email"  />
+                       <input className="px-4 py-2 bg-sky-500 rounded text-white text-[18px] cursor-pointer" type="submit" value="Submit" />
+                       </div>
+                </div>
+
             </div>
-
-           <div className='w-[30%]'>
-           <h3 className="text-[23px] font-semibold">EJOBS IN</h3>
-           <ul>
-            <li className='list-none text-xl'>Dhaka</li>
-            <li className='list-none text-xl'>San Fransisco</li>
-            <li className='list-none text-xl'>New York</li>
-            <li className='list-none text-xl'>Los Angeles</li>
-            <li className='list-none text-xl'>Chicago</li>
-            <li className='list-none text-xl'>San Diego</li>
-            <li className='list-none text-xl'>Portland</li> 
-            <li className='list-none text-xl'>Seattle</li> 
-            <li className='list-none text-xl'>Austin</li>
-           </ul>
-           </div>
-
-           <div  className='w-[30%]'>
-           <h3 className="text-[23px] font-semibold" >FOLLOW US</h3>
-
-           </div>
+            
+          
+            <div className='text-center mt-10 text-[18px] text-gray-300 py-2'>
+                <p>&copy; 2025 Hirred. All Rights Reserved.</p>
+            </div>
         </div>
     );
 };
