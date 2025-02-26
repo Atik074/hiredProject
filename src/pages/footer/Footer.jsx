@@ -1,4 +1,5 @@
-import SocialICon from '@/components/constantUi/socialICon';
+
+import SocialIcons from '@/components/constantUi/SocialIcons';
 import { Input } from '@/components/ui/input';
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
@@ -34,10 +35,10 @@ const Footer = () => {
                 <div className='space-y-4  ml-12'>
                     <h3 className="text-[24px] font-semibold text-white">FOLLOW US</h3>
                     <div className='flex gap-4'>
-                        <SocialICon icon={FaFacebookF} />
-                        <SocialICon icon={FaInstagram} />
-                        <SocialICon icon={FaGithub} />
-                        <SocialICon icon={FiTwitter} />
+                        <SocialIcons icon={FaFacebookF} />
+                        <SocialIcons icon={FaInstagram} />
+                        <SocialIcons icon={FaGithub} />
+                        <SocialIcons icon={FiTwitter} />
                     </div>
                   
                        <div className="flex gap-3">
