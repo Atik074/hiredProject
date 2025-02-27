@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import './Style.css'
 
 
+
 const FeatureJobs = () => {
   const { jobs  } = useJobData();
   const { setJob} = useContext(JobDataContext)
@@ -48,7 +49,7 @@ const FeatureJobs = () => {
         ))}
       </div>
          
-      <div className="text-center mt-6">
+      <div className="text-center mt-14">
   <Link to="/alljobs">
     <Button
       className="moreJobsBtn w-full   lg:w-[20%] p-4 md:p-6 text-base md:text-lg lg:text-xl"
@@ -60,6 +61,7 @@ const FeatureJobs = () => {
   </Link>
 </div>
 
+      
     </div>
   );
 };

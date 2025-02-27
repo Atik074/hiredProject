@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { AuthContext } from '@/context/AuthContext';
 import React, { useContext, useState } from 'react';
-import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from 'react-router-dom';
 
@@ -26,17 +25,15 @@ const SocialLogin = () => {
     }
 
     return (
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 w-full">
-            {/* Github Button */}
-            <Button variant="white" size="sm" className="flex items-center justify-center sm:w-auto w-full py-2 px-4">
-                <FaGithub className="text-xl sm:text-2xl" />
-                <span className="text-[14px] sm:text-[19px] text-[#535555] ml-2">Github</span>
-            </Button>
-
+        <div className="flex flex-col justify-center items-center gap-3 w-full">
             {/* Google Button */}
-            <Button onClick={handleGoogleSignIn} variant="white" size="sm" className="flex items-center justify-center sm:w-auto w-full py-2 px-4">
-                <FcGoogle className="text-xl sm:text-2xl" />
-                <span className="text-[14px] sm:text-[19px] text-[#535555] ml-2">Google</span>
+            <Button 
+                onClick={handleGoogleSignIn} 
+                variant="white" 
+                size="sm" 
+                className="flex items-center justify-center sm:w-auto w-full py-3 px-4 md:py-3 md:px-6 lg:py-[19px] lg:px-12 md:text-lg lg:text-xl">
+                <FcGoogle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl" />
+                <span className="text-[14px] sm:text-[19px] text-[#535555] ml-2 md:text-lg lg:text-xl">Google</span>
             </Button>
         </div>
     );

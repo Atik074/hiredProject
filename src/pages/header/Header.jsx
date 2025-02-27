@@ -37,9 +37,12 @@ const Header = () => {
       {/* Button and User Avatar Section */}
       <div className="flex items-center space-x-4 md:space-x-6 justify-center md:justify-end w-full">
         {/* Post a Job Button */}
+        <Link to="/postjob">
         <Button className="hidden md:block" variant="green" size="lg">
           Post a Job
         </Button>
+        </Link>
+       
 
         {/* User Avatar and Login */}
         {user ? (

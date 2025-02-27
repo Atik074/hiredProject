@@ -6,6 +6,7 @@ import MainLayout from "./layout/MainLayout"
 import FeatureJobDetails from "./pages/featureJobs/FeatureJobDetails"
 import JobDataProvider from "./providers/JobDataProvider"
 import AllJobs from "./pages/allJobs/AllJobs"
+import PostJobs from "./pages/PostJobs/PostJobs"
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
         <Route 
         path="/alljobs" element={<ProtectedRoute>
           <AllJobs/>
+        </ProtectedRoute>} />
+        <Route 
+        path="/postjob" element={<ProtectedRoute>
+          <PostJobs/>
         </ProtectedRoute>} />
     </Routes>
 

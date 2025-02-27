@@ -5,7 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const Banner = () => {
   return (
-    <div className="px-4 mt-12 md:mt-24">
+    <div className="px-4 lg:my-[150px] my-24">
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
           Featured Companies
