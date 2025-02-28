@@ -15,6 +15,7 @@ const SocialLogin = () => {
             .then(result => {
                 const user = result.user;
                 if (user) navigate("/");
+                localStorage.setItem("user", user.email);
                 console.log(user);
             })
             .catch(err => {

@@ -10,7 +10,7 @@ const UserModal = ({ onCloseModal,onSignOut }) => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="w-80 z-40 text-white bg-[#747d8c] rounded-b-md absolute   top-[78px] right-[43px]  p-4">
+    <div className="w-80 z-40 text-white bg-[#747d8c] rounded absolute   top-[68px] right-[40px]  p-4">
       <div className="flex  justify-between ">
         <p className="text-xl mb-6">{user?.email}</p>
         <RxCross2

@@ -7,40 +7,44 @@ import Divider from "./Divider";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "@/context/AuthContext";
 import SocialLogin from "../SocialLogin";
-import "./Style.css"
+import "./Style.css";
 
 const Login = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const {signInUser } = useContext(AuthContext)
-  const [error , setError] = useState('')
-  const navigate = useNavigate()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const { signInUser } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
   // const location = useLocation()
-
 
   // const from = location.state?.from?.pathname || "/"
 
-
+  const handleCheackvox = (e) => {
+    const checked = e.target.checked;
+    console.log(checked);
+    if (checked) {
+    }
+  };
 
   // handle form submitm for user login
-  const onSubmit = (data) =>{
- 
-    signInUser(data.email , data.password)
-    .then(result =>{
-      const loggedInUser = result.user
-  
-      if(loggedInUser) navigate("/")
-    
-     
-    })
-    .catch(error =>{
-      const err = error.message 
-        console.log("err from login" , err)
-        setError(err)
-    })
+  const onSubmit = (data) => {
+    signInUser(data.email, data.password)
+      .then((result) => {
+        const loggedInUser = result.user;
+        console.log(loggedInUser.email);
+        localStorage.setItem("user", loggedInUser.email);
 
-
-  }
-
+        if (loggedInUser) navigate("/");
+      })
+      .catch((error) => {
+        const err = error.message;
+        console.log("err from login", err);
+        setError(err);
+      });
+  };
 
   return (
     <div className="loginBoard flex items-center justify-end py-12">
@@ -58,7 +62,7 @@ const Login = () => {
             Welcome back! Please sign in to Continue.
           </p>
         </div>
-         <SocialLogin/>
+        <SocialLogin />
         <Divider />
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="relative mb-6">
@@ -90,7 +94,8 @@ const Login = () => {
                   message: "Password is too long",
                 },
                 pattern: {
-                  value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                  value:
+                    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
                   message: "Password does not match",
                 },
               })}
@@ -103,7 +108,10 @@ const Login = () => {
           </div>
 
           <div className="w-1/2 mx-auto">
-            <button className="bg-gradient-to-r from-[#ba3213] to-[#a6b840cd] transition-all mr-4 text-white hover:text-black text-[19px] w-full border-none hover:border-transparent hover:bg-[#16a085]" type="submit">
+            <button
+              className="bg-gradient-to-r from-[#ba3213] to-[#a6b840cd] transition-all mr-4 text-white hover:text-black text-[19px] w-full border-none hover:border-transparent hover:bg-[#16a085]"
+              type="submit"
+            >
               Continue
             </button>
           </div>

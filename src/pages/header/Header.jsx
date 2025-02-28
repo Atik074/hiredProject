@@ -14,6 +14,7 @@ const Header = () => {
 
   // Handle sign out
   const handleSignOut = () => {
+    localStorage.removeItem('user');
     signOutUser()
       .then()
       .catch((err) => {
@@ -40,6 +41,12 @@ const Header = () => {
         <Link to="/postjob">
         <Button className="hidden md:block" variant="green" size="lg">
           Post a Job
+        </Button>
+        </Link>
+
+        <Link to="/adminlogin">
+        <Button className="hidden md:block" variant="green" size="lg">
+          Admin Login
         </Button>
         </Link>
        
@@ -70,7 +77,7 @@ const Header = () => {
               )}
 
               {isHover && !showModal && (
-                <div className="bg-[#a19999c1] rounded absolute top-[78px] right-[43px] text-center text-white p-4">
+                <div className="bg-[#a19999c1] rounded absolute top-[68px] right-[40px] text-center text-white p-4">
                   {user?.displayName && <p>{user?.displayName}</p>}
                   <p>{user?.email}</p>
                 </div>

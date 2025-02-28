@@ -7,6 +7,8 @@ import FeatureJobDetails from "./pages/featureJobs/FeatureJobDetails"
 import JobDataProvider from "./providers/JobDataProvider"
 import AllJobs from "./pages/allJobs/AllJobs"
 import PostJobs from "./pages/PostJobs/PostJobs"
+import AdminLogin from "./pages/admin/AdminLogin"
+import AdminDashboard from "./pages/admin/AdminDashboard"
 
 
 function App() {
@@ -28,6 +30,18 @@ function App() {
         path="/postjob" element={<ProtectedRoute>
           <PostJobs/>
         </ProtectedRoute>} />
+
+        <Route 
+        path="/adminlogin" element={<ProtectedRoute>
+          <AdminLogin/>
+        </ProtectedRoute>} />
+        <Route 
+        path="/admin-dashboard" element={<ProtectedRoute>
+         <AdminDashboard/>
+        </ProtectedRoute>} />
+     
+
+
     </Routes>
 
     </JobDataProvider>
