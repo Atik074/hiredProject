@@ -9,6 +9,7 @@ import AllJobs from "./pages/allJobs/AllJobs"
 import PostJobs from "./pages/PostJobs/PostJobs"
 import AdminLogin from "./pages/admin/AdminLogin"
 import AdminDashboard from "./pages/admin/AdminDashboard"
+import AdminProtectedRoute from "./routes/AdminProtectedRoute"
 
 
 function App() {
@@ -32,13 +33,11 @@ function App() {
         </ProtectedRoute>} />
 
         <Route 
-        path="/adminlogin" element={<ProtectedRoute>
-          <AdminLogin/>
-        </ProtectedRoute>} />
+        path="/admin-login"  element={<AdminLogin/>} />
         <Route 
-        path="/admin-dashboard" element={<ProtectedRoute>
-         <AdminDashboard/>
-        </ProtectedRoute>} />
+        path="/admin-dashboard" element={<AdminProtectedRoute>
+          <AdminDashboard/>
+        </AdminProtectedRoute>} />
      
 
 

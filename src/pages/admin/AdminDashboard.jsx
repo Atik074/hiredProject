@@ -1,36 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '@/context/AuthContext';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
-    const [users, setUsers] = useState([
-        { id: 1, email: 'user1@example.com', status: 'active' },
-        { id: 2, email: 'user2@example.com', status: 'active' },
-        { id: 3, email: 'user3@example.com', status: 'inactive' },
-    ]);
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const {user ,  loading } = useContext(AuthContext)
     const navigate = useNavigate();
+
+    console.log(user?.email)
 
     // Redirect if the admin is not logged in
     useEffect(() => {
         const token = localStorage.getItem('adminToken');
         if (!token) {
-            navigate('/'); // If no admin token, redirect to login page
+            navigate('/'); 
         }
     }, [navigate]);
 
     // Admin logout
     const handleLogout = () => {
         localStorage.removeItem('adminToken');
+        localStorage.removeItem('role');
         navigate('/');
     };
 
     return (
-        <div className="flex h-screen p-12  justify-center w-[100%] gap-12  container">
+        <div className="flex justify-center w-[100%] gap-12  container">
            <div className="border-2 border-red-600 w-[20%]">
-             <h3>Lorem ipsum dolor sit amet.</h3>
-             <h3>Lorem ipsum dolor sit amet.</h3>
-             <h3>Lorem ipsum dolor sit amet.</h3>
-             <h3>Lorem ipsum dolor sit amet.</h3>
+            
+           
+           <ul>
+            <li><Link  to="/">Home</Link></li>
+            <li><Link  to="/">Home</Link></li>
+            <li><Link  to="/">Home</Link></li>
+            <li><Link  to="/">Home</Link></li>
+            <li><Link  to="/">Home</Link></li>
+            <li><Link  to="/">Home</Link></li>
+           
+           </ul>
+             
            </div>
             {/* Sidebar */}
             <div
@@ -87,9 +95,9 @@ const AdminDashboard = () => {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M4 6h16M4 12h16M4 18h16"
                     ></path>
                 </svg>
@@ -101,7 +109,7 @@ const AdminDashboard = () => {
                 <div className="bg-white p-8 rounded-lg ">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-3xl font-semibold text-gray-800">Admin Dashboard</h2>
-                        <h2 className="text-3xl font-semibold text-red-800 font-thin">The Page is under contruction.please wait unit it recover..</h2>
+                        <h2 className="text-3xl text-red-800 font-thin">The Page is under contruction.please wait unit it recover..</h2>
                         <button
                             onClick={handleLogout}
                             className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
@@ -120,25 +128,10 @@ const AdminDashboard = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {users.map((user) => (
-                                    <tr key={user.id} className="border-t hover:bg-gray-50">
-                                        <td className="px-4 py-3">{user.email}</td>
-                                        <td className="px-4 py-3">
-                                            <span
-                                                className={`px-3 py-1 rounded-full text-white ${
-                                                    user.status === 'active' ? 'bg-green-500' : 'bg-red-500'
-                                                }`}
-                                            >
-                                                {user.status}
-                                            </span>
-                                        </td>
-                                        <td className="px-4 py-3">
-                                            <button className="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                                                Edit
-                                            </button>
-                                        </td>
+                                <tr> 
+                                <td className="px-4 py-3 ">{user?.email}</td>
                                     </tr>
-                                ))}
+                               
                             </tbody>
                         </table>
                     </div>

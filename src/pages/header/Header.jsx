@@ -11,6 +11,8 @@ const Header = () => {
   const { user, signOutUser } = useContext(AuthContext);
   const [isHover, setIsHover] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const role = localStorage.getItem("role")
+ 
 
   // Handle sign out
   const handleSignOut = () => {
@@ -38,17 +40,27 @@ const Header = () => {
       {/* Button and User Avatar Section */}
       <div className="flex items-center space-x-4 md:space-x-6 justify-center md:justify-end w-full">
         {/* Post a Job Button */}
-        <Link to="/postjob">
+
+        {/* <Link to="/postjob">
         <Button className="hidden md:block" variant="green" size="lg">
           Post a Job
         </Button>
-        </Link>
+        </Link> */}
 
-        <Link to="/adminlogin">
+         { 
+        
+          role === "admin" ?   <Link to="/admin-dashboard">
+          <Button className="hidden md:block" variant="green" size="lg">
+           Admin Dashboard
+          </Button>
+          </Link> :   <Link to="/admin-dashboard">
         <Button className="hidden md:block" variant="green" size="lg">
           Admin Login
         </Button>
         </Link>
+         }
+ 
+       
        
 
         {/* User Avatar and Login */}

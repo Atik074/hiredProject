@@ -21,6 +21,7 @@ const AdminLogin = () => {
       adminInfo.password === "admin123"
     ) {
       localStorage.setItem("adminToken", "jwt-token");
+       localStorage.setItem("role", "admin");
       navigate("/admin-dashboard");
     } else {
       setError("Invalid credentials");
