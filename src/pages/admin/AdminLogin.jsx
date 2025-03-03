@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
-  const generalUser = localStorage.getItem('user');
-  console.log("token", generalUser);
 
   const adminInfo = {
     email: "admin@gmail.com",

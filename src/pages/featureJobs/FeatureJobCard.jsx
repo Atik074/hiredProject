@@ -9,7 +9,7 @@ import "./Style.css"
 
 const FeatureJobCard = ({ job, onJobDetails, inView }) => {
   const { id, image, post_name, job_type, salary_range, location, category, description } = job;
-  console.log(inView)
+
 
   return (
     <Card

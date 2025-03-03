@@ -26,6 +26,8 @@ const FeatureJobDetails = () => {
     category,
   } = job;
   const [showModal, setShowModal] = useState(false);
+  
+ 
 
   return (
     <div>

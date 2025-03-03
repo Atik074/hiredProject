@@ -1,13 +1,16 @@
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { useForm } from 'react-hook-form';
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { JobDataContext } from "@/context/AuthContext";
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { RxCross2 } from "react-icons/rx";
-import { useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const JobAppliedModal = ({ setShowModal }) => {
+  const { job } = useContext(JobDataContext);
+  const { post_name, title } = job;
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
 
@@ -20,20 +23,33 @@ const JobAppliedModal = ({ setShowModal }) => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, apply!"
+      confirmButtonText: "Yes, apply!",
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log("data for job modal", data);
+        const name = data.name;
+        const email = data.email;
+
+        const jobWithUserInfo = {
+          name , email,post_name,
+          title,
+        }
+
+        let appliedJobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
+        appliedJobs.push(jobWithUserInfo);
+
+        localStorage.setItem("appliedJobs", JSON.stringify(appliedJobs));
+
         Swal.fire({
           title: "Applied!",
           text: "Thank you! Your application has been submitted.",
-          icon: "success"
+          icon: "success",
         });
+
         setShowModal(false);
-        navigate('/');
+        navigate("/");
       }
     });
-  }
+  };
 
   return (
     <div className="fixed inset-0 mx-auto z-50 bg-black/60 backdrop-blur-sm flex justify-center items-center">
