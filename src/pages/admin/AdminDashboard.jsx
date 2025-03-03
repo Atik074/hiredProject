@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import PostJobs from "../PostJobs/PostJobs";
+import JobList from "./JobList";
+import ManageByPie from "./ManageByPie";
 
 const AdminDashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,48 +29,65 @@ const AdminDashboard = () => {
 
   // Handle removing a job from applied jobs list
   const handleRemoveJob = (index) => {
-    // Get the applied jobs array from localStorage
     let jobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
 
-    // Remove the job from the array by its index
     jobs.splice(index, 1);
 
-    // Save the updated jobs array back to localStorage
     localStorage.setItem("appliedJobs", JSON.stringify(jobs));
 
-    // Update the state to reflect the changes in the UI
     setAppliedJobs(jobs);
   };
 
   return (
-    <div className="flex justify-center w-[100%] gap-8 container">
-      <div className=" w-[16%] mt-[90px]">
+    <div className="container flex justify-center  mx-auto gap-8 pt-24">
+      <div className=" w-[16%]    text-center p-4">
         <ul>
-          <li>
-            <button
+          <li className="list-none mb-2">
+            <Link
               onClick={() => setCurrentPage("dashboard")}
-              className="text-[19px] mb-2 text-black"
+              className="text-[19px]  text-black"
             >
               Dashboard
-            </button>
+            </Link>
           </li>
-          <li>
-            <button
+        
+          <li className="list-none mb-2">
+            <Link
+               to="/"
+              className="text-[19px]  text-black"
+            >
+             Home
+            </Link>
+          </li>
+          <li className="list-none mb-2">
+            <Link
               onClick={() => setCurrentPage("jobList")}
               className="text-[19px] mb-2 text-black"
             >
               Job List
-            </button>
+            </Link>
           </li>
-          <li>
-          <button
-  onClick={() => {/* Your onClick handler here */}}
-  className="text-[18px] font-medium p-3 mb-4 text-black hover:text-indigo-600 focus:outline-none"
->
-  Normal Button
-</button>
-
+          <li className="list-none mb-5">
+            <Link
+              onClick={() => setCurrentPage("manage")}
+              className="text-[19px] mb-2 text-black"
+            >
+             Manage
+            </Link>
           </li>
+          <li  
+          onClick={handleLogout}
+           className="list-none"
+           >
+            <Link
+              
+              className="py-2 px-4 rounded-md  text-left focus:outline-none focus:ring-2 focus:ring-red-400  text-[19px] mb-2 text-black border-2"
+             
+            >
+              Logout
+            </Link>
+          </li>
+          
         </ul>
       </div>
 
@@ -137,25 +155,16 @@ const AdminDashboard = () => {
       </button>
 
       {/* Main Content */}
-      <div className="flex-1 p-6  w-[60%]">
+      <div className="flex-1  w-[60%] ">
         <div className="bg-white p-8 rounded-lg">
-
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-3xl font-semibold text-gray-800">
-              Admin Dashboard
-            </h2>
-
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
-            >
-              Logout
-            </button>
-          </div>
+        
 
           {/* Conditional Rendering based on currentPage */}
           {currentPage === "dashboard" && (
             <>
+              <div className="flex justify-between items-center mb-6">
+          
+          </div>
               <h3 className="text-2xl font-semibold text-gray-700 mb-4">
                 User Applied Jobs
               </h3>
@@ -206,14 +215,14 @@ const AdminDashboard = () => {
           {/* Add content for other pages like 'Job List' and 'Settings' */}
           {currentPage === "jobList" && (
             <div>
-              <PostJobs/>
+             <JobList/>
             </div>
           )}
 
-          {currentPage === "settings" && (
+          {currentPage === "manage" && (
             <div>
-              <h3>Settings Page</h3>
-              {/* Add settings content here */}
+              <h3 className="">Over All Summery Of The Year</h3>
+             <ManageByPie/>
             </div>
           )}
         </div>

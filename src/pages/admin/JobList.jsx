@@ -1,11 +1,11 @@
 import useJobData from "@/hooks/useData";
 import { useState } from "react";
-import PostJobForm from "./PostJobForm";
 import { FaPen } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { MdDelete } from "react-icons/md";
+import CreateJob from "./CreateJob";
 
-const PostJobs = () => {
+const JobList = () => {
   const { jobs, setJobs } = useJobData();
   const [showForm, setShowForm] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
@@ -92,7 +92,7 @@ const PostJobs = () => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto p-4">
+    <div className="max-w-screen-lg mx-auto ">
       <div className="flex justify-between mt-12">
         <h3 className="text-xl font-semibold">Current Job Listings</h3>
         {showForm !== true && (
@@ -109,7 +109,7 @@ const PostJobs = () => {
       </div>
 
       {showForm && (
-        <PostJobForm
+        <CreateJob
           onSubmit={handleSubmit}
           newJob={newJob}
           onInputChange={handleInputChange}
@@ -160,4 +160,4 @@ const PostJobs = () => {
   );
 };
 
-export default PostJobs;
+export default JobList;
