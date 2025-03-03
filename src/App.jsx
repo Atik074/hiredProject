@@ -28,7 +28,7 @@ function App() {
           <AllJobs/>
         </ProtectedRoute>} />
         <Route 
-        path="/postjob" element={<ProtectedRoute>
+        path="/job-list" element={<ProtectedRoute>
           <PostJobs/>
         </ProtectedRoute>} />
 
