@@ -1,46 +1,40 @@
+import useJobData from '@/hooks/useData';
 import React from 'react';
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
 
-const data01 = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-  { name: 'Group E', value: 278 },
-  { name: 'Group F', value: 189 },
-];
 
-const data02 = [
-  { name: 'Group A', value: 2400 },
-  { name: 'Group B', value: 4567 },
-  { name: 'Group C', value: 1398 },
-  { name: 'Group D', value: 9800 },
-  { name: 'Group E', value: 3908 },
-  { name: 'Group F', value: 4800 },
-];
+// Your job category data
+const jobData = [
+    { name: "Frontend Developer", value: 276 },
+    { name: "Backend Developer", value: 368 },
+    { name: "Full Stack Developer", value: 270 },
+    { name: "UI/UX Designer", value: 250 },
+    { name: "Product Manager", value: 293 },
+    { name: "Data Scientist", value: 242 },
+    { name: "Software Engineer", value: 312 },
+    { name: "DevOps Engineer", value: 300 },
+    { name: "Full-Time", value: 240 },
+    { name: "Part-Time", value: 230 },
+    { name: "Freelance", value: 220 },
+    { name: "Internship", value: 310 },
+  ];
+  
+  
 
 const ManageByPie = () => {
+    const { jobs  } = useJobData();
+
   return (
     <ResponsiveContainer width="100%" height={400}>
       <PieChart>
         <Pie
           dataKey="value"
-          isAnimationActive={false}
-          data={data01}
+          data={jobData}
           cx="50%"
           cy="50%"
           outerRadius={80}
           fill="#8884d8"
           label
-        />
-        <Pie
-          dataKey="value"
-          data={data02}
-          cx="50%" // Adjusted position
-          cy="50%" // Adjusted position
-          innerRadius={40}
-          outerRadius={80}
-          fill="#82ca9d"
         />
         <Tooltip />
       </PieChart>

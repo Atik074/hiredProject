@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import FeatureJobs from '../featureJobs/FeatureJobs';
 import Banner from '../banner/Banner';
 import Footer from '../footer/Footer';
-import ManageByPie from '../admin/ManageByPie';
 
 
 const Home = () => {
@@ -13,7 +12,6 @@ const Home = () => {
 
       <div >
           <Header/>
-          <ManageByPie/>
          
 <div className='container'>
      <FeatureJobs/>  
