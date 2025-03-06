@@ -92,9 +92,12 @@ const JobList = () => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto ">
-      <div className="flex justify-between mt-12">
-        <h3 className="text-xl font-semibold">Current Job Listings</h3>
+    <div >
+      <div className="flex justify-between ">
+        {
+            showForm !== true  && ( <h3 className="text-xl font-semibold">Current Job Listings</h3>)
+        }
+       
         {showForm !== true && (
           <button
             className="bg-blue-500 text-white  rounded-md hover:bg-blue-600 transition duration-300"
@@ -121,32 +124,32 @@ const JobList = () => {
       )}
 
       {showForm !== true && (
-        <table className="min-w-full bg-white border border-gray-300 rounded-lg mt-4">
+        <table className="min-w-full bg-white border border-gray-300 rounded-lg mt-4 ">
           <thead className="bg-gray-100">
             <tr>
-              <th className="p-4 text-left">Job Title</th>
-              <th className="p-4 text-left">Post Name</th>
-              <th className="p-4 text-left">Location</th>
-              <th className="p-4 text-left">Actions</th>
+              <th className="p-4 text-left text-[19px]">Job Title</th>
+              <th className="p-4 text-left text-[19px]">Post Name</th>
+              <th className="p-4 text-left text-[19px]">Location</th>
+              <th className="p-4 text-left text-[19px]">Actions</th>
             </tr>
           </thead>
           <tbody>
             {jobs.map((job) => (
               <tr key={job.id} className="border-b border-gray-200">
-                <td className="p-4">{job.title}</td>
-                <td className="p-4">{job.post_name}</td>
-                <td className="p-4">{job.location}</td>
+                <td className="p-4 text-[17px]">{job.title}</td>
+                <td className="p-4 text-[17px]">{job.post_name}</td>
+                <td className="p-4 text-[17px]">{job.location}</td>
                 <td>
                   <Button
                     onClick={() => handleEditJob(job)}
-                    className="mr-6 border-none bg-red-500"
+                    className="mr-4 border-none bg-red-500"
                   >
                     {" "}
                     <FaPen />
                   </Button>
                   <Button
                     onClick={() => handleDeleteJob(job.id)}
-                    className="mr-6 border-none bg-red-500"
+                    className="mr-4 border-none bg-red-500"
                   >
                     <MdDelete />
                   </Button>

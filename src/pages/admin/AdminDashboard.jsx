@@ -39,9 +39,9 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="container flex justify-center  mx-auto gap-8 pt-24">
-      <div className=" w-[16%]    text-center p-4">
-        <ul>
+    <div className="container flex justify-center  mx-auto gap-8 py-24 ">
+      <div className=" w-[20%] bg-gray-100 rounded shadow-md    p-4">
+        <ul className="mx-4 mt-4">
           <li className="list-none mb-2">
             <Link
               onClick={() => setCurrentPage("dashboard")}
@@ -155,14 +155,14 @@ const AdminDashboard = () => {
       </button>
 
       {/* Main Content */}
-      <div className="flex-1  w-[60%] ">
-        <div className="bg-white p-8 rounded-lg">
+      <div className="flex-1  w-[60%] bg-gray-100  shadow-md rounded-md">
+        <div className="bg-white m-8">
         
 
           {/* Conditional Rendering based on currentPage */}
           {currentPage === "dashboard" && (
-            <>
-              <div className="flex justify-between items-center mb-6">
+            <div className="p-6 rounded-md">
+              <div className="flex justify-between  items-center mb-6 ">
           
           </div>
               <h3 className="text-2xl font-semibold text-gray-700 mb-4">
@@ -209,12 +209,12 @@ const AdminDashboard = () => {
                   </tbody>
                 </table>
               </div>
-            </>
+            </div>
           )}
 
           {/* Add content for other pages like 'Job List' and 'Settings' */}
           {currentPage === "jobList" && (
-            <div>
+            <div className="p-6 rounded-md">
              <JobList/>
             </div>
           )}

@@ -9,7 +9,7 @@ const CreateJob = ({
   }) => {
     return (
       <form
-        className="mt-8 bg-gray-50 p-6 rounded-lg shadow-md space-y-4"
+        className=" bg-gray-50 p-6 rounded-lg shadow-md space-y-4"
         onSubmit={onSubmit}
       >
         <h3 className="text-xl font-semibold">Create New Job Post</h3>

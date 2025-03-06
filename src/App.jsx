@@ -9,6 +9,8 @@ import AllJobs from "./pages/allJobs/AllJobs"
 import AdminLogin from "./pages/admin/AdminLogin"
 import AdminDashboard from "./pages/admin/AdminDashboard"
 import AdminProtectedRoute from "./routes/AdminProtectedRoute"
+import Header from "./pages/header/Header"
+import Footer from "./pages/footer/Footer"
 
 
 function App() {
@@ -32,7 +34,9 @@ function App() {
         path="/admin-login"  element={<AdminLogin/>} />
         <Route 
         path="/admin-dashboard" element={<AdminProtectedRoute>
+          <Header></Header>
           <AdminDashboard/>
+          <Footer/>
         </AdminProtectedRoute>} />
      
 
