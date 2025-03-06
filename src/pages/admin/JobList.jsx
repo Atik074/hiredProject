@@ -4,6 +4,7 @@ import { FaPen } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { MdDelete } from "react-icons/md";
 import CreateJob from "./CreateJob";
+import Swal from "sweetalert2";
 
 const JobList = () => {
   const { jobs, setJobs } = useJobData();
@@ -45,6 +46,7 @@ const JobList = () => {
     e.preventDefault();
 
     if (isEdit) {
+     
       const editJobs = jobs.map((job) =>
         job.id === jobEdit.id ? { ...job, ...newJob } : job
       );
@@ -53,10 +55,26 @@ const JobList = () => {
       setIsEdit(false);
       setJobEdit(null);
       resetFrom();
+
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Job Edited successfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
     } else {
+    
       const newJobPost = { ...newJob, id: (jobs.length + 1).toString() };
       setJobs([...jobs, newJobPost]);
       resetFrom();
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "New job created successfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
     }
   };
 
@@ -79,8 +97,28 @@ const JobList = () => {
 
   // handle delete
   const handleDeleteJob = (id) => {
-    const restJobs = jobs.filter((job) => job.id !== id);
-    setJobs(restJobs);
+  
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const restJobs = jobs.filter((job) => job.id !== id);
+        setJobs(restJobs);
+        Swal.fire({
+          title: "Deleted!",
+          text: "Job has been deleted.",
+          icon: "success"
+        });
+       
+      }
+    });
   };
 
   // handle edit job

@@ -1,4 +1,4 @@
-import useJobData from '@/hooks/useData';
+
 import React from 'react';
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -22,7 +22,7 @@ const jobData = [
   
 
 const ManageByPie = () => {
-    const { jobs  } = useJobData();
+   
 
   return (
     <ResponsiveContainer width="100%" height={400}>

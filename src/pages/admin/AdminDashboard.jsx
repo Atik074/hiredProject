@@ -2,12 +2,29 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import JobList from "./JobList";
 import ManageByPie from "./ManageByPie";
+import { MdDashboard } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
+import { IoIosListBox } from "react-icons/io";
+import { RiContactsBook3Fill } from "react-icons/ri";
+import { IoIosSettings } from "react-icons/io";
+import { FaArrowDown } from "react-icons/fa";
+import { getFileFromLocalStorage } from "@/hooks/pdfReader";
+import ManageBoard from "@/components/constantUi/ManageBoard";
+import Contact from "./Contact";
+
+
+
+
+
+
 
 const AdminDashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [appliedJobs, setAppliedJobs] = useState([]);
-  const [currentPage, setCurrentPage] = useState("dashboard"); // State to track current page
+  const [currentPage, setCurrentPage] = useState("dashboard"); 
   const navigate = useNavigate();
+ 
+ 
 
   // Redirect if the admin is not logged in
   useEffect(() => {
@@ -40,39 +57,55 @@ const AdminDashboard = () => {
 
   return (
     <div className="container flex justify-center  mx-auto gap-8 py-24 ">
+     
       <div className=" w-[20%] bg-gray-100 rounded shadow-md    p-4">
         <ul className="mx-4 mt-4">
-          <li className="list-none mb-2">
+          <li className="list-none mb-2 ">
             <Link
               onClick={() => setCurrentPage("dashboard")}
-              className="text-[19px]  text-black"
+              className="text-[19px]  text-black  flex items-center  gap-2"
             >
+              < MdDashboard/>
               Dashboard
             </Link>
           </li>
         
-          <li className="list-none mb-2">
-            <Link
-               to="/"
-              className="text-[19px]  text-black"
-            >
-             Home
-            </Link>
-          </li>
+         
           <li className="list-none mb-2">
             <Link
               onClick={() => setCurrentPage("jobList")}
-              className="text-[19px] mb-2 text-black"
+              className="text-[19px] mb-2 text-black flex items-center  gap-2"
             >
+              <IoIosListBox/>
               Job List
             </Link>
           </li>
-          <li className="list-none mb-5">
+          <li className="list-none mb-2">
             <Link
               onClick={() => setCurrentPage("manage")}
-              className="text-[19px] mb-2 text-black"
+              className="text-[19px] mb-2 text-black flex items-center  gap-2"
             >
+              <IoIosSettings/>
              Manage
+            </Link>
+          </li>
+      
+          <li className="list-none mb-2">
+            <Link
+              onClick={() => setCurrentPage("contact")}
+              className="text-[19px] mb-2 text-black flex items-center  gap-2"
+            >
+              <RiContactsBook3Fill/>
+            Contact
+            </Link>
+          </li>
+          <li className="list-none mb-6">
+            <Link
+               to="/"
+              className="text-[19px]  text-black flex items-center  gap-2"
+            >
+              <FaHome/>
+             Home
             </Link>
           </li>
           <li  
@@ -168,42 +201,53 @@ const AdminDashboard = () => {
               <h3 className="text-2xl font-semibold text-gray-700 mb-4">
                 User Applied Jobs
               </h3>
-              <div className="overflow-x-auto bg-white rounded-lg">
+            <div className="overflow-x-auto bg-white rounded-lg">
                 <table className="min-w-full table-auto">
                   <thead className="bg-gray-200">
                     <tr>
-                      <th className="px-4 py-2 text-left text-gray-600 font-medium text-[18px]">
+                      <th className="py-4 px-3 text-left text-gray-600 font-medium text-[18px]">
                         Name
                       </th>
-                      <th className="px-4 py-2 text-left text-gray-600 font-medium text-[18px]">
+                      <th className="py-4 px-2  text-left text-gray-600 font-medium text-[18px]">
                         Email
                       </th>
-                      <th className="px-4 py-2 text-left text-gray-600 font-medium text-[18px]">
+                      <th className="py-4 px-2  text-left text-gray-600 font-medium text-[18px]">
                         Post Name
                       </th>
-                      <th className="px-4 py-2 text-left text-gray-600 font-medium text-[18px]">
+                      <th className="py-4 px-2  text-left text-gray-600 font-medium text-[18px]">
                         Company Name
                       </th>
-                      <th className="px-4 py-2 text-left text-gray-600 font-medium text-[18px]">
+                      <th className="py-4   text-left text-gray-600 font-medium text-[18px]">
                         Actions
+                      </th>
+                      <th className="py-4 px-3  text-left text-gray-600 font-medium text-[18px]">
+                        Resume
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     {appliedJobs.map((job, index) => (
                       <tr key={index}>
-                        <td className="px-4 py-3">{job.name}</td>
-                        <td className="px-4 py-3">{job.email}</td>
-                        <td className="px-4 py-3">{job.post_name}</td>
-                        <td className="px-4 py-3">{job.title}</td>
-                        <td className="px-4 py-3 ">
+                        <td className="py-3 px-2">{job.name}</td>
+                        <td className="py-3 px-2">{job.email}</td>
+                        <td className="py-3 px-2">{job.post_name}</td>
+                        <td className="py-3 px-2">{job.title}</td>
+                        <td className="py-3 px-2">
                           <button
-                            className="px-4 py-3 text-red-600"
+                            className="px-3 text-red-600"
                             onClick={() => handleRemoveJob(index)}
                           >
                             Remove
                           </button>
                         </td>
+                        <td >
+                        <button onClick={()=>getFileFromLocalStorage()} className="px-6 ml-4">
+                          <FaArrowDown className="text-[18px]"/>
+                          
+                        </button>
+                        </td>
+
+                        
                       </tr>
                     ))}
                   </tbody>
@@ -221,8 +265,15 @@ const AdminDashboard = () => {
 
           {currentPage === "manage" && (
             <div>
-              <h3 className="">Over All Summery Of The Year</h3>
+              <h3 className="text-2xl text-sky-600 text-center  font-bold  p-6">Over All Summery Of The Year</h3>
+               <ManageBoard/>
+               
              <ManageByPie/>
+            </div>
+          )}
+            {currentPage === "contact" && (
+            <div>
+             <Contact/>
             </div>
           )}
         </div>

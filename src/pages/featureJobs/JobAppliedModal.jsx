@@ -2,7 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { JobDataContext } from "@/context/AuthContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
@@ -13,9 +13,10 @@ const JobAppliedModal = ({ setShowModal }) => {
   const { post_name, title } = job;
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-
+ 
   // Handle applied job data
   const onSubmit = (data) => {
+    console.log(data);
     Swal.fire({
       title: "Do you want to apply?",
       text: "Once you submit, you can't change",
@@ -26,13 +27,25 @@ const JobAppliedModal = ({ setShowModal }) => {
       confirmButtonText: "Yes, apply!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const name = data.name;
-        const email = data.email;
+        const { name, email, file , message} = data;
+        const resumeFile = file[0];
+
+        // Store the PDF 
+        const reader = new FileReader();
+        reader.onload = () => {
+          localStorage.setItem("resumeFile", reader.result);
+          
+        };
+        reader.readAsDataURL(resumeFile);
 
         const jobWithUserInfo = {
-          name , email,post_name,
+          name,
+          email,
+          post_name,
           title,
-        }
+          message ,
+          resume: reader.result, 
+        };
 
         let appliedJobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
         appliedJobs.push(jobWithUserInfo);
@@ -76,32 +89,26 @@ const JobAppliedModal = ({ setShowModal }) => {
             {...register("email", { required: true })}
           />
         </div>
+        
 
         <div className="grid w-full items-center gap-4 mb-3">
-          <Label htmlFor="number">Your Phone Number</Label>
-          <Input
-            type="number"
-            id="number"
-            placeholder="phone number"
-            {...register("number", { required: true })}
-          />
-        </div>
-
-        <div className="grid w-full items-center gap-4 mb-3">
-          <Label htmlFor="picture">Your resume</Label>
+          <Label htmlFor="picture">Your Resume (PDF only)</Label>
           <Input
             id="picture"
             type="file"
+            accept=".pdf"
             {...register("file", { required: true })}
           />
         </div>
 
+      
+
         <div className="grid w-full items-center gap-4 mb-3">
-          <Label htmlFor="message">Say something</Label>
+          <Label htmlFor="message">Send me a Feedback</Label>
           <Textarea
             id="message"
-            placeholder="Shortly, type your extra creativity (optional!)"
-            {...register("message")}
+            placeholder="Send me message for our application"
+            {...register("message" ,{ required: true })}
           />
         </div>
 
