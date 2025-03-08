@@ -16,9 +16,8 @@ const Home = () => {
           <Banner/>
          
 <div className='container'>
-     <FeatureJobs/> 
-     <FeaturesBanner/> 
-   
+     <FeatureJobs/>  
+    <FeaturesBanner/>
     
   </div>
     <Footer/>

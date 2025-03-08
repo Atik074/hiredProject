@@ -92,7 +92,7 @@ const JobAppliedModal = ({ setShowModal }) => {
         
 
         <div className="grid w-full items-center gap-4 mb-3">
-          <Label htmlFor="picture">Your Resume (PDF only)</Label>
+          <Label htmlFor="picture">Your Resume (PDF only )</Label>
           <Input
             id="picture"
             type="file"

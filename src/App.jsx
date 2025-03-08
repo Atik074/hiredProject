@@ -22,19 +22,23 @@ function App() {
         <Route path="/login" element={<Login/>}  />
         <Route path="/register" element={<Register/>} />
         <Route 
-        path="/:id" element={<ProtectedRoute><FeatureJobDetails/>
+        path="/:id" element={<ProtectedRoute>
+          <Header/>
+          <FeatureJobDetails/>
+          <Footer/>
         </ProtectedRoute>} />
         <Route 
         path="/alljobs" element={<ProtectedRoute>
+          <Header/>
           <AllJobs/>
+          <Footer/>
         </ProtectedRoute>} />
-       
 
         <Route 
         path="/admin-login"  element={<AdminLogin/>} />
         <Route 
         path="/admin-dashboard" element={<AdminProtectedRoute>
-          <Header></Header>
+          <Header/>
           <AdminDashboard/>
           <Footer/>
         </AdminProtectedRoute>} />

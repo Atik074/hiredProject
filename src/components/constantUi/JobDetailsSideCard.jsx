@@ -2,109 +2,64 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const JobDetailsSideCard = () => {
+  const cards = [
+    {
+      img: "https://shorturl.at/cUQVZ",
+      alt: "Foundation",
+      title: "Your logic building is your foundation",
+      btnText: "Learn",
+    },
+    {
+      img: "https://shorturl.at/ma4hP",
+      alt: "Priority",
+      title: "To catch fundamental is our priority",
+      btnText: "Achieve",
+    },
+    {
+      img: "https://shorturl.at/D26Jt",
+      alt: "Problem Solving",
+      title: "Problem solving skill gives opportunity",
+      btnText: "Test",
+    },
+    {
+      img: "https://shorturl.at/aIlIJ",
+      alt: "Communication Skill",
+      title: "Communication skill opens a new window",
+      btnText: "Learn",
+    },
+    {
+      img: "https://shorturl.at/uFa8Y",
+      alt: "Leadership Mind",
+      title: "Your leadership mind helps to grow",
+      btnText: "Gain",
+    },
+  ];
+
   return (
-    <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] mx-auto">
-      <div className="grid gap-6 grid-cols-1">
-        {/* First Card */}
-        <div className="relative overflow-hidden rounded-lg shadow-lg">
+    <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] mx-auto grid gap-6">
+      {cards.map((card, index) => (
+        <div
+          key={index}
+          className="relative overflow-hidden rounded-2xl shadow-lg bg-gray-800 group"
+        >
           <img
-            className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
-            src="https://shorturl.at/cUQVZ"
-            alt="Foundation"
+            className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-500 group-hover:scale-110"
+            src={card.img}
+            alt={card.alt}
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 sm:p-6">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col items-center justify-center p-6 transition-all duration-500 opacity-0 group-hover:opacity-100">
             <h3 className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-white mb-4">
-              Your logic building is your foundation
+              {card.title}
             </h3>
             <Link
               to=""
-              className="bg-red-600 px-6 sm:px-10 py-2 rounded text-lg sm:text-xl text-white font-medium hover:bg-red-700 mb-4"
+              className="bg-red-600 px-6 sm:px-10 py-2 rounded-full text-lg sm:text-xl text-white font-medium hover:bg-red-700 transition"
             >
-              Learn
+              {card.btnText}
             </Link>
           </div>
         </div>
-
-        {/* Second Card */}
-        <div className="relative overflow-hidden rounded-lg shadow-lg">
-          <img
-            className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
-            src="https://shorturl.at/ma4hP"
-            alt="Priority"
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 sm:p-6">
-            <h3 className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-white mb-4">
-              To catch fundamental is our priority
-            </h3>
-            <Link
-              to=""
-              className="bg-red-600 px-6 sm:px-10 py-2 rounded text-lg sm:text-xl text-white font-medium hover:bg-red-700 mb-4"
-            >
-              Achieve
-            </Link>
-          </div>
-        </div>
-
-        {/* Third Card */}
-        <div className="relative overflow-hidden rounded-lg shadow-lg">
-          <img
-            className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
-            src="https://shorturl.at/D26Jt"
-            alt="Problem Solving"
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 sm:p-6">
-            <h3 className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-white mb-4">
-              Problem solving skill gives opportunity
-            </h3>
-            <Link
-              to=""
-              className="bg-red-600 px-6 sm:px-10 py-2 rounded text-lg sm:text-xl text-white font-medium hover:bg-red-700 mb-4"
-            >
-              Test
-            </Link>
-          </div>
-        </div>
-
-        {/* Fourth Card */}
-        <div className="relative overflow-hidden rounded-lg shadow-lg">
-          <img
-            className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
-            src="https://shorturl.at/aIlIJ"
-            alt="Communication Skill"
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 sm:p-6">
-            <h3 className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-white mb-4">
-              Communication skill opens a new window
-            </h3>
-            <Link
-              to=""
-              className="bg-red-600 px-6 sm:px-10 py-2 rounded text-lg sm:text-xl text-white font-medium hover:bg-red-700 mb-4"
-            >
-              Learn
-            </Link>
-          </div>
-        </div>
-
-        {/* Fifth Card */}
-        <div className="relative overflow-hidden rounded-lg shadow-lg">
-          <img
-            className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
-            src="https://shorturl.at/uFa8Y"
-            alt="Leadership Mind"
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 sm:p-6">
-            <h3 className="text-[18px] sm:text-[22px] md:text-[24px] font-bold text-white mb-4">
-              Your leadership mind helps to grow
-            </h3>
-            <Link
-              to=""
-              className="bg-red-600 px-6 sm:px-10 py-2 rounded text-lg sm:text-xl text-white font-medium hover:bg-red-700 mb-4"
-            >
-              Gain
-            </Link>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

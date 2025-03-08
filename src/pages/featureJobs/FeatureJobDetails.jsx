@@ -7,7 +7,6 @@ import { IoMdArrowForward } from "react-icons/io";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { MdOutlineOtherHouses } from "react-icons/md";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import JobDetailsSideCard from "@/components/constantUi/JobDetailsSideCard";
 import JobAppliedModal from "./JobAppliedModal";
 
@@ -31,9 +30,10 @@ const FeatureJobDetails = () => {
 
   return (
     <div>
-      <div className="w-full h-[400px] opacity-[.7] bg-cover bg-[url('https://shorturl.at/VZCnr')] mb-20"></div>
+      <div className="w-full h-[400px] opacity-[.7] bg-cover bg-[url('https://shorturl.at/VZCnr')] mb-20 md:mb-30 lg:mb-40"></div>
+    
       
-      <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 absolute top-[20%] w-full">
+      <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 absolute top-[40%] w-full">
         <img className="w-32 h-32 sm:w-40 sm:h-40 rounded-full" src={image} alt="companyLogo" />
         <div className="text-center sm:text-left">
           <span className="bg-[#e0f5d7] text-[#449626] text-[14px] sm:text-[16px] px-2 rounded">
@@ -55,9 +55,12 @@ const FeatureJobDetails = () => {
         </div>
       </div>
 
+      <h2 className="text-[32px] text-center font-semibold mb-8 underline underline-offset-8"><span className="text-sky-600 hover:text-sky-700 ">{post_name}</span> Job Details</h2>
+
       <div className="container flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 md:gap-16 px-4 sm:px-8 md:px-12">
         <div className="w-full lg:w-[67%]">
-          <img className="w-full sm:w-[100%]" src="https://shorturl.at/PTyMD" alt="" />
+        
+          <img className="w-full sm:w-[100%] rounded" src="https://shorturl.at/PTyMD" alt="" />
           
           <div className="bg-gray-700 flex items-center gap-x-2 p-3 my-6 rounded">
             <TbFileDescription className="border border-[#898686] bg-white rounded-full w-9 h-9 p-[6px]" />
