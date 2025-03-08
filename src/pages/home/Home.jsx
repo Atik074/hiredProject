@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import FeatureJobs from '../featureJobs/FeatureJobs';
 import Banner from '../banner/Banner';
 import Footer from '../footer/Footer';
+import FeaturesBanner from '../banner/FeaturesBanner';
 
 
 const Home = () => {
@@ -12,10 +13,12 @@ const Home = () => {
 
       <div >
           <Header/>
+          <Banner/>
          
 <div className='container'>
-     <FeatureJobs/>  
-     <Banner/>
+     <FeatureJobs/> 
+     <FeaturesBanner/> 
+   
     
   </div>
     <Footer/>
