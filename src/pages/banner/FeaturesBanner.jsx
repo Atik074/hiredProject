@@ -4,7 +4,7 @@ import companies from "../../data/companies.json";
 
 const FeaturesBanner = () => {
   return (
-    <div className="px-4 lg:my-[150px] my-24">
+    <div className="px-4 lg:my-48 md:my-36 sm:my-28 sm-min:my-28 sm-max:my-28">
       {/* Title Section */}
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-[#2D2D2D]">

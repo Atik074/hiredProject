@@ -43,13 +43,13 @@ const Header = () => {
       <div className="flex items-center space-x-4 sm:space-x-6 justify-center sm:justify-end w-full">
         {role === "admin" ? (
           <Link to="/admin-dashboard">
-            <Button variant="green" size="lg">
+            <Button className="py-3" variant="green" size="lg">
               Admin Dashboard
             </Button>
           </Link>
         ) : (
           <Link to="/admin-dashboard">
-            <Button variant="green" size="lg">
+            <Button  className="py-3" variant="green" size="lg">
               Admin Login
             </Button>
           </Link>
@@ -80,7 +80,7 @@ const Header = () => {
             )}
 
             {isHover && !showModal && (
-              <div className="bg-[#a19999c1] rounded absolute top-[55px] sm:top-[68px] right-0 sm:right-[40px] text-center text-white p-2 sm:p-4">
+              <div className="bg-[#a19999c1] rounded absolute top-[55px] sm:top-[68px] right-0 sm:right-[40px] text-center text-white p-2 sm:p-4 z-50">
                 {user?.displayName && <p>{user?.displayName}</p>}
                 <p>{user?.email}</p>
               </div>

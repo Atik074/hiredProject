@@ -46,7 +46,6 @@ const JobList = () => {
     e.preventDefault();
 
     if (isEdit) {
-     
       const editJobs = jobs.map((job) =>
         job.id === jobEdit.id ? { ...job, ...newJob } : job
       );
@@ -54,31 +53,30 @@ const JobList = () => {
       setJobs(editJobs);
       setIsEdit(false);
       setJobEdit(null);
-      resetFrom();
+      resetForm();
 
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Job Edited successfully",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       });
     } else {
-    
       const newJobPost = { ...newJob, id: (jobs.length + 1).toString() };
       setJobs([...jobs, newJobPost]);
-      resetFrom();
+      resetForm();
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "New job created successfully",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       });
     }
   };
 
-  const resetFrom = () => {
+  const resetForm = () => {
     setNewJob({
       title: "",
       image: "",
@@ -95,10 +93,7 @@ const JobList = () => {
     setShowForm(false);
   };
 
-  // handle delete
   const handleDeleteJob = (id) => {
-  
-
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -106,7 +101,7 @@ const JobList = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         const restJobs = jobs.filter((job) => job.id !== id);
@@ -114,14 +109,12 @@ const JobList = () => {
         Swal.fire({
           title: "Deleted!",
           text: "Job has been deleted.",
-          icon: "success"
+          icon: "success",
         });
-       
       }
     });
   };
 
-  // handle edit job
   const handleEditJob = (job) => {
     setNewJob(job);
     setIsEdit(true);
@@ -130,15 +123,14 @@ const JobList = () => {
   };
 
   return (
-    <div >
-      <div className="flex justify-between ">
-        {
-            showForm !== true  && ( <h3 className="text-xl font-semibold">Current Job Listings</h3>)
-        }
-       
+    <div className="p-4 sm:p-6 md:p-8 lg:p-10">
+      <div className="flex flex-col sm:flex-row justify-between items-center">
+        {showForm !== true && (
+          <h3 className="text-2xl font-semibold mb-4 sm:mb-0">Current Job Listings</h3>
+        )}
         {showForm !== true && (
           <button
-            className="bg-blue-500 text-white  rounded-md hover:bg-blue-600 transition duration-300"
+            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
             onClick={() => {
               setShowForm(true);
               setIsEdit(false);
@@ -157,45 +149,40 @@ const JobList = () => {
           onRequirementsChange={handleRequirementsChange}
           setShowForm={setShowForm}
           isEdit={isEdit}
-          onReset={resetFrom}
+          onReset={resetForm}
         />
       )}
 
       {showForm !== true && (
-        <table className="min-w-full bg-white border border-gray-300 rounded-lg mt-4 ">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="p-4 text-left text-[19px]">Job Title</th>
-              <th className="p-4 text-left text-[19px]">Post Name</th>
-              <th className="p-4 text-left text-[19px]">Location</th>
-              <th className="p-4 text-left text-[19px]">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {jobs.map((job) => (
-              <tr key={job.id} className="border-b border-gray-200">
-                <td className="p-4 text-[17px]">{job.title}</td>
-                <td className="p-4 text-[17px]">{job.post_name}</td>
-                <td className="p-4 text-[17px]">{job.location}</td>
-                <td>
-                  <Button
-                    onClick={() => handleEditJob(job)}
-                    className="mr-4 border-none bg-red-500"
-                  >
-                    {" "}
-                    <FaPen />
-                  </Button>
-                  <Button
-                    onClick={() => handleDeleteJob(job.id)}
-                    className="mr-4 border-none bg-red-500"
-                  >
-                    <MdDelete />
-                  </Button>
-                </td>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-300 rounded-lg mt-4 text-lg">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="p-4 text-left">Job Title</th>
+                <th className="p-4 text-left">Post Name</th>
+                <th className="p-4 text-left">Location</th>
+                <th className="p-4 text-left">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {jobs.map((job) => (
+                <tr key={job.id} className="border-b border-gray-200">
+                  <td className="p-4 text-lg">{job.title}</td>
+                  <td className="p-4 text-lg">{job.post_name}</td>
+                  <td className="p-4 text-lg">{job.location}</td>
+                  <td className="flex space-x-2 p-4">
+                    <Button onClick={() => handleEditJob(job)} className="bg-red-500 text-white px-3 py-1 rounded">
+                      <FaPen />
+                    </Button>
+                    <Button onClick={() => handleDeleteJob(job.id)} className="bg-red-500 text-white px-3 py-1 rounded">
+                      <MdDelete />
+                    </Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
