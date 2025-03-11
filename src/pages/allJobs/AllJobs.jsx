@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import useJobData from "@/hooks/useData";
 import FeatureJobCard from "../featureJobs/FeatureJobCard";
 import { JobDataContext } from "@/context/AuthContext";
+import "./AllJobs.css"
 
 const AllJobs = () => {
   const { jobs } = useJobData();
@@ -71,8 +72,9 @@ const AllJobs = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-[250px,1fr] gap-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8   allJobs">
+      <h3 className="text-center font-semibold mb-8 jobsTitle">Our All Jobs  In Hirred</h3>
+      <div className="grid grid-cols-1 md:grid-cols-[250px,1fr] gap-12">
         {/* Sidebar */}
         <div className="sidebar">
           <h2 className="text-[24px] font-semibold mb-3 border-b-2">
@@ -125,7 +127,7 @@ const AllJobs = () => {
           )}
 
           <div
-            className={`mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`}
+            className={`mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4`}
           >
             {currentJobsItem.map((job) => (
               <FeatureJobCard
@@ -138,7 +140,7 @@ const AllJobs = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-12">
             {[1, 2, 3, 4, 5].map((page) => (
               <button
                 key={page}

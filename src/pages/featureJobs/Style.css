@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width:480px) {
     .title{
         font-size: 21px;  
-       margin-bottom: 12px;
+        margin-bottom: 12px;
         text-align: center;
     }
     .cardImg{
@@ -76,6 +76,7 @@
 @media (min-width: 1025px) and (max-width: 1200px) {
     .cardParent{
         padding: 0px 16px;
+      
     }
     .card{
         width: 100%;
@@ -83,7 +84,7 @@
     }
     .title{
         font-size: 21px;
-        margin-bottom: 20px;
+       
       
     }
     .jobType{
@@ -95,6 +96,7 @@
 @media (min-width: 1201px) {
     .cardParent{
         padding: 0px 16px;
+       
     }
     .card{
         width: 100%;

@@ -33,7 +33,10 @@ const Header = () => {
     <div className="flex items-center justify-between shadow-md px-4 py-2 md:px-6 lg:px-8">
       {/* Logo */}
       <div className="flex justify-center md:w-[15%] sm:w-[40%] sm:min-w-[110px]">
+        <Link to="/">
         <img className="w-auto sm:min-w-[110px] md:w-[80%] lg:w-[70%]" src={Logo} alt="Logo" />
+        </Link>
+       
       </div>
 
       {/* Button and User Avatar Section */}

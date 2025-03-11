@@ -30,7 +30,7 @@ const FeatureJobDetails = () => {
 
   return (
     <div>
-      <div className="w-full h-[400px] opacity-[.7] bg-cover bg-[url('https://shorturl.at/VZCnr')] mb-20 md:mb-30 lg:mb-40"></div>
+      <div className="w-full h-[400px] opacity-[.7] bg-cover bg-[url('https://shorturl.at/VZCnr')] mb-20 md:mb-30 lg:mb-52"></div>
     
       
       <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 absolute top-[40%]">
@@ -55,7 +55,7 @@ const FeatureJobDetails = () => {
         </div>
       </div>
 
-      <h2 className="text-[32px] text-center font-semibold mb-8 underline underline-offset-8"><span className="text-sky-600 hover:text-sky-700 ">{post_name}</span> Job Details</h2>
+      <h2 className="text-[32px] text-center font-semibold mb-11 underline underline-offset-8"><span className="text-sky-600 hover:text-sky-700 ">{post_name}</span> Job Details</h2>
 
       <div className="container flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 md:gap-16 px-4 sm:px-8 md:px-12">
         <div className="w-full lg:w-[67%]">
@@ -113,7 +113,7 @@ const FeatureJobDetails = () => {
       <div className="mt-10 sm:mt-20 mx-8 sm:mx-20 mb-20 sm:mb-72 flex justify-center">
   <Button
     onClick={() => setShowModal(true)}
-    className="text-white w-full sm:w-1/2 md:w-1/3 lg:w-1/4 text-xl py-3"
+    className="text-white w-full sm:w-1/2 md:w-1/3 lg:w-1/4 text-xl py-3 mt-12"
     variant="destructive"
     size="lg"
   >

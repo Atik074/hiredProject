@@ -14,7 +14,7 @@ const Footer = () => {
                 {/* Company Information Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-semibold text-white">HIRRED</h2>
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-[20px] text-gray-300 leading-relaxed">
                         Jobs are shown here. Select the job according to your skill, apply by clicking on & Apply.
                         If you are eligible, this is your best platform. Highlight your skills and get your dream job.
                     </p>
@@ -27,7 +27,7 @@ const Footer = () => {
                         {location.map((item) => (
                             <li
                                 key={item}
-                                className="text-lg text-gray-300 hover:underline hover:text-white cursor-pointer"
+                                className="text-[20px] text-gray-300 hover:underline hover:text-white cursor-pointer"
                             >
                                 {item}
                             </li>
