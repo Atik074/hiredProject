@@ -41,9 +41,9 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen gap-8 p-4 lg:p-8">
+    <div className="flex flex-col lg:flex-row min-h-screen gap-8 p-4 lg:p-8 my-24">
       {/* Sidebar */}
-      <div className={`fixed lg:relative z-40 bg-gray-100 p-4 shadow-md transition-transform duration-300 ease-in-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 w-64 h-full lg:h-auto`}>
+      <div className={`fixed lg:relative z-40 bg-gray-100 p-4 shadow-md transition-transform duration-300 ease-in-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 w-64 h-full lg:h-auto py-8`}>
         <button
           onClick={() => setSidebarOpen(false)}
           className="lg:hidden absolute top-4 right-4 text-gray-600"
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
         </button>
         <ul>
           <li className="mb-2">
-            <Link onClick={() => setCurrentPage("dashboard")} className="flex items-center gap-2 text-black">
+            <Link onClick={() => setCurrentPage("dashboard")} className="flex items-center gap-2 text-black text-xl">
               <MdDashboard /> Dashboard
             </Link>
           </li>
