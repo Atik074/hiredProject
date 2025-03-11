@@ -33,7 +33,7 @@ const FeatureJobDetails = () => {
       <div className="w-full h-[400px] opacity-[.7] bg-cover bg-[url('https://shorturl.at/VZCnr')] mb-20 md:mb-30 lg:mb-40"></div>
     
       
-      <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 absolute top-[40%] w-full">
+      <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 absolute top-[40%]">
         <img className="w-32 h-32 sm:w-40 sm:h-40 rounded-full" src={image} alt="companyLogo" />
         <div className="text-center sm:text-left">
           <span className="bg-[#e0f5d7] text-[#449626] text-[14px] sm:text-[16px] px-2 rounded">
