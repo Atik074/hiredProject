@@ -6,6 +6,7 @@ import FeatureJobs from '../featureJobs/FeatureJobs';
 import Banner from '../banner/Banner';
 import Footer from '../footer/Footer';
 import FeaturesBanner from '../banner/FeaturesBanner';
+import JobAccordian from '@/components/constantUi/JobAccordian';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
 <div className='container'>
      <FeatureJobs/>  
     <FeaturesBanner/>
+    <JobAccordian/>
     
   </div>
     <Footer/>
