@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
+
 const Contact = () => {
   const [selectedMessage, setSelectedMessage] = useState(null);
   const [reply, setReply] = useState('');
+  
+  console.log("select", selectedMessage);
   const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs')) || [];
 
   const messages = appliedJobs.map((job, index) => ({
@@ -12,22 +15,39 @@ const Contact = () => {
     email: job.email,
     post_name: job.post_name,
     message: job.message,
-    status: 'Pending'
+    status: 'Pending',
   }));
+
+  // Load previous reply from localStorage if it exists for the selected job
+  const loadPreviousReply = (jobId) => {
+    const storedReply = localStorage.getItem(`reply_${jobId}`);
+    if (storedReply) {
+      setReply(storedReply);
+    } else {
+      setReply('');
+    }
+  };
 
   const handleSelectMessage = (message) => {
     setSelectedMessage(message);
-    setReply('');
+    console.log(message.id)
+    loadPreviousReply(message.id);  // Load the reply for the selected job
   };
 
-  const handleReplySubmit = () => {
-    Swal.fire({
-      title: "Reply successful",
-      icon: "success",
-      draggable: true
-    });
-    setReply('');
-    setSelectedMessage(null);
+  const handleReplySubmit = (replyMsg) => {
+    if (selectedMessage) {
+      // Store the reply for the selected job using the job's id as the key
+      localStorage.setItem(`reply_${selectedMessage.id}`, replyMsg);
+
+      Swal.fire({
+        title: "Reply successful",
+        icon: "success",
+        draggable: true,
+      });
+
+      setReply("");
+      setSelectedMessage(null);
+    }
   };
 
   return (
@@ -57,6 +77,8 @@ const Contact = () => {
             <p><strong>Name:</strong> {selectedMessage.name}</p>
             <p><strong>Email:</strong> {selectedMessage.email}</p>
             <p><strong>Message:</strong> <span className='text-lg underline capitalize text-blue-600 font-semibold'>{selectedMessage.message}</span></p>
+
+            
             <div className="mt-4">
               <textarea
                 className="w-full border rounded p-2 mb-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -67,7 +89,7 @@ const Contact = () => {
               />
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-full sm:w-auto"
-                onClick={handleReplySubmit}
+                onClick={() => handleReplySubmit(reply)}
               >
                 Send Reply
               </button>

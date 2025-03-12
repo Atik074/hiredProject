@@ -11,6 +11,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard"
 import AdminProtectedRoute from "./routes/AdminProtectedRoute"
 import Header from "./pages/header/Header"
 import Footer from "./pages/footer/Footer"
+import UserDashboard from "./pages/User/UserDashboard"
 
 
 function App() {
@@ -43,7 +44,12 @@ function App() {
           <Footer/>
         </AdminProtectedRoute>} />
      
-
+        <Route 
+        path="/user-dashboard" element={<ProtectedRoute>
+          <Header/>
+           <UserDashboard/>
+          <Footer/>
+        </ProtectedRoute>} />
 
     </Routes>
 

@@ -38,6 +38,7 @@ const AdminDashboard = () => {
     jobs.splice(index, 1);
     localStorage.setItem("appliedJobs", JSON.stringify(jobs));
     setAppliedJobs(jobs);
+    
   };
 
   return (

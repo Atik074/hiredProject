@@ -34,7 +34,7 @@ const Header = () => {
       {/* Logo */}
       <div className="flex justify-center md:w-[15%] sm:w-[40%] sm:min-w-[110px]">
         <Link to="/">
-        <img className="w-auto sm:min-w-[110px] md:w-[80%] lg:w-[70%]" src={Logo} alt="Logo" />
+        <img className="w-auto sm:min-w-[110px] md:w-[80%] lg:w-[80%]" src={Logo} alt="Logo" />
         </Link>
        
       </div>
@@ -43,7 +43,7 @@ const Header = () => {
       <div className="flex items-center space-x-4 sm:space-x-6 justify-center sm:justify-end w-full">
         {role === "admin" ? (
           <Link to="/admin-dashboard">
-            <Button className="py-3" variant="green" size="lg">
+            <Button className="py-3 lg:text-[17px]" variant="green" size="lg">
               Admin Dashboard
             </Button>
           </Link>
