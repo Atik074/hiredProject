@@ -28,6 +28,7 @@ const AllJobs = () => {
 
   // Collect all categories from jobs data
   const allCategoryJobs = [...new Set(jobs.map((job) => job.category))];
+  
   // Collect all locations from jobs data
   const allJobsLocation = [...new Set(jobs.map((job) => job.location))];
 
@@ -35,6 +36,7 @@ const AllJobs = () => {
     setJob(job);
   };
 
+  // handle search by category
   const handleSearchCategory = (e, categoryItem) => {
     const isChecked = e.target.checked;
     const newAllCategory = [...selectedCategories, categoryItem];
@@ -53,23 +55,26 @@ const AllJobs = () => {
     setCurrentPage(1);
   };
 
+  // handle search by location
   const handleSearchLocation = (e, locationItem) => {
     const isChecked = e.target.checked;
-    const newAllLocation = [...selectedLocation, locationItem];
-    const removeLocation = selectedLocation.filter(
-      (location) => location !== locationItem
-    );
-
-    let updatedLocation = isChecked ? newAllLocation : removeLocation;
-    setSelectedLocation(updatedLocation);
-
-    setFilterJobs(
-      updatedLocation.length > 0
-        ? jobs.filter((job) => updatedLocation.includes(job.location))
-        : jobs
-    );
-    setCurrentPage(1);
+    
+    setSelectedLocation(prevLocations => {
+      const updatedLocations = isChecked
+        ? [...prevLocations, locationItem]  // Add location
+        : prevLocations.filter(location => location !== locationItem);  
+      
+   
+      setFilterJobs(
+        updatedLocations.length > 0
+          ? jobs.filter(job => updatedLocations.includes(job.location))  
+          : jobs  
+      );
+      setCurrentPage(1);  
+      return updatedLocations;  
+    });
   };
+  
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8   allJobs">
@@ -139,20 +144,24 @@ const AllJobs = () => {
             ))}
           </div>
 
+         
           {/* Pagination */}
-          <div className="flex justify-center mt-12">
-            {[1, 2, 3, 4, 5].map((page) => (
-              <button
-                key={page}
-                onClick={() => paginate(page)}
-                className={`px-4 py-2 mx-1 border rounded ${
-                  currentPage === page ? "bg-blue-500 text-white" : "bg-gray-200"
-                }`}
-              >
-                {page}
-              </button>
-            ))}
-          </div>
+{filterJobs.length > 9 && (
+  <div className="flex justify-center mt-12">
+    {[1, 2, 3, 4, 5].map((page) => (
+      <button
+        key={page}
+        onClick={() => paginate(page)}
+        className={`px-4 py-2 mx-1 border rounded ${currentPage === page ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+      >
+        {page}
+      </button>
+    ))}
+  </div>
+)}
+
+
+
         </div>
       </div>
     </div>

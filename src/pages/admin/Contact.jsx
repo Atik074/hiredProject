@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import Swal from 'sweetalert2';
-
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const [selectedMessage, setSelectedMessage] = useState(null);
-  const [reply, setReply] = useState('');
-  
+  const [reply, setReply] = useState("");
+
   console.log("select", selectedMessage);
-  const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs')) || [];
+  const appliedJobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
 
   const messages = appliedJobs.map((job, index) => ({
     id: index,
@@ -15,29 +14,24 @@ const Contact = () => {
     email: job.email,
     post_name: job.post_name,
     message: job.message,
-    status: 'Pending',
+    status: "Pending",
   }));
-
-  // Load previous reply from localStorage if it exists for the selected job
-  const loadPreviousReply = (jobId) => {
-    const storedReply = localStorage.getItem(`reply_${jobId}`);
-    if (storedReply) {
-      setReply(storedReply);
-    } else {
-      setReply('');
-    }
-  };
 
   const handleSelectMessage = (message) => {
     setSelectedMessage(message);
-    console.log(message.id)
-    loadPreviousReply(message.id);  // Load the reply for the selected job
   };
 
   const handleReplySubmit = (replyMsg) => {
     if (selectedMessage) {
-      // Store the reply for the selected job using the job's id as the key
-      localStorage.setItem(`reply_${selectedMessage.id}`, replyMsg);
+      const existingData = JSON.parse(localStorage.getItem("notify")) || {};
+
+      if (!existingData[selectedMessage.post_name]) {
+        existingData[selectedMessage.post_name] = [];
+      }
+
+      existingData[selectedMessage.post_name].push(replyMsg);
+
+      localStorage.setItem("notify", JSON.stringify(existingData));
 
       Swal.fire({
         title: "Reply successful",
@@ -55,18 +49,28 @@ const Contact = () => {
       {/* Contact List */}
       <div className="col-span-1 border rounded-lg p-4 bg-white shadow-md">
         <h2 className="text-2xl mb-4 font-semibold">Messages</h2>
-        <ul>
-          {messages.map((msg) => (
-            <li
-              key={msg.id}
-              className={`p-3 mb-2 border rounded cursor-pointer transition-colors ${selectedMessage?.id === msg.id ? 'bg-blue-300' : 'bg-gray-100 hover:bg-gray-200'}`}
-              onClick={() => handleSelectMessage(msg)}
-            >
-              <p className="font-medium">{msg.name} - {msg.post_name}</p>
-              <p className="text-sm text-gray-600">Status: {msg.status}</p>
-            </li>
-          ))}
-        </ul>
+        {messages.length === 0 ? (
+          <p className="text-center  text-2xl  px-1 text-red-500 font-semibold ">No messages found</p>
+        ) : (
+          <ul>
+            {messages.map((msg) => (
+              <li
+                key={msg.id}
+                className={`p-3 mb-2 border rounded cursor-pointer transition-colors ${
+                  selectedMessage?.id === msg.id
+                    ? "bg-blue-300"
+                    : "bg-gray-100 hover:bg-gray-200"
+                }`}
+                onClick={() => handleSelectMessage(msg)}
+              >
+                <p className="font-medium">
+                  {msg.name} - {msg.post_name}
+                </p>
+                <p className="text-sm text-gray-600">Status: {msg.status}</p>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* Message Details & Reply Form */}
@@ -74,11 +78,19 @@ const Contact = () => {
         {selectedMessage ? (
           <div>
             <h2 className="text-xl mb-2 font-semibold">Message Details</h2>
-            <p><strong>Name:</strong> {selectedMessage.name}</p>
-            <p><strong>Email:</strong> {selectedMessage.email}</p>
-            <p><strong>Message:</strong> <span className='text-lg underline capitalize text-blue-600 font-semibold'>{selectedMessage.message}</span></p>
+            <p>
+              <strong>Name:</strong> {selectedMessage.name}
+            </p>
+            <p>
+              <strong>Email:</strong> {selectedMessage.email}
+            </p>
+            <p>
+              <strong>Message:</strong>{" "}
+              <span className="text-lg underline capitalize text-blue-600 font-semibold">
+                {selectedMessage.message}
+              </span>
+            </p>
 
-            
             <div className="mt-4">
               <textarea
                 className="w-full border rounded p-2 mb-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -96,7 +108,9 @@ const Contact = () => {
             </div>
           </div>
         ) : (
-          <p className='text-lg text-center text-gray-600'>Select a message to view details and reply.</p>
+          <p className="text-lg text-center text-gray-600">
+            Select a message to view details and reply.
+          </p>
         )}
       </div>
     </div>

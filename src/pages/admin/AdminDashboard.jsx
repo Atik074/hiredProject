@@ -104,43 +104,48 @@ const AdminDashboard = () => {
       {/* Main Content */}
       <div className="flex-1 bg-gray-100 p-6 rounded-md shadow-md overflow-auto">
         {currentPage === "dashboard" && (
-          <div>
-            <h3 className="text-2xl font-semibold mb-4">User Applied Jobs</h3>
-            <div className="overflow-x-auto bg-white rounded-lg">
-              <table className="w-full">
-                <thead className="bg-gray-200">
-                  <tr>
-                    <th className="py-4 px-3 text-left">Name</th>
-                    <th className="py-4 px-2 text-left">Email</th>
-                    <th className="py-4 px-2 text-left">Post Name</th>
-                    <th className="py-4 px-2 text-left">Company Name</th>
-                    <th className="py-4 text-left">Actions</th>
-                    <th className="py-4 px-3 text-left">Resume</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {appliedJobs.map((job, index) => (
-                    <tr key={index}>
-                      <td className="py-3 px-2 text-[18px]">{job.name}</td>
-                      <td className="py-3 px-2 text-[18px]">{job.email}</td>
-                      <td className="py-3 px-2 text-[18px]">{job.post_name}</td>
-                      <td className="py-3 px-2 text-[18px]">{job.title}</td>
-                      <td className="py-3 px-2 text-[18px]">
-                        <button className="text-red-600" onClick={() => handleRemoveJob(index)}>
-                          Remove
-                        </button>
-                      </td>
-                      <td>
-                        <button onClick={() => getFileFromLocalStorage()}>
-                          <FaArrowDown className="text-[18px]" />
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+         <div>
+         <h3 className="text-2xl font-semibold mb-4">User Applied Jobs</h3>
+         <div className="overflow-x-auto bg-white rounded-lg">
+           {appliedJobs.length === 0 ? (
+             <p className="text-center py-5 text-2xl  px-1 text-red-500 font-semibold ">User does not applied any jobs.</p>
+           ) : (
+             <table className="w-full">
+               <thead className="bg-gray-200">
+                 <tr>
+                   <th className="py-4 px-3 text-left">Name</th>
+                   <th className="py-4 px-2 text-left">Email</th>
+                   <th className="py-4 px-2 text-left">Post Name</th>
+                   <th className="py-4 px-2 text-left">Company Name</th>
+                   <th className="py-4 text-left">Actions</th>
+                   <th className="py-4 px-3 text-left">Resume</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 {appliedJobs.map((job, index) => (
+                   <tr key={index}>
+                     <td className="py-3 px-2 text-[18px]">{job.name}</td>
+                     <td className="py-3 px-2 text-[18px]">{job.email}</td>
+                     <td className="py-3 px-2 text-[18px]">{job.post_name}</td>
+                     <td className="py-3 px-2 text-[18px]">{job.title}</td>
+                     <td className="py-3 px-2 text-[18px]">
+                       <button className="text-red-600" onClick={() => handleRemoveJob(index)}>
+                         Remove
+                       </button>
+                     </td>
+                     <td>
+                       <button onClick={() => getFileFromLocalStorage()}>
+                         <FaArrowDown className="text-[18px]" />
+                       </button>
+                     </td>
+                   </tr>
+                 ))}
+               </tbody>
+             </table>
+           )}
+         </div>
+       </div>
+       
         )}
         {currentPage === "jobList" && <JobList />}
         {currentPage === "manage" && <>

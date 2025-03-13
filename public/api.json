@@ -96,7 +96,7 @@
 {
   "id": "6",
   "title": "InnovaTech Solutions",
-  "image": "/assets/logos/innovatech.png",
+ "image": "https://shorturl.at/X13w2",
   "vacancy": "06",
   "post_name": "Data Scientist",
   "job_type": "Full Time",
@@ -115,7 +115,7 @@
 {
   "id": "7",
   "title": "Tech Labs",
-  "image": "/assets/logos/innovatech.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "07",
   "post_name": "Software Engineer",
   "job_type": "Part Time",
@@ -134,7 +134,7 @@
 {
   "id": "8",
   "title": "Cloud Innovations",
-  "image": "/assets/logos/innovatech.png",
+ "image": "https://shorturl.at/X13w2",
   "vacancy": "08",
   "post_name": "DevOps Engineer",
   "job_type": "Contract",
@@ -153,7 +153,7 @@
 {
   "id": "9",
   "title": "InnovaTech Systems",
-  "image": "/assets/logos/innovatech.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "09",
   "post_name": "Network Engineer",
   "job_type": "Internship",
@@ -172,7 +172,7 @@
 {
   "id": "10",
   "title": "InnovateSoft Technologies",
-  "image": "/assets/logos/innovatesoft.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "10",
   "post_name": "Systems Administrator",
   "job_type": "Contract",
@@ -191,7 +191,7 @@
 {
   "id": "11",
   "title": "CyberTech Solutions",
-  "image": "/assets/logos/cybertech.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "11",
   "post_name": "Security Analyst",
   "job_type": "Internship",
@@ -210,7 +210,7 @@
 {
   "id": "12",
   "title": "CyberTech Solutions",
-  "image": "/assets/logos/cybertech.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "12",
   "post_name": "Network Security Engineer",
   "requirements": [
@@ -228,7 +228,7 @@
 {
   "id": "13",
   "title": "CloudSphere Technologies",
-  "image": "/assets/logos/cloudsphere.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "13",
   "post_name": "Cloud Architect",
   "requirements": [
@@ -246,7 +246,7 @@
 {
   "id": "14",
   "title": "CloudSphere Technologies",
-  "image": "/assets/logos/cloudsphere.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "14",
   "post_name": "Cloud Engineer",
   "requirements": [
@@ -264,7 +264,7 @@
 {
   "id": "15",
   "title": "DataTech Solutions",
-  "image": "/assets/logos/datatech.png",
+ "image": "https://shorturl.at/X13w2",
   "vacancy": "15",
   "post_name": "Machine Learning Engineer",
   "requirements": [
@@ -282,7 +282,7 @@
 {
   "id": "16",
   "title": "DataTech Solutions",
-  "image": "/assets/logos/datatech.png",
+  "image": "https://shorturl.at/X13w2",
   "vacancy": "16",
   "post_name": "Data Engineer",
   "requirements": [
@@ -301,7 +301,7 @@
     {
       "id": "17",
       "title": "QuantumTech",
-     "image": "/assets/logos/quantumtech.png",
+    "image": "https://shorturl.at/X13w2",
       "vacancy": "17",
       "post_name": "Quantum Computing Researcher",
       "requirements": [
@@ -319,7 +319,7 @@
     {
       "id": "18",
       "title": "QuantumTech",
-     "image": "/assets/logos/quantumtech.png",
+     "image": "https://shorturl.at/X13w2",
       "vacancy": "18",
       "post_name": "Quantum Software Engineer",
       "requirements": [
@@ -337,7 +337,7 @@
     {
       "id": "19",
       "title": "NextGen Tech",
-     "image": "/assets/logos/nextgen.png",
+    "image": "https://shorturl.at/X13w2",
       "vacancy": "19",
       "post_name": "AI Specialist",
       "requirements": [
@@ -355,7 +355,7 @@
     {
       "id": "20",
       "title": "NextGen Tech",
-     "image": "/assets/logos/nextgen.png",
+    "image": "https://shorturl.at/X13w2",
       "vacancy": "20",
       "post_name": "AI Researcher",
       "requirements": [
@@ -373,7 +373,7 @@
     {
       "id": "021",
       "title": "GreenTech Solutions",
-     "image": "/assets/logos/greentech.png",
+   "image": "https://shorturl.at/X13w2",
       "vacancy": "21",
       "post_name": "Environmental Engineer",
       "requirements": [
@@ -391,7 +391,7 @@
     {
       "id": "022",
       "title": "GreenTech Solutions",
-     "image": "/assets/logos/greentech.png",
+    "image": "https://shorturl.at/X13w2",
       "vacancy": "22",
       "post_name": "Sustainability Consultant",
       "requirements": [
@@ -409,7 +409,7 @@
     {
         "id": "023",
         "title": "MedTech Innovations",
-       "image": "/assets/logos/medtech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "23",
         "post_name": "Clinical Data Analyst",
         "requirements": [
@@ -427,7 +427,7 @@
       {
         "id": "024",
         "title": "MedTech Innovations",
-       "image": "/assets/logos/medtech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "24",
         "post_name": "Medical Device Engineer",
         "requirements": [
@@ -445,7 +445,7 @@
       {
         "id": "025",
         "title": "RetailPlus",
-       "image": "/assets/logos/retailplus.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "25",
         "post_name": "E-commerce Manager",
         "requirements": [
@@ -463,7 +463,7 @@
       {
         "id": "026",
         "title": "RetailPlus",
-       "image": "/assets/logos/retailplus.png",
+    "image": "https://shorturl.at/X13w2",
         "vacancy": "26",
         "post_name": "Digital Marketing Specialist",
         "requirements": [
@@ -481,7 +481,7 @@
       {
         "id": "027",
         "title": "FinTech Solutions",
-       "image": "/assets/logos/fintech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "27",
         "post_name": "Financial Analyst",
         "requirements": [
@@ -499,7 +499,7 @@
       {
         "id": "028",
         "title": "FinTech Solutions",
-       "image": "/assets/logos/fintech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "28",
         "post_name": "Compliance Officer",
         "requirements": [
@@ -517,7 +517,7 @@
       {
         "id": "029",
         "title": "HealthTech Inc.",
-       "image": "/assets/logos/healthtech.png",
+       "image": "https://shorturl.at/X13w2",
         "vacancy": "29",
         "post_name": "Healthcare IT Specialist",
         "requirements": [
@@ -535,7 +535,7 @@
       {
         "id": "030",
         "title": "HealthTech Inc.",
-       "image": "/assets/logos/healthtech.png",
+       "image": "https://shorturl.at/X13w2",
         "vacancy": "30",
         "post_name": "Clinical Research Coordinator",
         "requirements": [
@@ -553,7 +553,7 @@
       {
         "id": "031",
         "title": "AutoTech",
-       "image": "/assets/logos/autotech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "31",
         "post_name": "Automotive Engineer",
         "requirements": [
@@ -571,7 +571,7 @@
       {
         "id": "032",
         "title": "AutoTech",
-       "image": "/assets/logos/autotech.png",
+       "image": "https://shorturl.at/X13w2",
         "vacancy": "32",
         "post_name": "Automotive Technician",
         "requirements": [
@@ -589,7 +589,7 @@
       {
         "id": "033",
         "title": "CleanEnergy Solutions",
-       "image": "/assets/logos/cleanenergy.png",
+       "image": "https://shorturl.at/X13w2",
         "vacancy": "33",
         "post_name": "Renewable Energy Engineer",
         "requirements": [
@@ -607,7 +607,7 @@
       {
         "id": "034",
         "title": "CleanEnergy Solutions",
-       "image": "/assets/logos/cleanenergy.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "34",
         "post_name": "Energy Analyst",
         "requirements": [
@@ -624,7 +624,7 @@
       }, {
         "id": "035",
         "title": "BioTech Labs",
-       "image": "/assets/logos/biotech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "35",
         "post_name": "Biotech Research Scientist",
         "requirements": [
@@ -642,7 +642,7 @@
       {
         "id": "036",
         "title": "BioTech Labs",
-       "image": "/assets/logos/biotech.png",
+       "image": "https://shorturl.at/X13w2",
         "vacancy": "36",
         "post_name": "Molecular Biologist",
         "requirements": [
@@ -660,7 +660,7 @@
       {
         "id": "037",
         "title": "SmartHomes",
-       "image": "/assets/logos/smarthomes.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "37",
         "post_name": "IoT Solutions Architect",
         "requirements": [
@@ -678,7 +678,7 @@
       {
         "id": "038",
         "title": "SmartHomes",
-       "image": "/assets/logos/smarthomes.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "38",
         "post_name": "Embedded Systems Engineer",
         "requirements": [
@@ -696,7 +696,7 @@
       {
         "id": "039",
         "title": "SustainTech",
-       "image": "/assets/logos/sustaintech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "39",
         "post_name": "Sustainability Data Scientist",
         "requirements": [
@@ -714,7 +714,7 @@
       {
         "id": "040",
         "title": "SustainTech",
-       "image": "/assets/logos/sustaintech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "40",
         "post_name": "Environmental Consultant",
         "requirements": [
@@ -732,7 +732,7 @@
       {
         "id": "041",
         "title": "TravelTech",
-       "image": "/assets/logos/traveltech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "41",
         "post_name": "Travel Technology Developer",
         "requirements": [
@@ -750,7 +750,7 @@
       {
         "id": "042",
         "title": "TravelTech",
-       "image": "/assets/logos/traveltech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "42",
         "post_name": "Data Analyst - Travel Insights",
         "requirements": [
@@ -768,7 +768,7 @@
       {
         "id": "043",
         "title": "AeroTech Solutions",
-       "image": "/assets/logos/aerotech.png",
+     "image": "https://shorturl.at/X13w2",
         "vacancy": "43",
         "post_name": "Aerodynamics Engineer",
         "requirements": [
@@ -786,7 +786,7 @@
       {
         "id": "044",
         "title": "AeroTech Solutions",
-       "image": "/assets/logos/aerotech.png",
+      "image": "https://shorturl.at/X13w2",
         "vacancy": "44",
         "post_name": "Flight Systems Engineer",
         "requirements": [

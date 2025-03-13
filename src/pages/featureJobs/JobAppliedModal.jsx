@@ -106,7 +106,7 @@ const JobAppliedModal = ({ setShowModal }) => {
         </div>
 
         <div className="grid w-full gap-4 mb-4">
-          <Label htmlFor="message">Send a Feedback</Label>
+          <Label htmlFor="message">Why are you perfect ?</Label>
           <Textarea
             id="message"
             placeholder="Message for application"
